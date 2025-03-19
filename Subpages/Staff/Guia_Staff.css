@@ -71,18 +71,14 @@ body{
 
 
 [class^="Texto_Comando_"] {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5vw 1vw;
-    border-radius: 10px;
-    border: none;
     background: rgb(26, 25, 25);
-    color: white;
-    font-size: 3vw;
-    font-family: sans-serif;
-    outline: none;
-    resize: none;
-    text-align: center;
+    grid-column: 2;
+    grid-row: 2;
+    height: 80%;
+    min-height: 25px;
+    margin: 2vw;
+    border-radius: 15px;
+    display: flex;
 }
 
 .Comandos_Campo input:nth-child(1) { grid-column: 1; grid-row: 1; }
