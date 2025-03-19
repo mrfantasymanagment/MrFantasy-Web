@@ -30,13 +30,13 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
   }
 
   try {
-      const response = await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre })
-      });
+    await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre })
+    });
 
-      await fetch('https://mrfantasy-backend.onrender.com/guia/agregar', {
+    const response = await fetch('https://mrfantasy-backend.onrender.com/guia/agregar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -54,18 +54,19 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
             enlace: document.getElementById('PluginLink').value
         })
     });
-      const data = await response.json();
 
-      if (response.ok) {
-          document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
-          document.getElementById('Nombre').value = '';
-      } else {
-          document.getElementById('Reportes_Incompleto').style.display = 'flex';
-      }
-  } catch (error) {
-      console.log(error);
-      document.getElementById('Reportes_Incompleto').style.display = 'flex';
-  }
+    const data = await response.json();
+
+    if (response.ok) {
+        document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+        document.getElementById('Nombre').value = '';
+    } else {
+        document.getElementById('Reportes_Incompleto').style.display = 'flex';
+    }
+} catch (error) {
+    console.log(error);
+    document.getElementById('Reportes_Incompleto').style.display = 'flex';
+}
 });
 
 document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
