@@ -49,7 +49,11 @@ function limitarPorEspacio(input) {
 
             //Crear Archivos
 
-            
+            await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ nombre })
+          });
         } else {
             document.getElementById('Reportes_Incompleto').style.display = 'flex';
         }
