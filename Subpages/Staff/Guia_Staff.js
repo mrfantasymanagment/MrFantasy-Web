@@ -46,6 +46,10 @@ function limitarPorEspacio(input) {
             document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
             document.getElementById('Nombre').value = '';
             document.getElementById('Descripcion').value = '';
+
+            //Crear Archivos
+
+            
         } else {
             document.getElementById('Reportes_Incompleto').style.display = 'flex';
         }
