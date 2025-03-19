@@ -4,5 +4,6 @@ const { obtenerPlugins, crearArchivosPlugin } = require('../controllers/guiacont
 
 router.get('/plugins', obtenerPlugins);
 router.post('/crear-archivos', crearArchivosPlugin);
+router.post('/agregar', agregarPlugin);
 
 module.exports = router;
