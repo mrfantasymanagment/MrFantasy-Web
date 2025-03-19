@@ -68,7 +68,7 @@ body{
 }
 
 
-[class^="Texto_Comando_"] {
+[class^="Texto_Comando"] {
     width: 50%;
     box-sizing: border-box;
     padding: 0.5vw 1vw;
