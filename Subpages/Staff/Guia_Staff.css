@@ -86,8 +86,7 @@ body{
     outline: none;
     resize: none;
     text-align: center;
-    align-items: center;
-    justify-items: center;
+    
 }
 
 .Comandos_Campo input:nth-child(1) { grid-column: 1; grid-row: 1; }
