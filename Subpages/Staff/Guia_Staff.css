@@ -63,7 +63,7 @@ body{
     grid-column: 2/4;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(4)%;
+    grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(6VW, 6VW, 6VW, 6VW);
 }
 
