@@ -2,7 +2,7 @@ function crearPlugin(datos) {
     return `
     <a href="${datos.Enlace}" style="text-decoration: none;">
     <div class="Plugin_Container">
-        div class="Nombre_Campo">
+        <div class="Nombre_Campo">
             <div class="hproyectos">${datos.Nombre}</div>
         </div>
         <div class="Descripcion_Campo">
