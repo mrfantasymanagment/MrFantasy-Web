@@ -113,7 +113,7 @@ body{
     min-height: 25px;
     border-radius: 15px;
     grid-column: 2/4;
-    grid-row: 6;
+    grid-row: 5;
     margin: 2vw;
     transition-duration: 0.5s;
     cursor: pointer;
