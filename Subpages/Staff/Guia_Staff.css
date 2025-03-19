@@ -27,11 +27,9 @@ body{
     display: flex;
 }
 
-.Texto_Comando_1, .Texto_Comando_2, .Texto_Comando_3, .Texto_Comando_4,{
+[class^="Texto_Comando_"] {
     width: calc(95% + 2vw);
 }
-
-
 
 .Comandos_Campo, .PluginLink_Campo, .Imagen_Campo, .Añadir_Campo {
     width: calc(95% + 2vw);
