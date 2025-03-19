@@ -26,9 +26,9 @@ class AutoSync(FileSystemEventHandler):
             if repo.is_dirty(untracked_files=True):
                 repo.git.add(A=True)
                 repo.git.reset('Subpages/Guia/Plugins/')
+                repo.git.checkout('origin/main', '--', 'Subpages/Guia/Plugins/')
                 repo.index.commit("Auto-sync")
                 repo.remotes.origin.push(refspec='main', force=True)
-                print("✓ Sincronizado")
         except Exception as e:
             print(f"Error: {e}")
 
