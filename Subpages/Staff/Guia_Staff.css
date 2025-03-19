@@ -121,6 +121,14 @@ body{
     justify-content: center;
 }
 
+#Imagen_Input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .Añadir_Campo{
     background: rgb(26, 25, 25);
     height: 80%;
