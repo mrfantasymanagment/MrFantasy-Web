@@ -35,7 +35,7 @@ body{
 }
 
 .Texto_Nombre, .Texto_Descripcion, .Texto_PluginLink{
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
     padding: 0.5vw 1vw;
     border-radius: 10px;
