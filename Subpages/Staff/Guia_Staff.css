@@ -28,7 +28,7 @@ body{
 }
 
 [class^="Texto_Comando_"] {
-    width: calc(95% + 2vw);
+
 }
 
 .Comandos_Campo, .PluginLink_Campo, .Imagen_Campo, .Añadir_Campo {
