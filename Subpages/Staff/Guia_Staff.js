@@ -9,7 +9,7 @@ function limitarPorEspacio(input) {
   const anchoDisponible = input.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
   
   if (anchoTexto > anchoDisponible) {
-    input.value = input.value.slice(0, -1);
+      input.value = input.value.slice(0, -1);
   }
 }
 
@@ -30,43 +30,43 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
   }
 
   try {
-    await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre })
-    });
+      await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nombre })
+      });
 
-    const response = await fetch('https://mrfantasy-backend.onrender.com/guia/agregar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            nombre,
-            descripcion: document.getElementById('Descripcion').value,
-            comando1: document.getElementById('Comando_1').value,
-            comando2: document.getElementById('Comando_2').value,
-            comando3: document.getElementById('Comando_3').value,
-            comando4: document.getElementById('Comando_4').value,
-            comando5: document.getElementById('Comando_5').value,
-            comando6: document.getElementById('Comando_6').value,
-            comando7: document.getElementById('Comando_7').value,
-            comando8: document.getElementById('Comando_8').value,
-            imagen: document.getElementById('PluginLink').value,
-            enlace: document.getElementById('PluginLink').value
-        })
-    });
+      const response = await fetch('https://mrfantasy-backend.onrender.com/guia/agregar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+              nombre,
+              descripcion: document.getElementById('Descripcion').value,
+              comando1: document.getElementById('Comando_1').value,
+              comando2: document.getElementById('Comando_2').value,
+              comando3: document.getElementById('Comando_3').value,
+              comando4: document.getElementById('Comando_4').value,
+              comando5: document.getElementById('Comando_5').value,
+              comando6: document.getElementById('Comando_6').value,
+              comando7: document.getElementById('Comando_7').value,
+              comando8: document.getElementById('Comando_8').value,
+              imagen: document.getElementById('PluginLink').value,
+              enlace: document.getElementById('PluginLink').value
+          })
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (response.ok) {
-        document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
-        document.getElementById('Nombre').value = '';
-    } else {
-        document.getElementById('Reportes_Incompleto').style.display = 'flex';
-    }
-} catch (error) {
-    console.log(error);
-    document.getElementById('Reportes_Incompleto').style.display = 'flex';
-}
+      if (response.ok) {
+          document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+          document.getElementById('Nombre').value = '';
+      } else {
+          document.getElementById('Reportes_Incompleto').style.display = 'flex';
+      }
+  } catch (error) {
+      console.log(error);
+      document.getElementById('Reportes_Incompleto').style.display = 'flex';
+  }
 });
 
 document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
