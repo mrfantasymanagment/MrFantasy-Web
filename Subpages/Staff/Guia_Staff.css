@@ -72,6 +72,19 @@ body{
     margin: 2vw;    
 }
 
+.Comando_Wrapper {
+    background: rgb(26, 25, 25);
+    width: 95%;
+    height: 80%;
+    border-radius: 15px;
+    display: flex;
+}
+
+[class^="Texto_Comando_"] {
+    width: 100%;
+    /* resto igual... */
+}
+
 [class^="Texto_Comando_"] {
     width: 95%;
     box-sizing: border-box;
