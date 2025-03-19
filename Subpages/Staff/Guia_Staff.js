@@ -78,3 +78,18 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
         reader.readAsDataURL(archivo);
     }
 });
+
+document.getElementById('Imagen_Input').addEventListener('change', function(e) {
+  const archivo = e.target.files[0];
+  
+  if (archivo) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          const imagen = document.getElementById('Imagen_Campo');
+          imagen.style.backgroundImage = `url(${e.target.result})`;
+          imagen.style.backgroundSize = 'cover';
+          imagen.style.backgroundPosition = 'center';
+      };
+      reader.readAsDataURL(archivo);
+  }
+});
