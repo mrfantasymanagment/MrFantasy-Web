@@ -103,6 +103,7 @@ body{
 .Imagen_Campo {
     grid-column: 2/4;
     grid-row: 4;
+    min-height: 20vw;
 }
 
 
