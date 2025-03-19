@@ -26,7 +26,7 @@ body{
     border-radius: 15px;
     display: flex;
 }
- .PluginLink_Campo, .Imagen_Campo, .Añadir_Campo {
+.PluginLink_Campo, .Imagen_Campo, .Añadir_Campo {
     width: calc(95% + 2vw);
 }
 
