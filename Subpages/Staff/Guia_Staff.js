@@ -79,6 +79,8 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
     }
 });
 
+//Mostrar Imagen Añadida
+
 document.getElementById('Imagen_Input').addEventListener('change', function(e) {
   const archivo = e.target.files[0];
   
