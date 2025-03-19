@@ -80,13 +80,10 @@ body{
     display: flex;
 }
 
-[class^="Texto_Comando_"] {
-    width: 100%;
-    /* resto igual... */
-}
+
 
 [class^="Texto_Comando_"] {
-    width: 95%;
+    width: 100%;
     box-sizing: border-box;
     padding: 2vw;
     border-radius: 10px;
