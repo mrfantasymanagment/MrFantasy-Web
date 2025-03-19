@@ -72,7 +72,7 @@ body{
 
 
 [class^="Texto_Comando_"] {
-    width: 93%;
+    width: 100%;
     box-sizing: border-box;
     padding: 2vw;
     border-radius: 10px;
