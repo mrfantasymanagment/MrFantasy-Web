@@ -71,7 +71,7 @@ body{
 [class^="Texto_Comando_"] {
     width: 95%;
     box-sizing: border-box;
-    padding: 10vw;
+    padding: 0.5vw 1vw;
     border-radius: 10px;
     border: none;
     background: rgb(26, 25, 25);
