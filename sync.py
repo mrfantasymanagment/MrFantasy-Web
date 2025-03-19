@@ -4,17 +4,16 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 REPO_PATH = r"C:\Users\sebastian\Desktop\Proyectos\MrFantasy\Web\Final"
+PLUGINS_REL = "Subpages/Guia/Plugins"
 
 class AutoSync(FileSystemEventHandler):
     def __init__(self):
         self.ultimo_sync = 0
 
-    def on_modified(self, event):
-        self.sync()
-    def on_created(self, event):
-        self.sync()
-    def on_deleted(self, event):
-        self.sync()
+    def on_modified(self, event): self.sync()
+    def on_created(self, event):  self.sync()
+    def on_deleted(self, event):  self.sync()
+
     def sync(self):
         ahora = time.time()
         if ahora - self.ultimo_sync < 3:
@@ -23,11 +22,21 @@ class AutoSync(FileSystemEventHandler):
         time.sleep(1)
         try:
             repo = git.Repo(REPO_PATH)
+
+            # Fetch del remoto sin mergear todo
+            repo.remotes.origin.fetch('main')
+
+            # Traer solo la carpeta Plugins desde el remoto
+            repo.git.checkout('origin/main', '--', PLUGINS_REL)
+            print("⬇️  Plugins actualizado desde remoto")
+
+            # Pushear cambios locales
             if repo.is_dirty(untracked_files=True):
                 repo.git.add(A=True)
                 repo.index.commit("Auto-sync")
                 repo.remotes.origin.push(refspec='main', force=True)
                 print("✓ Sincronizado")
+
         except Exception as e:
             print(f"Error: {e}")
 
