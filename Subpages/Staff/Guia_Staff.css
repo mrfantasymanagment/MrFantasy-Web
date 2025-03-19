@@ -60,7 +60,7 @@ body{
 }
 
 .Comandos_Campo {
-    grid-column: 2/4;
+    grid-column: 0/6;
     grid-row: 2;
     display: grid;
     grid-template-columns: repeat(2, 50%);
