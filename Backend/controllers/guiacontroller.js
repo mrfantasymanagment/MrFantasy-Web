@@ -5,8 +5,6 @@ const obtenerPlugins = async (req, res) => {
     res.json(plugins);
 };
 
-module.exports = { obtenerPlugins };
-
 
 //Creacion de Archivos .html, .css y .js
 
