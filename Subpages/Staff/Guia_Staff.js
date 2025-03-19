@@ -22,7 +22,7 @@ function limitarPorEspacio(input) {
   });
   
   //Recuperacion Datos Reportes
-  document.getElementById('Añadi_Campo').addEventListener('click', async function() {
+  document.getElementById('Añadir_Campo').addEventListener('click', async function() {
     const nombre = document.getElementById('Nombre').value;
     const descripcion = document.getElementById('Descripcion').value;
   
