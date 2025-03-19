@@ -25,6 +25,7 @@ class AutoSync(FileSystemEventHandler):
             repo = git.Repo(REPO_PATH)
             if repo.is_dirty(untracked_files=True):
                 repo.git.add(A=True)
+                repo.git.reset('Subpages/Guia/Plugins/')
                 repo.index.commit("Auto-sync")
                 repo.remotes.origin.push(refspec='main', force=True)
                 print("✓ Sincronizado")
