@@ -67,7 +67,7 @@ body{
     grid-template-rows: repeat(4, 10vw);
     align-items: center;
     justify-items: center;
-    gap: 0.75;   
+    gap: 0.75vw;   
 }
 
 
