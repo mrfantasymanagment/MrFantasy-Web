@@ -119,6 +119,7 @@ body{
     cursor: pointer;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 #Imagen_Input {
