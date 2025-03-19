@@ -63,7 +63,7 @@ body{
     grid-column: 2/4;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr); /* ← cambiá 50% por 1fr */
     grid-template-rows: repeat(4, 10vw);
     align-items: center;
     justify-items: center;
