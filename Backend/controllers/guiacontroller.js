@@ -33,19 +33,14 @@ const crearArchivosPlugin = async (req, res) => {
 };
 
 const agregarPlugin = async (req, res) => {
-    try {
-        const { nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagen, enlace } = req.body;
-        
-        await db.query(
-            'INSERT INTO Plugins (Nombre, Descripcion, Comando1, Comando2, Comando3, Comando4, Comando5, Comando6, Comando7, Comando8, Imagen, Url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-            [nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagen, enlace]
-        );
+    const { nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagen, enlace } = req.body;
+    
+    await db.query(
+        'INSERT INTO Plugins (Nombre, Descripcion, Comando1, Comando2, Comando3, Comando4, Comando5, Comando6, Comando7, Comando8, Imagen, Enlace) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        [nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagen, enlace]
+    );
 
-        res.json({ ok: true });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: error.message });
-    }
+    res.json({ ok: true });
 };
 
 module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin };
