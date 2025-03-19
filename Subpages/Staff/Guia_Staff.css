@@ -31,7 +31,7 @@ body{
 }
 
 .Nombre_Campo, .Descripcion_Campo {
-    width: 95%;
+    width: 100%;
 }
 
 .Texto_Nombre, .Texto_Descripcion, .Texto_PluginLink{
