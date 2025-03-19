@@ -64,7 +64,7 @@ function limitarPorEspacio(input) {
     document.getElementById('Reportes_Incompleto').style.display = 'none';
   });
   
-  document.getElementById('Imagen_Input').addEventListener('change', function(e) {
+document.getElementById('Imagen_Input').addEventListener('change', function(e) {
     const archivo = e.target.files[0];
     
     if (archivo) {
