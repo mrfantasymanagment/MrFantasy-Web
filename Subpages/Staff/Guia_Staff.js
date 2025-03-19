@@ -32,7 +32,7 @@ function limitarPorEspacio(input) {
     }
   
     try {
-        const response = await fetch('https://mrfantasy-backend.onrender.com/guia/plugins', {
+        const response = await fetch('https://mrfantasy-backend.onrender.com/guia/crear', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({nombre, descripcion})
