@@ -33,5 +33,3 @@ const crearArchivosPlugin = async (req, res) => {
 
     res.json({ ok: true });
 };
-
-module.exports = { obtenerPlugins, crearArchivosPlugin };
