@@ -109,29 +109,6 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
   document.getElementById('Reportes_Incompleto').style.display = 'none';
 });
 
-// ─── Evento ───────────────────────────────────────────
-const Evento_TIEMPO_TOTAL = 604800;
-let Evento_segundosRestantes = Evento_TIEMPO_TOTAL;
-
-const Evento_intervalo = setInterval(() => {
-  Evento_segundosRestantes--;
-  document.getElementById('Evento_Display').textContent = formatearDHM(Evento_segundosRestantes);
-  if (Evento_segundosRestantes <= 0) clearInterval(Evento_intervalo);
-}, 1000);
-
-
-// ─── Update ───────────────────────────────────────────
-const Update_TIEMPO_TOTAL = 1209600;
-let Update_segundosRestantes = Update_TIEMPO_TOTAL;
-
-const Update_intervalo = setInterval(() => {
-  Update_segundosRestantes--;
-  document.getElementById('Update_Display').textContent = formatearDHM(Update_segundosRestantes);
-  if (Update_segundosRestantes <= 0) clearInterval(Update_intervalo);
-}, 1000);
-
-
-// ─── Función compartida ───────────────────────────────
 function formatearDHM(seg) {
   const d = Math.floor(seg / 86400);
   const h = Math.floor((seg % 86400) / 3600).toString().padStart(2, '0');
@@ -140,6 +117,30 @@ function formatearDHM(seg) {
   return `${d}d ${h}h ${m}m ${s}s`;
 }
 
+function calcularRestantes(fechaFin) {
+  return Math.max(0, Math.floor((new Date(fechaFin) - new Date()) / 1000));
+}
+
+fetch('config.json')
+  .then(r => r.json())
+  .then(config => {
+
+    // ─── Evento ──────────────────────────────────────
+    setInterval(() => {
+      document.getElementById('Evento_Display').textContent =
+        formatearDHM(calcularRestantes(config.evento_fin));
+    }, 1000);
+
+    // ─── Update ──────────────────────────────────────
+    setInterval(() => {
+      document.getElementById('Update_Display').textContent =
+        formatearDHM(calcularRestantes(config.update_fin));
+    }, 1000);
+
+  })
+  .catch(err => console.error('Error cargando config.json:', err));
+
+  
 // Seleccionamos todas las imágenes dentro de la clase "imagenes"
 const imagenes = document.querySelectorAll('img');
 
