@@ -334,27 +334,32 @@ body{
     align-items: center;     
 }
 
-
-.Evento{
+.Evento {
     background: rgb(54, 54, 54);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    position: relative; 
 }
 
-.Evento_Imagen{
+/* Contenedores individuales */
+.Evento_Contenedor,
+.Update_Contenedor {
+    position: relative;
+    width: 100%;
+}
+
+.Evento_Imagen,
+.Update_Imagen {
     height: auto;
-    width: 100%;  
-    display: grid;
-    grid-column: 1;
-    place-items: right;
-    text-align: right;
+    width: 100%;
+    display: block;
 }
 
-.Evento_Temporizador {
-    position: absolute; /* flota sobre la imagen */
+/* Ambos temporizadores centrados dentro de su propio contenedor */
+.Evento_Temporizador,
+.Update_Temporizador {
+    position: absolute;
     top: 70%;
-    left: 25%;
+    left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.65);
     color: white;
@@ -362,31 +367,7 @@ body{
     border-radius: 8px;
     font-family: monospace;
     font-size: 2.5vw;
-  }
-
-
-.Update_Imagen{
-    height: auto;
-    width: 100%;  
-    display: grid;
-    grid-column: 2;
-    place-items: left;
-    text-align: left;
 }
-
-.Update_Temporizador {
-    position: absolute; /* flota sobre la imagen */
-    top: 70%; 
-    left: 75%;     
-    transform: translateX(-50%);   
-    background: rgba(0, 0, 0, 0.65);
-    color: white;
-    padding: 0.75vw 2.5vw;
-    border-radius: 8px;
-    font-family: monospace;
-    font-size: 2.5vw;
-  }
-
 
 .Proyectos{
     display: grid;
