@@ -111,7 +111,7 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
 
 // Evento
 // JS — la variable que luego vas a importar desde afuera
-const Evento_TIEMPO_TOTAL = 60; // ← acá conectarás tu archivo externo
+const Evento_TIEMPO_TOTAL = 604800; // ← acá conectarás tu archivo externo
 
 let Evento_segundosRestantes = Evento_TIEMPO_TOTAL;
 
@@ -130,7 +130,7 @@ const Evento_intervalo = setInterval(() => {
 
 // Update
 // JS — la variable que luego vas a importar desde afuera
-const Update_TIEMPO_TOTAL = 30; // ← acá conectarás tu archivo externo
+const Update_TIEMPO_TOTAL = 1209600; // ← acá conectarás tu archivo externo
 
 let Update_segundosRestantes = Update_TIEMPO_TOTAL;
 
