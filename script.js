@@ -121,7 +121,7 @@ function calcularRestantes(fechaFin) {
   return Math.max(0, Math.floor((new Date(fechaFin) - new Date()) / 1000));
 }
 
-fetch('config.json')
+fetch('Timer.json')
   .then(r => r.json())
   .then(config => {
 
@@ -140,7 +140,7 @@ fetch('config.json')
   })
   .catch(err => console.error('Error cargando config.json:', err));
 
-  
+
 // Seleccionamos todas las imágenes dentro de la clase "imagenes"
 const imagenes = document.querySelectorAll('img');
 
