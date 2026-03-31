@@ -109,43 +109,35 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
   document.getElementById('Reportes_Incompleto').style.display = 'none';
 });
 
-// Evento
-// JS — la variable que luego vas a importar desde afuera
-const Evento_TIEMPO_TOTAL = 604800; // ← acá conectarás tu archivo externo
-
+// ─── Evento ───────────────────────────────────────────
+const Evento_TIEMPO_TOTAL = 604800;
 let Evento_segundosRestantes = Evento_TIEMPO_TOTAL;
-
-function formatear(seg) {
-  const Evento_m = Math.floor(seg / 60).toString().padStart(2, '0');
-  const Evento_s = (seg % 60).toString().padStart(2, '0');
-  return `${Evento_m}:${Evento_s}`;
-}
 
 const Evento_intervalo = setInterval(() => {
   Evento_segundosRestantes--;
-  document.getElementById('Evento_Display').textContent = formatear(Evento_segundosRestantes);
+  document.getElementById('Evento_Display').textContent = formatearDHM(Evento_segundosRestantes);
   if (Evento_segundosRestantes <= 0) clearInterval(Evento_intervalo);
 }, 1000);
 
 
-// Update
-// JS — la variable que luego vas a importar desde afuera
-const Update_TIEMPO_TOTAL = 1209600; // ← acá conectarás tu archivo externo
-
+// ─── Update ───────────────────────────────────────────
+const Update_TIEMPO_TOTAL = 1209600;
 let Update_segundosRestantes = Update_TIEMPO_TOTAL;
-
-function formatear(seg) {
-  const Update_m = Math.floor(seg / 60).toString().padStart(2, '0');
-  const Update_s = (seg % 60).toString().padStart(2, '0');
-  return `${Update_m}:${Update_s}`;
-}
 
 const Update_intervalo = setInterval(() => {
   Update_segundosRestantes--;
-  document.getElementById('Update_Display').textContent = formatear(Update_segundosRestantes);
+  document.getElementById('Update_Display').textContent = formatearDHM(Update_segundosRestantes);
   if (Update_segundosRestantes <= 0) clearInterval(Update_intervalo);
 }, 1000);
 
+
+// ─── Función compartida ───────────────────────────────
+function formatearDHM(seg) {
+  const d = Math.floor(seg / 86400);
+  const h = Math.floor((seg % 86400) / 3600).toString().padStart(2, '0');
+  const m = Math.floor((seg % 3600) / 60).toString().padStart(2, '0');
+  return `${d}d ${h}h ${m}m`;
+}
 // Seleccionamos todas las imágenes dentro de la clase "imagenes"
 const imagenes = document.querySelectorAll('img');
 
