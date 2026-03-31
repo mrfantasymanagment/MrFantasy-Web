@@ -15,7 +15,7 @@ body{
     width: 12vw;
     height: 4vw;          /* la mitad del width */
     background: rgb(45, 40, 75);
-    border-radius: 100px 100px 0 0;  /* solo redondea la parte de abajo */
+    border-radius: 0 0 0 0 100px;  /* solo redondea la parte de abajo */
     grid-column: 1;
     justify-self: center;
     grid-row: 1;
