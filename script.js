@@ -136,6 +136,7 @@ function formatearDHM(seg) {
   const d = Math.floor(seg / 86400);
   const h = Math.floor((seg % 86400) / 3600).toString().padStart(2, '0');
   const m = Math.floor((seg % 3600) / 60).toString().padStart(2, '0');
+  const s = (seg % 60).toString().padStart(2, '0');
   return `${d}d ${h}h ${m}m ${s}s`;
 }
 // Seleccionamos todas las imágenes dentro de la clase "imagenes"
