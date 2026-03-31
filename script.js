@@ -1,0 +1,178 @@
+
+
+//Campos Texto
+function limitarPorEspacio(input) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const estilo = window.getComputedStyle(input);
+  ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
+  
+  const anchoTexto = ctx.measureText(input.value).width;
+  const anchoDisponible = input.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
+  
+  if (anchoTexto > anchoDisponible) {
+    input.value = input.value.slice(0, -1);
+  }
+}
+
+document.querySelector('.Texto_Nombre').addEventListener('input', function() {
+  limitarPorEspacio(this);
+});
+
+document.querySelector('.Texto_Titulo').addEventListener('input', function() {
+  limitarPorEspacio(this);
+});
+
+// ── Textarea Cuerpo ──────────────────────────────────────────
+
+function getCtx(textarea) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const estilo = window.getComputedStyle(textarea);
+  ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
+  return ctx;
+}
+
+function getAnchoDisponible(textarea) {
+  const estilo = window.getComputedStyle(textarea);
+  const ancho = textarea.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
+  return ancho * 0.98; // 90% del ancho real — ajustá este valor a gusto
+}
+
+function contarLineasVisuales(textarea) {
+  const ctx = getCtx(textarea);
+  const anchoDisponible = getAnchoDisponible(textarea);
+  const lineas = textarea.value.split('\n');
+
+  let totalVisuales = 0;
+  for (const linea of lineas) {
+    if (linea === '') {
+      totalVisuales += 1;
+      continue;
+    }
+    const anchoLinea = ctx.measureText(linea).width;
+    totalVisuales += Math.ceil(anchoLinea / anchoDisponible);
+  }
+  return totalVisuales;
+}
+
+const cuerpo = document.querySelector('.Texto_Cuerpo');
+
+cuerpo.addEventListener('keydown', function(e) {
+  // Solo bloqueamos Enter si ya hay 5 líneas visuales
+  if (e.key === 'Enter') {
+    if (contarLineasVisuales(this) >= 5) e.preventDefault();
+    return;
+  }
+});
+
+cuerpo.addEventListener('input', function() {
+  const debeRevertir =
+    contarLineasVisuales(this) > 5 ||
+    this.value.split('\n').length > 5;
+
+  if (debeRevertir) {
+    this.value = this.dataset.lastValue ?? '';
+  } else {
+    this.dataset.lastValue = this.value;
+  }
+});
+
+//Recuperacion Datos Reportes
+document.getElementById('Reportes_Enviar').addEventListener('click', function() {
+    const nombre = document.getElementById('Nombre').value;
+    const titulo = document.getElementById('Titulo').value;
+    const cuerpo = document.getElementById('Cuerpo').value;
+
+
+    if (titulo.trim() === '' || cuerpo.trim() === '') {
+      document.getElementById('Reportes_Incompleto').style.display = 'flex';
+      return;
+  }
+
+    console.log({ nombre, titulo, cuerpo }); // ← faltaba esto
+    // Muestra la pantalla flotante
+    document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+
+    // Borra el contenido
+    document.getElementById('Nombre').value = '';
+    document.getElementById('Titulo').value = '';
+    document.getElementById('Cuerpo').value = '';
+    document.querySelector('.Texto_Cuerpo').dataset.lastValue = '';
+});
+
+document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
+    document.getElementById('Reportes_Agradecimiento').style.display = 'none';
+});
+
+document.getElementById('Reportes_Error_Cerrar').addEventListener('click', function() {
+  document.getElementById('Reportes_Incompleto').style.display = 'none';
+});
+
+// Evento
+// JS — la variable que luego vas a importar desde afuera
+const Evento_TIEMPO_TOTAL = 60; // ← acá conectarás tu archivo externo
+
+let Evento_segundosRestantes = Evento_TIEMPO_TOTAL;
+
+function formatear(seg) {
+  const Evento_m = Math.floor(seg / 60).toString().padStart(2, '0');
+  const Evento_s = (seg % 60).toString().padStart(2, '0');
+  return `${Evento_m}:${Evento_s}`;
+}
+
+const Evento_intervalo = setInterval(() => {
+  Evento_segundosRestantes--;
+  document.getElementById('Evento_Display').textContent = formatear(Evento_segundosRestantes);
+  if (Evento_segundosRestantes <= 0) clearInterval(Evento_intervalo);
+}, 1000);
+
+
+// Update
+// JS — la variable que luego vas a importar desde afuera
+const Update_TIEMPO_TOTAL = 30; // ← acá conectarás tu archivo externo
+
+let Update_segundosRestantes = Update_TIEMPO_TOTAL;
+
+function formatear(seg) {
+  const Update_m = Math.floor(seg / 60).toString().padStart(2, '0');
+  const Update_s = (seg % 60).toString().padStart(2, '0');
+  return `${Update_m}:${Update_s}`;
+}
+
+const Update_intervalo = setInterval(() => {
+  Update_segundosRestantes--;
+  document.getElementById('Update_Display').textContent = formatear(Update_segundosRestantes);
+  if (Update_segundosRestantes <= 0) clearInterval(Update_intervalo);
+}, 1000);
+
+// Seleccionamos todas las imágenes dentro de la clase "imagenes"
+const imagenes = document.querySelectorAll('img');
+
+// Función para pausar todas las animaciones
+function pausarAnimaciones() {
+  imagenes.forEach(imagen => {
+    imagen.style.animationPlayState = 'paused'; // Pausamos la animación
+  });
+}
+
+// Función para reanudar todas las animaciones
+function reanudarAnimaciones() {
+  imagenes.forEach(imagen => {
+    imagen.style.animationPlayState = 'running'; // Reanudamos la animación
+  });
+}
+
+// Cuando el ratón pasa sobre cualquier imagen, pausamos todas las animaciones
+imagenes.forEach(imagen => {
+  imagen.addEventListener('mouseenter', pausarAnimaciones);
+  imagen.addEventListener('mouseleave', reanudarAnimaciones);
+});
+
+
+const btnMenu = document.querySelector('.Menu-Boton');
+const menuLateral = document.querySelector('.Menu-Lateral');
+
+btnMenu.addEventListener('click', () => {
+    menuLateral.classList.toggle('abierto');
+});

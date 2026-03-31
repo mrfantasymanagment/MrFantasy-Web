@@ -1,0 +1,669 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(20, 20, 20);
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;        
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.Banner_Imagen{
+    background: rgb(45, 40, 75);
+    height: auto;
+    width: 100%;
+}
+
+
+.HerramientasPrincipales{
+    background: rgba(0, 0, 0, 0.842);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    column-gap: 2vw;
+    height: 25vw;
+    min-height: 25px;
+    margin: 1.2vw;
+    border-radius: 150px 150px 150px 150px;
+    align-items: start; /* ← centra los hijos verticalmente dentro de la fila */
+    grid-auto-rows: 0;
+}
+
+
+.Mods{
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    place-items: center;
+    text-align: center;
+    align-self: center;
+}
+ 
+.Mods a{
+    width: 50%;
+    border-radius: 50%;
+    transform: translate(-25%, -13%);
+}
+
+.Mods_Imagen{
+    width: 170%;
+    animation: ZoomPulsante 2.5s infinite ease-in-out;
+    transition-duration: 1s;
+}
+
+.Mods_Imagen:hover{
+    scale: 1.1;
+}
+
+
+.Guia{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    place-items: center;
+    text-align: center;
+    align-self: center;
+}
+ 
+.Guia a{
+    width: 50%;
+    border-radius: 50%;
+    transform: translate(0%, -13%);
+}
+
+.Guia_Imagen{
+    width: 100%;
+    animation: ZoomPulsante 2.5s infinite ease-in-out;
+    transition-duration: 1s;
+}
+
+.Guia_Imagen:hover{
+    scale: 1.1;
+}
+
+
+.Shop{
+    display: grid;
+    grid-column: 3;
+    grid-row: 1;
+    place-items: center;
+    text-align: center;
+    align-self: center;
+}
+ 
+.Shop a{
+    width: 55%;
+    border-radius: 50%;
+    transform: translate(-8%, -13%);
+}
+
+.Shop_Imagen{
+    width: 100%;
+    animation: ZoomPulsante 2.5s infinite ease-in-out;
+    transition-duration: 1s;
+}
+
+.Shop_Imagen:hover{
+    scale: 1.1;
+}
+
+
+
+.hproyectos_Menus{
+    font-size: 3.1vw;
+    margin-top: 0.3vw;
+    align-items: center;
+}
+
+.Mods_Texto {
+    width: 12vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 100px 100px 0 0;  /* solo redondea la parte de abajo */
+    grid-column: 1;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+}
+
+
+.Guia_Texto {
+    width: 12vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 100px 100px 0 0;  /* solo redondea la parte de abajo */
+    grid-column: 2;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+}
+
+
+.Shop_Texto {
+    width: 12vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 100px 100px 0 0;  /* solo redondea la parte de abajo */
+    grid-column: 3;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+}
+.Discord {
+    width: 8vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 0 0 200px 200px;  /* solo redondea la parte de abajo */
+    grid-column: 1/3;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Discord:hover{
+    scale: 1.1;
+    transform-origin: top center; /* crece solo hacia abajo */
+}
+
+.Instagram {
+    width: 8vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 0 0 200px 200px;  /* solo redondea la parte de abajo */
+    grid-column: 2/4;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Instagram:hover{
+    scale: 1.1;
+    transform-origin: top center; /* crece solo hacia abajo */
+}
+
+.Youtube {
+    width: 8vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 200px 200px 0 0;  /* solo redondea la parte de abajo */
+    grid-column: 1/3;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+}
+.Youtube:hover{
+    scale: 1.1;
+    transform-origin: bottom center;
+}
+
+
+.Facebook {
+    width: 8vw;
+    height: 4vw;          /* la mitad del width */
+    background: rgb(45, 40, 75);
+    border-radius: 200px 200px 0 0;  /* solo redondea la parte de abajo */
+    grid-column: 2/4;
+    justify-self: center;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: end;
+}
+
+.Facebook:hover{
+    scale: 1.1;
+    transform-origin: bottom center;
+
+}
+
+.Discord, .Instagram, .Youtube, .Facebook {
+    width: clamp(20px, 12vw, 100px);
+    height: clamp(10px, 6vw, 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Discord a, .Instagram a, .Youtube a, .Facebook a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Youtube img, .Facebook img {
+    width: 55%;
+    height: auto;
+    display: block;
+}
+
+.Discord img, .Instagram img{
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+.Menu-Boton {
+    position: fixed;
+    top: 1vw;
+    left: 1vw;
+    z-index: 10;
+    width: clamp(15px, 4vw, 60px);
+    height: clamp(15px, 4vw, 60px);
+    border-radius: 50%;
+    background: rgb(45, 40, 75);
+    color: white;
+    font-size: clamp(10px, 2vw, 40px);
+    cursor: pointer;
+}
+
+
+
+.Menu-Lateral {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--ancho-menu) * 3); /* ← sincronizado con el width */
+    width: var(--ancho-menu);           /* ← misma variable */
+    height: 100%;
+    background: rgb(45, 40, 75);
+    z-index: 9;
+    transition: left 0.3s ease;
+    padding-top: calc(clamp(15px, 4vw, 60px) + 1vw + 10px);
+}
+
+.Menu-Lateral.abierto {
+    left: 0;
+}
+
+.Menu-Lateral ul {
+    list-style: none;
+}
+
+.Menu-Lateral ul li a {
+    display: block;
+    padding: 8% 10%;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(8px, 1.2vw, 16px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Menu-Lateral ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.Login_Boton {
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+    z-index: 10;
+    width: clamp(15px, 4vw, 60px);
+    height: clamp(15px, 4vw, 60px);
+    border-radius: 50%;
+    background: rgb(45, 40, 75);
+    color: white;
+    font-size: clamp(10px, 2vw, 40px);
+    cursor: pointer;
+    display: flex;        
+    justify-content: center;   
+    align-items: center;     
+}
+
+
+.Evento{
+    background: rgb(54, 54, 54);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative; 
+}
+
+.Evento_Imagen{
+    height: auto;
+    width: 100%;  
+    display: grid;
+    grid-column: 1;
+    place-items: right;
+    text-align: right;
+}
+
+.Evento_Temporizador {
+    position: absolute; /* flota sobre la imagen */
+    top: 70%;
+    left: 75%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 0.75vw 2.5vw;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 2.5vw;
+  }
+
+
+.Update_Imagen{
+    height: auto;
+    width: 100%;  
+    display: grid;
+    grid-column: 2;
+    place-items: left;
+    text-align: left;
+}
+
+.Update_Temporizador {
+    position: absolute; /* flota sobre la imagen */
+    top: 70%; 
+    left: 25%;     
+    transform: translateX(-50%);   
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 0.75vw 2.5vw;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 2.5vw;
+  }
+
+
+.Proyectos{
+    display: grid;
+    grid-template-columns: repeat(3, 32.46%);
+    column-gap: 1.3%;
+    grid-row: repeat(4,3vw);
+    text-align: center;
+    justify-items: center
+}
+
+.Proyectos{
+    background: rgb(53, 52, 52);
+    height: 25vw;
+    margin: 2vw;
+    color:rgb(115, 29, 255);
+    border-radius: 30px 30px 30px 30px;
+}
+
+/* Propiedades comunes a todas las imágenes */
+.Herramienta_imagen {
+    width: 90%;
+    margin-top: 2vw;
+    margin-bottom: 0.5vw;
+    border-radius: 15px;
+    animation: ZoomPulsante 2.5s infinite ease-in-out;
+    transition-duration: 1s;
+    border: 0.35vw solid rgb(138, 135, 135);
+    margin: 1.5vw;
+}
+
+.Herramienta_imagen:hover {
+    animation-play-state: paused;
+    scale: 1.15;
+    border: 0.3vw solid #0c5f01;
+}
+
+/* Propiedades comunes a todos los textos */
+.Herramienta {
+    width: 90%;
+    margin-bottom: 0.5vw;
+    border-radius: 15px;
+}
+
+/* Solo la posición es única por elemento */
+.Herramienta_1, .Herramienta_1_imagen { grid-column: 1; }
+.Herramienta_2, .Herramienta_2_imagen { grid-column: 2; }
+.Herramienta_3, .Herramienta_3_imagen { grid-column: 3; }
+
+.hproyectos{
+    grid-row: 1/1;
+    grid-column: 2/3;
+    font-size: 3.1vw;
+    margin-top: 2.5vw;
+}
+
+
+:root {
+    --ancho-menu: clamp(40px, 15vw, 120px);
+    --gap:      clamp(8px, 1.5vw, 16px);
+    --radius:   clamp(10px, 1.2vw, 16px);
+    --radius-btn: clamp(8px, 0.8vw, 12px);
+    --fs-label: clamp(5px, 3vw, 46px);
+    --fs-input: clamp(12px, 10vw, 45px);
+    --fs-btn:   clamp(13px, 1.6vw, 18px);
+  }
+  
+  .Reportes {
+    background: rgba(0,0,0,0.842);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--gap);
+    align-items: start;
+    box-sizing: border-box;
+    margin: 2vw;
+  }
+
+  
+  .Reportes_Nombre {
+    background: rgb(26, 25, 25);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 0.45fr 1fr;
+    align-items: center;
+    overflow: hidden;       /* mantiene el border-radius consistente */
+    min-height: 40px;
+  }  
+  
+  .Reportes_Titulo {
+    background: rgb(26, 25, 25);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: 0.01fr 1fr;
+    align-items: center;
+    overflow: hidden;       /* mantiene el border-radius consistente */
+    min-height: 40px;
+  }
+  
+  .Reportes_Nombre { grid-column: 1; grid-row: 1; }
+  .Reportes_Titulo  { grid-column: 2; grid-row: 1; }
+  
+  .Reportes_Cuerpo {
+    background: rgb(26, 25, 25);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    grid-column: 1 / 3;
+    grid-row: 2;
+    overflow: hidden;
+    align-self: start;
+    height: 270px;
+    min-height: 270px;  /* ← no puede achicarse */
+    max-height: 270px;  /* ← no puede crecer */
+  }
+  
+  .Reportes_Enviar {
+    background: rgb(26, 25, 25);
+    border-radius: var(--radius-btn);
+    grid-column: 1 / 3;
+    grid-row: 3;
+    justify-self: center;
+    padding: clamp(8px, 1vw, 12px) clamp(24px, 4vw, 48px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(30%, 180px);
+    min-width: 100px;
+    transition: scale 0.25s ease;
+    cursor: pointer;
+  }
+  
+  .Reportes_Enviar:hover{
+    scale: 1.03;
+    transform-origin: center;
+}
+
+  .Fuente_Reportes {
+    font-size: var(--fs-label);
+    color: rgb(101, 98, 105);
+    font-family: sans-serif;
+    padding: clamp(6px, 0.8vw, 12px) clamp(8px, 1vw, 14px);
+    white-space: nowrap;
+  }
+  
+  .Fuente_Reportes_Enviar {
+    font-size: var(--fs-btn);
+    color: rgb(103, 3, 233);
+    font-family: sans-serif;
+  }
+
+
+#Reportes_Cerrar {
+    background: rgb(45, 40, 75);
+    border-radius: 10px;
+    padding: 0.75vw 2vw;
+    cursor: pointer;
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    margin-top: 1vw;
+}
+
+#Reportes_Cerrar:hover {
+    background: rgb(65, 58, 110);
+}
+
+#Reportes_Agradecimiento,
+#Reportes_Incompleto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(280px, 60%, 700px);   /* no se achica ni se estira de más */
+    height: auto;                       /* que crezca según el contenido */
+    min-height: clamp(120px, 30%, 300px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius: 15px;
+}
+
+#Reportes_Modal,
+#Reportes_Error_Incompleto {
+    border-radius: 15px;
+    padding: clamp(16px, 3vw, 40px) clamp(20px, 4vw, 56px);
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: clamp(13px, 2vw, 24px);
+    width: 100%;                        /* ocupa el ancho del padre fijo */
+    box-sizing: border-box;
+}
+
+#Reportes_Modal          { background: rgb(12, 11, 11); }
+#Reportes_Error_Incompleto { background: rgb(40, 10, 10); }
+
+#Reportes_Error_Cerrar {
+    background: rgb(45, 40, 75);
+    border-radius: 10px;
+    padding: 0.75vw 2vw;
+    cursor: pointer;
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    margin-top: 1vw;
+}
+
+#Reportes_Error_Cerrar:hover {
+    background: rgb(160, 40, 40);
+}
+
+.Texto_Nombre{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5vw 1vw;
+    border-radius: 10px;
+    border: none;
+    background: rgb(26, 25, 25);
+    color: white;
+    font-size: var(--fs-input);
+    font-family: sans-serif;
+    outline: none; /* saca el borde azul al hacer foco */
+    resize: none;  /* solo para textarea, evita que el usuario lo redimensione */
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
+
+.Texto_Titulo{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5vw 1vw;
+    border-radius: 10px;
+    border: none;
+    background: rgb(26, 25, 25);
+    color: white;
+    font-size: var(--fs-input);
+    font-family: sans-serif;
+    outline: none; /* saca el borde azul al hacer foco */
+    resize: none;  /* solo para textarea, evita que el usuario lo redimensione */
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
+
+.Texto_Cuerpo{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0.5vw 1vw;
+    border-radius: 10px;
+    border: none;
+    background: rgb(26, 25, 25);
+    color: white;
+    font-size: var(--fs-input);
+    font-family: sans-serif;
+    outline: none; /* saca el borde azul al hacer foco */
+    resize: none;  /* solo para textarea, evita que el usuario lo redimensione */
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    overflow-y: auto;
+}
+
+
+@keyframes ZoomPulsante{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.021);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
