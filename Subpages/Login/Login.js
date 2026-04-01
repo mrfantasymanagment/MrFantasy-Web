@@ -54,4 +54,20 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
 
   // Login Con Google
 
-  
+  document.getElementById('Google_Campo').addEventListener('click', function() {
+    const client = google.accounts.oauth2.initTokenClient({
+        client_id: '225885462765-n32kdp8pcp5suonhucgr3lem5veb62jt.apps.googleusercontent.com',
+        scope: 'openid email profile',
+        callback: (response) => {
+            fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+                headers: { Authorization: `Bearer ${response.access_token}` }
+            })
+            .then(r => r.json())
+            .then(user => {
+                console.log('Email:', user.email);
+                console.log('Nombre:', user.name);
+            });
+        }
+    });
+    client.requestAccessToken();
+});
