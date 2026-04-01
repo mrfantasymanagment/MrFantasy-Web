@@ -18,8 +18,11 @@ body{
     background: rgb(26, 25, 25);
     grid-column: 2/4;
     grid-row: 2;
-    width: 100%;
-    height: 100%;
+    height: 80%;
+    width: 95%;
+    min-height: 25px;
+    margin: 2vw;
+    border-radius: 15px;
 }
 
 
