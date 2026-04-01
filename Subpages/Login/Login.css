@@ -95,6 +95,35 @@ body{
     font-family: sans-serif;
 }
 
+.Discord_Campo{
+    background: rgb(26, 25, 25);
+    height: 80%;
+    width: 90%;
+    min-height: 25px;
+    border-radius: 15px;
+    grid-column: 2;
+    grid-row: 4;
+    margin: 2vw;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+
+.Discord_Campo:hover{
+    scale: 1.03;
+    transform-origin: center;
+}
+
+.Discord_Google{
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 0.5vw;
+    color:rgb(103, 3, 233);
+    font-family: sans-serif;
+}
+
 @keyframes ZoomPulsante{
     0%{
         transform: scale(1);
