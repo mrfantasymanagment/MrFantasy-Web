@@ -411,11 +411,11 @@ body{
     justify-content: center;
     align-items: flex-start;
     width: 100%;
+    justify-self: center;
 }
 
 .Herramienta_Texto_Imagen {
     width: 100%;
-    
 }
 
 
