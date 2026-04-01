@@ -419,6 +419,9 @@ body{
 .Herramienta_Texto_Imagen {
     width: 100%;
     align-self: flex-start;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
 }
 
 
