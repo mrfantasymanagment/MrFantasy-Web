@@ -17,6 +17,7 @@ body{
     background: rgb(5, 75, 226);
     grid-column: 2/3;
     grid-row: 2;
+    width: 100%;
     height: auto;
 }
 
