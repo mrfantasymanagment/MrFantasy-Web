@@ -81,3 +81,12 @@ document.getElementById('Discord_Campo').addEventListener('click', function() {
   
   window.location.href = `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
 });
+
+//Leer Datos Discord
+const urlParams = new URLSearchParams(window.location.search);
+const code = urlParams.get('code');
+
+if (code) {
+    console.log('Login con Discord exitoso, código:', code);
+    // Acá más adelante manejás el código para obtener los datos del usuario
+}
