@@ -1,59 +1,53 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login</title>
-    <link rel="stylesheet" href="Login.css" />
-    <style>
-    </style>
-
-</head>
 
 
-<body>
-    
-    <div class="Nickname_Campo" >
-        <input type="text" class="Texto_Nickname"  placeholder="Nickname" id="Nickname" name="Nickname" spellcheck="false" autocomplete="off">
-    </div>
+//Campos Texto
+function limitarPorEspacio(input) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const estilo = window.getComputedStyle(input);
+  ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
+  
+  const anchoTexto = ctx.measureText(input.value).width;
+  const anchoDisponible = input.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
+  
+  if (anchoTexto > anchoDisponible) {
+    input.value = input.value.slice(0, -1);
+  }
+}
+
+document.querySelector('.Texto_Ninckname').addEventListener('input', function() {
+  limitarPorEspacio(this);
+});
+
+document.querySelector('.Texto_Contraseña').addEventListener('input', function() {
+  limitarPorEspacio(this);
+});
+
+//Recuperacion Datos Reportes
+document.getElementById('Login_Campo').addEventListener('click', function() {
+    const nickname = document.getElementById('Nickname').value;
+    const contraseña = document.getElementById('Contraseña').value;
 
 
-    <div class="Contraseña_Campo" >
-        <input type="text" class="Texto_Contraseña"  placeholder="Contraseña" id="Contraseña" name="Contraseña" spellcheck="false" autocomplete="off">
-    </div>
 
+    if (nickname.trim() === '' || contraseña.trim() === '') {
+      document.getElementById('Reportes_Incompleto').style.display = 'flex';
+      return;
+  }
 
-    <div class="Google_Campo" id="Google_Campo">
-        <div class="Fuente_Google">Google</div>
-    </div>
+    console.log({nickname, contraseña}); 
+    // Muestra la pantalla flotante
+    document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
 
-    <div class="Discord_Campo" >
-        <div class="Fuente_Discord">Discord</div>
-    </div>
+    // Borra el contenido
+    document.getElementById('Nickname').value = '';
+    document.getElementById('Contraseña').value = '';
+});
 
-    <div class="Login_Campo" id="Login_Campo">
-        <div class="Fuente_Login">Login</div>
-    </div>
+document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
+    document.getElementById('Reportes_Agradecimiento').style.display = 'none';
+});
 
-    <div id="Reportes_Agradecimiento">
-        <div id="Reportes_Modal">
-            <p>Agradecemos tu Reporte</p>
-            <div id="Reportes_Cerrar">Cerrar</div>
-        </div>
-    </div>
-</div>
-
-<div id="Reportes_Incompleto">
-    <div id="Reportes_Error_Incompleto">
-        <p>Por favor completá el título y el mensaje.</p>
-        <div id="Reportes_Error_Cerrar">Cerrar</div>
-    </div>
-</div>
-
-
-    <script src="Login.js"> </script>
-</body>
-</html>
+document.getElementById('Reportes_Error_Cerrar').addEventListener('click', function() {
+  document.getElementById('Reportes_Incompleto').style.display = 'none';
+});
