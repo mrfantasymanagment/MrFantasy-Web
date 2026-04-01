@@ -13,6 +13,9 @@ body{
     grid-template-rows: repeat(6);
 }
 
+.Nickname_Campo {
+
+}
 
 
 @keyframes ZoomPulsante{
