@@ -40,10 +40,8 @@ document.getElementById('Reportes_Enviar').addEventListener('click', function() 
     document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
 
     // Borra el contenido
-    document.getElementById('Nombre').value = '';
-    document.getElementById('Titulo').value = '';
-    document.getElementById('Cuerpo').value = '';
-    document.querySelector('.Texto_Cuerpo').dataset.lastValue = '';
+    document.getElementById('Nickname').value = '';
+    document.getElementById('Contraseña').value = '';
 });
 
 document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
