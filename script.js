@@ -164,10 +164,10 @@ imagenes.forEach(imagen => {
   imagen.addEventListener('mouseleave', reanudarAnimaciones);
 });
 
-
+/*
 const btnMenu = document.querySelector('.Menu-Boton');
 const menuLateral = document.querySelector('.Menu-Lateral');
 
 btnMenu.addEventListener('click', () => {
     menuLateral.classList.toggle('abierto');
-});
+}); ¨/
