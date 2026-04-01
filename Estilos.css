@@ -405,10 +405,17 @@ body{
     border-radius: 30px 30px 30px 30px;
 }
 
-.Herramientas_Texto{
+.Herramientas_Texto {
     grid-row: 1;
-    grid-column: 3;
-    width: 1%;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Herramienta_Texto_Imagen {
+    width: 40%;
 }
 
 
