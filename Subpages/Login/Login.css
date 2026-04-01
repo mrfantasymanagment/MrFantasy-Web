@@ -87,7 +87,13 @@ body{
     transform-origin: center;
 }
 
-
+.Fuente_Reportes_Enviar{
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 0.5vw;
+    color:rgb(103, 3, 233);
+    font-family: sans-serif;
+}
 
 @keyframes ZoomPulsante{
     0%{
