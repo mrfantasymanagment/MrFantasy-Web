@@ -391,8 +391,8 @@ body{
 .Proyectos{
     display: grid;
     grid-template-columns: repeat(3, 32.46%);
+    grid-template-rows: 5vw 20vw;
     column-gap: 1.3%;
-    grid-row: 5vw, 20vw;
     text-align: center;
     justify-items: center
 }
