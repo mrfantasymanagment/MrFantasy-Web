@@ -409,11 +409,12 @@ body{
     grid-column: 2;
     display: flex;
     width: 100%;
-    justify-items: start;
+    justify-items: center
 }
 
 .Herramienta_Texto_Imagen {
     width: 100%;
+    justify-content: center;
 }
 
 
