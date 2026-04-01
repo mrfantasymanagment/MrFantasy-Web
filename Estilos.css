@@ -411,17 +411,10 @@ body{
     align-self: start;
     justify-self: center;
     width: 100%;
-    height: fit-content;
-    margin: 0;
-    padding: 0;
 }
 
 .Herramienta_Texto_Imagen {
     width: 100%;
-    align-self: flex-start;
-    height: fit-content;
-    margin: 0;
-    padding: 0;
 }
 
 
