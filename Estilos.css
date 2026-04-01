@@ -411,6 +411,7 @@ body{
     align-self: start;
     justify-self: center;
     width: 100%;
+    height: fit-content;
 }
 
 .Herramienta_Texto_Imagen {
