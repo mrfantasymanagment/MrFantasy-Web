@@ -24,7 +24,7 @@ document.querySelector('.Texto_Contraseña').addEventListener('input', function(
 });
 
 //Recuperacion Datos Reportes
-document.getElementById('Reportes_Enviar').addEventListener('click', function() {
+document.getElementById('Login_Campo').addEventListener('click', function() {
     const nickname = document.getElementById('Nickname').value;
     const contraseña = document.getElementById('Contraseña').value;
 
