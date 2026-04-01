@@ -405,7 +405,7 @@ body{
     border-radius: 30px 30px 30px 30px;
 }
 
-.Herramientas_Imagen{
+.Herramientas_Texto{
     grid-row: 1;
     grid-column: 2;
     width: 1%;
