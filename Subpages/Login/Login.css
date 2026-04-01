@@ -242,7 +242,6 @@ body{
     background: rgb(160, 40, 40);
 }
 
-
 @keyframes ZoomPulsante{
     0%{
         transform: scale(1);
