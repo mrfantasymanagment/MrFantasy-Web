@@ -421,7 +421,6 @@ body{
 
 /* Propiedades comunes a todas las imágenes */
 .Herramienta_imagen {
-    grid-row: 2;
     width: 90%;
     margin-top: 2vw;
     margin-bottom: 0.5vw;
@@ -433,7 +432,6 @@ body{
 }
 
 .Herramienta_imagen:hover {
-    grid-row: 2;
     animation-play-state: paused;
     scale: 1.15;
     border: 0.3vw solid #0c5f01;
