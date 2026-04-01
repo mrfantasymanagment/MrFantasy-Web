@@ -25,7 +25,7 @@ document.querySelector('.Texto_Contraseña').addEventListener('input', function(
 
 //Recuperacion Datos Reportes
 document.getElementById('Reportes_Enviar').addEventListener('click', function() {
-    const nombre = document.getElementById('Nombre').value;
+    const nombre = document.getElementById('Nickname').value;
     const titulo = document.getElementById('Titulo').value;
 
 
