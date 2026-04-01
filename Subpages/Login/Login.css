@@ -15,7 +15,9 @@ body{
 
 .Nickname_Campo {
     background: rgb(5, 75, 226);
-    col
+    grid-column: 2/3;
+    grid-row: 2;
+    height: auto;
 }
 
 
