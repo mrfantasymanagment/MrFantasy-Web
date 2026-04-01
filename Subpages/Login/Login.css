@@ -78,8 +78,8 @@ body{
     transition-duration: 0.5s;
     cursor: pointer
     display: flex;
-    align-items: center;      /* centra verticalmente */
-    justify-content: center;  /* centra horizontalmente */
+    align-items: center;  
+    justify-content: center;
 }
 
 .Google_Campo:hover{
