@@ -10,8 +10,8 @@ body{
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: repeat(4);
-    grid-template-rows: repeat(6);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
 
 .Nickname_Campo {
