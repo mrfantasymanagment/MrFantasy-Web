@@ -406,14 +406,10 @@ body{
 }
 
 .Herramienta_Texto{
-    width: 90%;
-    margin-top: 2vw;
-    margin-bottom: 0.5vw;
-    border-radius: 15px;
-    animation: ZoomPulsante 2.5s infinite ease-in-out;
-    transition-duration: 1s;
-    border: 0.35vw solid rgb(138, 135, 135);
-    margin: 1.5vw;
+    grid-row: 1/1;
+    grid-column: 2/3;
+    font-size: 3.1vw;
+    margin-top: 2.5vw;
 }
 
 
