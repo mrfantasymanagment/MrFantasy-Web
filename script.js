@@ -170,4 +170,4 @@ const menuLateral = document.querySelector('.Menu-Lateral');
 
 btnMenu.addEventListener('click', () => {
     menuLateral.classList.toggle('abierto');
-}); ¨/
+}); */
