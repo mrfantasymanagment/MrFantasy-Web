@@ -127,7 +127,7 @@ body{
 .Login_Campo{
     background: rgb(26, 25, 25);
     height: 80%;
-    width: 90%;
+    width: 95%;
     min-height: 25px;
     border-radius: 15px;
     grid-column: 2/4;
