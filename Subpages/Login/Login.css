@@ -12,6 +12,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(6, 16vw);
+    padding: clamp(8px, 1.5vw, 16px);
 }
 
 .Nickname_Campo {
