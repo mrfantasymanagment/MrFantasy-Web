@@ -51,3 +51,7 @@ document.getElementById('Reportes_Cerrar').addEventListener('click', function() 
 document.getElementById('Reportes_Error_Cerrar').addEventListener('click', function() {
   document.getElementById('Reportes_Incompleto').style.display = 'none';
 });
+
+  // Login Con Google
+
+  
