@@ -405,7 +405,7 @@ body{
     border-radius: 30px 30px 30px 30px;
 }
 
-.Herramientas_{
+.Herramienta_Texto{
     display: grid;
     grid-template-columns: repeat(3, 32.46%);
     column-gap: 1.3%;
