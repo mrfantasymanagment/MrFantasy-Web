@@ -216,7 +216,7 @@ body{
 }
 
 
-.Facebook {
+.Twitch {
     width: 8vw;
     height: 4vw;          /* la mitad del width */
     background: rgb(45, 40, 75);
@@ -230,13 +230,13 @@ body{
     align-self: end;
 }
 
-.Facebook:hover{
+.Twitch:hover{
     scale: 1.1;
     transform-origin: bottom center;
 
 }
 
-.Discord, .Instagram, .Youtube, .Facebook {
+.Discord, .Instagram, .Youtube, .Twitch {
     width: clamp(20px, 12vw, 100px);
     height: clamp(10px, 6vw, 50px);
     display: flex;
@@ -244,7 +244,7 @@ body{
     align-items: center;
 }
 
-.Discord a, .Instagram a, .Youtube a, .Facebook a {
+.Discord a, .Instagram a, .Youtube a, .Twitch a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,7 +252,7 @@ body{
     height: 100%;
 }
 
-.Youtube img, .Facebook img {
+.Youtube img, .Twitch img {
     width: 55%;
     height: auto;
     display: block;
