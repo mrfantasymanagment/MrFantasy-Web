@@ -77,6 +77,9 @@ body{
     margin: 2vw;
     transition-duration: 0.5s;
     cursor: pointer
+    display: flex;
+    align-items: center;      /* centra verticalmente */
+    justify-content: center;  /* centra horizontalmente */
 }
 
 .Google_Campo:hover{
