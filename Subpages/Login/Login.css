@@ -25,6 +25,22 @@ body{
     border-radius: 15px;
 }
 
+.Texto_Titulo{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5vw 1vw;
+    border-radius: 10px;
+    border: none;
+    background: rgb(26, 25, 25);
+    color: white;
+    font-size: 3vw;
+    font-family: sans-serif;
+    outline: none; /* saca el borde azul al hacer foco */
+    resize: none;  /* solo para textarea, evita que el usuario lo redimensione */
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
 
 @keyframes ZoomPulsante{
     0%{
