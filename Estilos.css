@@ -408,7 +408,7 @@ body{
 .Herramienta_Texto{
     grid-row: 1/1;
     grid-column: 2/3;
-    font-size: 3.1vw;
+    width: 10%;
     margin-top: 2.5vw;
 }
 
