@@ -76,7 +76,7 @@ body{
     grid-row: 4;
     margin: 2vw;
     transition-duration: 0.5s;
-    cursor: pointer
+    cursor: pointer;
     display: flex;
     align-items: center;  
     justify-content: center;
