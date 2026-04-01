@@ -408,9 +408,8 @@ body{
 .Herramientas_Texto {
     grid-row: 1;
     grid-column: 2;
-    display: flex;
-    justify-content: center;
-    align-self: flex-start;
+    align-self: start;
+    justify-self: center;
     width: 100%;
 }
 
