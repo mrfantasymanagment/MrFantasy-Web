@@ -82,6 +82,13 @@ body{
     cursor: pointer
 }
 
+.Reportes_Enviar:hover{
+    scale: 1.03;
+    transform-origin: center;
+}
+
+
+
 @keyframes ZoomPulsante{
     0%{
         transform: scale(1);
