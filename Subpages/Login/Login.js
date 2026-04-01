@@ -27,7 +27,7 @@ document.querySelector('.Texto_Titulo').addEventListener('input', function() {
 document.getElementById('Reportes_Enviar').addEventListener('click', function() {
     const nombre = document.getElementById('Nombre').value;
     const titulo = document.getElementById('Titulo').value;
-    const cuerpo = document.getElementById('Cuerpo').value;
+
 
 
     if (titulo.trim() === '' || cuerpo.trim() === '') {
