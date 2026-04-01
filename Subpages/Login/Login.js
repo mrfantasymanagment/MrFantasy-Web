@@ -19,7 +19,7 @@ document.querySelector('.Texto_Ninckname').addEventListener('input', function() 
   limitarPorEspacio(this);
 });
 
-document.querySelector('.Texto_Titulo').addEventListener('input', function() {
+document.querySelector('.Texto_Contraseña').addEventListener('input', function() {
   limitarPorEspacio(this);
 });
 
