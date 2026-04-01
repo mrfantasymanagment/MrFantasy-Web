@@ -406,12 +406,14 @@ body{
 }
 
 .Herramienta_Texto{
-    display: grid;
-    grid-template-columns: repeat(3, 32.46%);
-    column-gap: 1.3%;
-    grid-row: repeat(4,3vw);
-    text-align: center;
-    justify-items: center
+    width: 90%;
+    margin-top: 2vw;
+    margin-bottom: 0.5vw;
+    border-radius: 15px;
+    animation: ZoomPulsante 2.5s infinite ease-in-out;
+    transition-duration: 1s;
+    border: 0.35vw solid rgb(138, 135, 135);
+    margin: 1.5vw;
 }
 
 
