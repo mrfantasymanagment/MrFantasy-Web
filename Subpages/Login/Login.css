@@ -101,7 +101,7 @@ body{
     width: 90%;
     min-height: 25px;
     border-radius: 15px;
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 4;
     margin: 2vw;
     transition-duration: 0.5s;
