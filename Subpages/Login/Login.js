@@ -75,7 +75,7 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
 
   // Login Con Discord
 document.getElementById('Discord_Campo').addEventListener('click', function() {
-  const clientId = 'TU_CLIENT_ID_AQUI';
+  const clientId = '1488985476793630810';
   const redirectUri = encodeURIComponent('http://127.0.0.1:5500/Subpages/Login/Login.html');
   const scope = 'identify email';
   
