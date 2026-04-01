@@ -449,6 +449,11 @@ body{
 .Herramienta_2, .Herramienta_2_imagen { grid-column: 2; }
 .Herramienta_3, .Herramienta_3_imagen { grid-column: 3; }
 
+/* Solo la posición es única por elemento */
+.Herramienta_1, .Herramienta_1_imagen { grid-row: 2; }
+.Herramienta_2, .Herramienta_2_imagen { grid-row: 2; }
+.Herramienta_3, .Herramienta_3_imagen { grid-row: 2; }
+
 .hproyectos{
     grid-row: 1/1;
     grid-column: 2/3;
