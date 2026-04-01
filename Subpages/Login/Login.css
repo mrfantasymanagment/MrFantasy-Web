@@ -37,7 +37,7 @@ body{
     font-family: sans-serif;
     outline: none;
     resize: none;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
     text-align: left;
 }
