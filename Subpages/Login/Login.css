@@ -23,6 +23,9 @@ body{
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
 }
 
 .Texto_Nickname{
@@ -49,6 +52,9 @@ body{
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
 }
 
 .Texto_Contraseña{
