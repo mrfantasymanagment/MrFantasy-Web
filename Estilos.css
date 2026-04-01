@@ -407,7 +407,7 @@ body{
 
 .Herramienta_Texto{
     grid-row: 1/1;
-    grid-column: 3;
+    grid-column: 2;
     width: 10%;
     margin-top: 2.5vw;
 }
