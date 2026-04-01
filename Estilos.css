@@ -433,6 +433,7 @@ body{
 }
 
 .Herramienta_imagen:hover {
+    grid-row: 1;
     animation-play-state: paused;
     scale: 1.15;
     border: 0.3vw solid #0c5f01;
