@@ -82,7 +82,7 @@ body{
     cursor: pointer
 }
 
-.Reportes_Enviar:hover{
+.Google_Campo:hover{
     scale: 1.03;
     transform-origin: center;
 }
