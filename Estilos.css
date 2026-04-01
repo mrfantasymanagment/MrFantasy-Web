@@ -409,7 +409,7 @@ body{
     grid-column: 2;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-self: flex-start;
     width: 100%;
 }
 
