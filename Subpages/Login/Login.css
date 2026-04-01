@@ -10,7 +10,7 @@ body{
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 10vw);
     grid-template-rows: repeat(6, 1fr);
 }
 
