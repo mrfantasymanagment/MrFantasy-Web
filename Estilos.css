@@ -409,7 +409,7 @@ body{
     grid-column: 2;
     display: flex;
     justify-content: center;
-    align-items: flex-center;
+    align-items: flex;
     width: 100%;
     justify-items: center
 }
