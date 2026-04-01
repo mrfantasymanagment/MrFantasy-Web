@@ -35,7 +35,7 @@ document.getElementById('Login_Campo').addEventListener('click', function() {
       return;
   }
 
-    console.log({ nombre, titulo, cuerpo }); // ← faltaba esto
+    console.log({ nombre, titulo, cuerpo }); 
     // Muestra la pantalla flotante
     document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
 
