@@ -23,61 +23,6 @@ document.querySelector('.Texto_Titulo').addEventListener('input', function() {
   limitarPorEspacio(this);
 });
 
-// ── Textarea Cuerpo ──────────────────────────────────────────
-
-function getCtx(textarea) {
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  const estilo = window.getComputedStyle(textarea);
-  ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
-  return ctx;
-}
-
-function getAnchoDisponible(textarea) {
-  const estilo = window.getComputedStyle(textarea);
-  const ancho = textarea.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
-  return ancho * 0.98; // 90% del ancho real — ajustá este valor a gusto
-}
-
-function contarLineasVisuales(textarea) {
-  const ctx = getCtx(textarea);
-  const anchoDisponible = getAnchoDisponible(textarea);
-  const lineas = textarea.value.split('\n');
-
-  let totalVisuales = 0;
-  for (const linea of lineas) {
-    if (linea === '') {
-      totalVisuales += 1;
-      continue;
-    }
-    const anchoLinea = ctx.measureText(linea).width;
-    totalVisuales += Math.ceil(anchoLinea / anchoDisponible);
-  }
-  return totalVisuales;
-}
-
-const cuerpo = document.querySelector('.Texto_Cuerpo');
-
-cuerpo.addEventListener('keydown', function(e) {
-  // Solo bloqueamos Enter si ya hay 5 líneas visuales
-  if (e.key === 'Enter') {
-    if (contarLineasVisuales(this) >= 5) e.preventDefault();
-    return;
-  }
-});
-
-cuerpo.addEventListener('input', function() {
-  const debeRevertir =
-    contarLineasVisuales(this) > 5 ||
-    this.value.split('\n').length > 5;
-
-  if (debeRevertir) {
-    this.value = this.dataset.lastValue ?? '';
-  } else {
-    this.dataset.lastValue = this.value;
-  }
-});
-
 //Recuperacion Datos Reportes
 document.getElementById('Reportes_Enviar').addEventListener('click', function() {
     const nombre = document.getElementById('Nombre').value;
