@@ -30,7 +30,7 @@ document.getElementById('Login_Campo').addEventListener('click', function() {
 
 
 
-    if (Nickname.trim() === '' || contraseña.trim() === '') {
+    if (nickname.trim() === '' || contraseña.trim() === '') {
       document.getElementById('Reportes_Incompleto').style.display = 'flex';
       return;
   }
