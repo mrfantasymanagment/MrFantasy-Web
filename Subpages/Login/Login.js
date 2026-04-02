@@ -78,7 +78,7 @@ document.getElementById('Discord_Campo').addEventListener('click', function() {
   const redirectUri = encodeURIComponent('http://127.0.0.1:5500/Subpages/Login/Login.html');
   const scope = 'identify email';
   
-  windo.location.href = `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
+  window.location.href = `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
 });
 
 //Leer Datos Discord
