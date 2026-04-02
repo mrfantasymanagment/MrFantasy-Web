@@ -83,7 +83,7 @@ document.getElementById('Discord_Campo').addEventListener('click', function() {
 
 //Leer Datos Discord
 const urlParams = new URLSearchParams(window.location.search);
-cons code = urlParams.get('code');
+const code = urlParams.get('code');
 
 if (code) {
     console.log('Login con Discord exitoso, código:', code);
