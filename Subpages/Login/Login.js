@@ -72,7 +72,6 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
     client.requestAccessToken();
 });
 
-
   // Login Con Discord
 document.getElementById('Discord_Campo').addEventListener('click', function() {
   const clientId = '1488985476793630810';
