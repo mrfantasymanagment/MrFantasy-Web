@@ -24,25 +24,39 @@ document.querySelector('.Texto_Contraseña').addEventListener('input', function(
 });
 
 //Recuperacion Datos Reportes
-document.getElementById('Login_Campo').addEventListener('click', function() {
-    const nickname = document.getElementById('Nickname').value;
-    const contraseña = document.getElementById('Contraseña').value;
+document.getElementById('Login_Campo').addEventListener('click', async function() {
+  const nickname = document.getElementById('Nickname').value;
+  const contrasena = document.getElementById('Contraseña').value;
 
-
-
-    if (nickname.trim() === '' || contraseña.trim() === '') {
+  if (nickname.trim() === '' || contrasena.trim() === '') {
       document.getElementById('Reportes_Incompleto').style.display = 'flex';
       return;
   }
 
-    console.log({nickname, contraseña}); 
-    // Muestra la pantalla flotante
-    document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+  try {
+      const response = await fetch('https://mrfantasy-backend.onrender.com/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nickname, contrasena })
+      });
 
-    // Borra el contenido
-    document.getElementById('Nickname').value = '';
-    document.getElementById('Contraseña').value = '';
+      const data = await response.json();
+
+      if (response.ok) {
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('nickname', data.nickname);
+          document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+          document.getElementById('Nickname').value = '';
+          document.getElementById('Contraseña').value = '';
+      } else {
+          document.getElementById('Reportes_Incompleto').style.display = 'flex';
+      }
+  } catch (error) {
+      console.log(error);
+      document.getElementById('Reportes_Incompleto').style.display = 'flex';
+  }
 });
+
 
 document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
     document.getElementById('Reportes_Agradecimiento').style.display = 'none';

@@ -8,7 +8,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-    origin: 'https://mrfantasymanagment.github.io'
+    origin: ['https://mrfantasymanagment.github.io', 'http://127.0.0.1:5500', 'http://localhost:5500']
 }));
 app.use(express.json());
 
