@@ -25,6 +25,12 @@ body{
     align-self: end;
 }
 
+.hproyectos{
+    grid-row: 1/1;
+    grid-column: 2/3;
+    font-size: 3.1vw;
+    margin-top: 2.5vw;
+}
 
 @keyframes ZoomPulsante{
     0%{
