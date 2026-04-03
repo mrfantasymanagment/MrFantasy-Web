@@ -25,6 +25,21 @@ body{
     align-self: end;
 }
 
+.Nickname_Campo {
+    background: rgb(26, 25, 25);
+    grid-column: 2/4;
+    grid-row: 2;
+    height: 80%;
+    width: 95%;
+    min-height: 25px;
+    margin: 2vw;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+
+
 .hproyectos{
     grid-row: 1/1;
     grid-column: 2/3;
