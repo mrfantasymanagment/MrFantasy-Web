@@ -53,7 +53,7 @@ body{
     justify-content: center;
 }
 
-.Plugin_Container {
+.Descripcion_Campo {
     background: rgb(26, 25, 25);
     grid-column: 2/4;
     grid-row: 2;
