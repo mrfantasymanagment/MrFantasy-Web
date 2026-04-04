@@ -88,7 +88,7 @@ body{
     height: 83%;
     width: 100%;
     min-height: 25px;
-    margin-top: 2%;
+    margin: 2%;
     border-radius: 15px;
     display: flex;
     align-items: center;  
