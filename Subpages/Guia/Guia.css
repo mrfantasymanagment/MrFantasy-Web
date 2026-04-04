@@ -57,7 +57,7 @@ body{
     background: rgb(26, 25, 25);
     grid-column: 1;
     grid-row: 2;
-    height: 80%;
+    height: 100%;
     width: 95%;
     min-height: 25px;
     margin: 2vw;
