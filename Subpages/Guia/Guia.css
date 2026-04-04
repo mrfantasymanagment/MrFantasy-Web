@@ -27,7 +27,7 @@ body{
 
 .Plugin_Container {
     background: rgb(39, 38, 39);
-    height: 25vw;
+    height: 75vw;
     margin: 2vw;
     border-radius: 30px 30px 30px 30px;
     display: grid;
