@@ -82,7 +82,7 @@ body{
 
 .Imagen_Campo {
     background: rgb(26, 25, 25);
-    grid-column: 2/4;
+    grid-column: 3;
     grid-row: 1/2;
     height: 80%;
     width: 95%;
