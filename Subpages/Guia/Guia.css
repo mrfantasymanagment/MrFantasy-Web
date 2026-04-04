@@ -30,6 +30,7 @@ body{
     height: auto;
     margin: 2vw;
     padding: 0.5%;
+    padding-top: 1%;
     border-radius: 30px 30px 30px 30px;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
