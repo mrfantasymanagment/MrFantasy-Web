@@ -86,7 +86,7 @@ body{
     grid-column: 3;
     grid-row: 1/2;
     height: 80%;
-    width: 95%;
+    width: 100%;
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
