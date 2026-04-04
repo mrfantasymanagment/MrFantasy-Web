@@ -33,7 +33,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 32.46%);
     grid-template-rows: 10vw 20vw;
-    column-gap: 1%;
+    column-gap: 1.3%;
     text-align: center;
     justify-items: center
 }
