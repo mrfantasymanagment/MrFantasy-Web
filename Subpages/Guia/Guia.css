@@ -35,7 +35,8 @@ body{
     grid-template-rows: 3vw 20vw;
     column-gap: 1.3%;
     text-align: center;
-    justify-items: center
+    justify-items: center;
+    justify-content: center;
 }
 
 .Nombre_Campo {
