@@ -43,7 +43,7 @@ body{
     background: rgb(26, 25, 25);
     grid-column: 1/3;
     grid-row: 1;
-    height: 10vw;
+    height: 11vw;
     width: 100%;
     min-height: 25px;
     margin: 2vw;
