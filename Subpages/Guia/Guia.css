@@ -47,7 +47,7 @@ body{
     grid-row: 1;
     height: 100%;
     width: 100%;
-    min-height: 25px;
+    min-height: 50px;
     border-radius: 15px;
     display: flex;
     align-items: center;  
