@@ -31,7 +31,6 @@ body{
     margin: 2vw;
     border-radius: 30px 30px 30px 30px;
     display: grid;
-    box-sizing: border-box;
     grid-template-columns: repeat(3, 31.7%);
     grid-template-rows: 3vw 20vw;
     column-gap: 1.3%;
