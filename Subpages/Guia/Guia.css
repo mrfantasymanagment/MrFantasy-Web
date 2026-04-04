@@ -29,7 +29,6 @@ body{
     background: rgb(39, 38, 39);
     height: 75vw;
     margin: 2vw;
-    padding: 2%;
     border-radius: 30px 30px 30px 30px;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
