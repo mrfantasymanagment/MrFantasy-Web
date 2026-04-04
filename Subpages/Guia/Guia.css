@@ -34,7 +34,7 @@ body{
     box-sizing: border-box;
     grid-template-columns: repeat(3, 31.7%);
     grid-template-rows: 3vw 20vw;
-    column-gap: 1.3%;
+    column-gap: 1%;
     text-align: center;
     justify-items: center
 }
