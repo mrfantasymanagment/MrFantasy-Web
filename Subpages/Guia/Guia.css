@@ -29,54 +29,7 @@ body{
     justify-content: center;
 }
 
-.Nombre_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 1/3;
-    grid-row: 1;
-    width: 100%;
-    min-height: 50px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;  
-    justify-content: center;
-}
 
-.Descripcion_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 1;
-    grid-row: 2;
-    width: 100%;
-    min-height: 25px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;  
-    justify-content: center;
-}
-
-.Comandos_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 2;
-    grid-row: 2;
-    width: 100%;
-    min-height: 25px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;  
-    justify-content: center;
-}
-
-.Imagen_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 3;
-    grid-row: 1/3;
-    width: 100%;
-    min-height: 356px;
-    max-height: 356px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;  
-    justify-content: center;
-}
 
 .hproyectos{
     grid-row: 1/1;
