@@ -21,7 +21,7 @@ body{
     border-radius: 30px 30px 30px 30px;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
-    grid-rows: 150px 1000px;
+    grid-rows: 1500px 1000px;
     column-gap: 1.3%;
     row-gap: 5px;
     text-align: center;
