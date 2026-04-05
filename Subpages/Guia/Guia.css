@@ -42,6 +42,7 @@ body{
     justify-items: center;
     justify-content: center;
     align-items: start
+    min-width: 600px; /* ← límite mínimo; ajustá el valor a tu gusto */
 }
 
 .Nombre_Campo {
