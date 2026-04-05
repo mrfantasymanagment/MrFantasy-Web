@@ -5,8 +5,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
-const guiaRoutes = require('./routes/guia');
-app.use('/guia', guiaRoutes);
 
 // Middlewares
 app.use(cors({
@@ -17,6 +15,9 @@ app.use(express.json());
 // Rutas
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
+
+const guiaRoutes = require('./routes/guia');
+app.use('/guia', guiaRoutes);
 
 // Ruta de prueba para UptimeRobot
 app.get('/health', (req, res) => {
