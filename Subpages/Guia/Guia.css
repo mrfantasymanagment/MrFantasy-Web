@@ -14,10 +14,10 @@ body{
 
 .Plugin_Container {
     background: rgb(39, 38, 39);
-    margin: 20px;
+    margin: 2vw;
     padding: 0.5%;
-    padding-top: 15px;
-    padding-bottom: 24px;
+    padding-top: 1.5%;
+    padding-bottom: 2.4%;
     border-radius: 30px 30px 30px 30px;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
