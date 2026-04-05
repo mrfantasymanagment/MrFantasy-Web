@@ -26,7 +26,7 @@ const agregarSeccion = (req, res) => {
     let html = fs.readFileSync(rutaHTML, 'utf8');
 
     html = html.replace(
-        '<script src="Guia.js">',
+        '<script src="Guia.js">'
         nuevaSeccion + '\n    <script src="Guia.js">'
     );
 
