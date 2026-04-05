@@ -99,7 +99,7 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
-    max-height: 150px; /* o 200px según la fila */
+    max-height: 300px; /* o 200px según la fila */
     overflow: hidden;   /* evita que el contenido lo estire */
 }
 
