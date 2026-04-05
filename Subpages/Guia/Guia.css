@@ -70,8 +70,6 @@ body{
     grid-column: 3;
     grid-row: 1/3;
     width: 100%;
-    min-height: 356px;
-    max-height: 356px;
     border-radius: 15px;
     display: flex;
     align-items: center;  
