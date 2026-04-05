@@ -3,7 +3,7 @@ const agregarSeccion = async (req, res) => {
 
     const TOKEN = process.env.GITHUB_TOKEN;
     const REPO = 'mrfantasymanagment/MrFantasy-Web';
-    const ARCHIVO = 'Final/Subpages/Guia/Guia.html';
+    const ARCHIVO = 'Subpages/Guia/Guia.html';
     const API = `https://api.github.com/repos/${REPO}/contents/${ARCHIVO}`;
 
     // 1. Leer el archivo actual
