@@ -25,7 +25,24 @@ body{
     align-self: end;
 }
 
-asi? 
+.Plugin_Container {
+    background: rgb(39, 38, 39);
+    height: auto;
+    margin: 2vw;
+    padding: 0.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 2.4vw;
+    border-radius: 30px 30px 30px 30px;
+    display: grid;
+    grid-template-rows: 11vw 20vw;
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 1.3vw;
+    row-gap: 3vw;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+
 .Nombre_Campo {
     background: rgb(26, 25, 25);
     grid-column: 1/3;
