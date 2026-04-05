@@ -54,8 +54,6 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
-    max-height: 150px; /* o 200px según la fila */
-    overflow: hidden;   /* evita que el contenido lo estire */
 }
 
 .Descripcion_Campo {
@@ -69,8 +67,6 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
-    max-height: 150px; /* o 200px según la fila */
-    overflow: hidden;   /* evita que el contenido lo estire */
 }
 
 .Comandos_Campo {
@@ -84,8 +80,6 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
-    max-height: 150px; /* o 200px según la fila */
-    overflow: hidden;   /* evita que el contenido lo estire */
 }
 
 .Imagen_Campo {
@@ -99,8 +93,6 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
-    max-height: 300px; /* o 200px según la fila */
-    overflow: hidden;   /* evita que el contenido lo estire */
 }
 
 .hproyectos{
