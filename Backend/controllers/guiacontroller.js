@@ -22,7 +22,7 @@ const agregarSeccion = (req, res) => {
     </div>
     </a>`;
 
-    const rutaHTML = path.join(__dirname, '../../frontend/Guia.html');
+    const rutaHTML = path.join(__dirname, '../../Subpages/Guia/Guia.html');
     let html = fs.readFileSync(rutaHTML, 'utf8');
 
     html = html.replace(
