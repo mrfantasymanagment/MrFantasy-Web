@@ -6,6 +6,9 @@ dotenv.config();
 
 const app = express();
 
+const guiaRoutes = require('./routes/guia');
+app.use('/guia', guiaRoutes);
+
 // Middlewares
 app.use(cors({
     origin: ['https://mrfantasymanagment.github.io', 'http://127.0.0.1:5500', 'http://localhost:5500']
