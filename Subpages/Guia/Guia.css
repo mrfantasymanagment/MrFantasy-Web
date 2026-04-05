@@ -84,15 +84,3 @@ body{
     font-size: 3.1vw;
     margin-top: 2.5vw;
 }
-
-@keyframes ZoomPulsante{
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(1.021);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
