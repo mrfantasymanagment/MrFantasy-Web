@@ -29,6 +29,9 @@ body{
     background: rgb(39, 38, 39);
     height: auto;
     margin: 2vw;
+    padding: 0.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 2.4vw;
     border-radius: 30px 30px 30px 30px;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
