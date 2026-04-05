@@ -39,7 +39,8 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
-    
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .Descripcion_Campo {
@@ -52,6 +53,8 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .Comandos_Campo {
@@ -64,6 +67,8 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .Imagen_Campo {
@@ -75,6 +80,8 @@ body{
     display: flex;
     align-items: center;  
     justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .hproyectos{
