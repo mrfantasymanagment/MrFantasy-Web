@@ -6,8 +6,6 @@ dotenv.config();
 
 const app = express();
 
-const guiaRoutes = require('./routes/guia');
-app.use('/guia', guiaRoutes);
 
 // Middlewares
 app.use(cors({
