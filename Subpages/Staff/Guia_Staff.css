@@ -28,7 +28,7 @@ body{
     display: flex;
 }
 
-.Texto_Nombre{
+.Texto_Nombre, .Texto_Descripcion, .Texto_PluginUrl{
     width: 100%;
     box-sizing: border-box;
     padding: 0.5vw 1vw;
