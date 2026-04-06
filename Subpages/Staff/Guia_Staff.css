@@ -53,8 +53,8 @@ body{
     margin: 2vw;
     border-radius: 15px;
     display: flex;
-    align-items: top;  
-    justify-content: center;
+    align-items: center;  
+    justify-content: right;
 }
 
 .Texto_Descripcion{
