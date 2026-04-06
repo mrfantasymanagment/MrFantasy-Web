@@ -16,7 +16,7 @@ body{
     justify-items: center;
 }
 
-, .Comandos_Campo, .PluginLink_Campo, .Imagen_Campo {
+.Comandos_Campo, .PluginLink_Campo, .Imagen_Campo {
     background: rgb(26, 25, 25);
     grid-column: 2;
     grid-row: 2;
