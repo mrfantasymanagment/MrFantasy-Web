@@ -60,12 +60,12 @@ body{
 
 
 .Imagen_Campo {
-    grid-column: 3;
-    grid-row: 1;
+    grid-column: 2/4;
+    grid-row: 2;
 }
 
 .PluginLink_Campo {
-    grid-column: 3;
+    grid-column: 2/4;
     grid-row: 2;
 }
 
