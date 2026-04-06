@@ -43,7 +43,7 @@ body{
     text-align: left;
 }
 
-.Contraseña_Campo {
+.Descripcion_Campo {
     background: rgb(26, 25, 25);
     grid-column: 2;
     grid-row: 3;
@@ -57,7 +57,7 @@ body{
     justify-content: center;
 }
 
-.Texto_Contraseña{
+.Texto_Descripcion{
     width: 100%;
     box-sizing: border-box;
     padding: 0.5vw 1vw;
