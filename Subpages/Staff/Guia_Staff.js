@@ -13,7 +13,7 @@ function limitarPorEspacio(input) {
     }
   }
   
-  document.querySelector('.Texto_Nickname').addEventListener('input', function() {
+  document.querySelector('.Texto_Nombre').addEventListener('input', function() {
     limitarPorEspacio(this);
   });
   
