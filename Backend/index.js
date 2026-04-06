@@ -16,6 +16,9 @@ app.use(express.json());
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 
+const guiaRoutes = require('./routes/guia');
+app.use('/guia', guiaRoutes);
+
 // Ruta de prueba para UptimeRobot
 app.get('/health', (req, res) => {
     res.json({ status: 'ok' });
