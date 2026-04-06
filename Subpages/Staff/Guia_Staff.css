@@ -12,7 +12,6 @@ body{
     display: grid;
     grid-template-columns: 15% 35% 35% 15%;
     grid-template-rows: repeat(6VW, 6VW, 6VW, 6VW);
-    padding: clamp(8px, 1.5vw, 16px);
 }
 
 .Nickname_Campo {
@@ -22,6 +21,7 @@ body{
     height: 80%;
     width: 95%;
     min-height: 25px;
+    margin: 2vw;
     border-radius: 15px;
     display: flex;
     align-items: center;  
