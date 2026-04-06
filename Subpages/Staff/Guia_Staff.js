@@ -23,10 +23,10 @@ function limitarPorEspacio(input) {
   
   //Recuperacion Datos Reportes
   document.getElementById('Añadi_Campo').addEventListener('click', async function() {
-    const nickname = document.getElementById('Nickname').value;
-    const contrasena = document.getElementById('Contraseña').value;
+    const nombre = document.getElementById('Nombre').value;
+    const descripcion = document.getElementById('Descripcion').value;
   
-    if (nickname.trim() === '' || contrasena.trim() === '') {
+    if (nombre.trim() === '' || descripcion.trim() === '') {
         document.getElementById('Reportes_Incompleto').style.display = 'flex';
         return;
     }
