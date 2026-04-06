@@ -16,11 +16,12 @@ body{
     justify-items: center;
 }
 
-.Comandos_Campo, .PluginLink_Campo, .Imagen_Campo {
+.Nombre_Campo, .Descripcion_Campo, .Comandos_Campo, .PluginLink_Campo, .Imagen_Campo {
     background: rgb(26, 25, 25);
     grid-column: 2;
     grid-row: 2;
     height: 80%;
+    width: 95%;
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
@@ -32,8 +33,8 @@ body{
     width: calc(95% + 2vw);
 }
 
-.Nombre_Campo, .Descripcion_Campo{
-    width: 95%;
+.Nombre_Campo, .Descripcion_Campo {
+    width: calc(95% + 2vw);
 }
 
 .Texto_Nombre, .Texto_Descripcion, .Texto_Comandos, .Texto_PluginLink{
