@@ -43,7 +43,7 @@ body{
     text-align: left;
 }
 
-.Descripcion_Campo {
+.Nombre_Campo {
     grid-column: 3;
     grid-row: 2;
 }
