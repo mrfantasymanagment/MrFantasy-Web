@@ -21,7 +21,6 @@ body{
     grid-column: 2;
     grid-row: 2;
     height: 80%;
-
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
