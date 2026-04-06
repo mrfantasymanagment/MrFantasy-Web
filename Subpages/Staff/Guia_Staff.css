@@ -74,7 +74,7 @@ body{
 .Añadir_Campo{
     background: rgb(26, 25, 25);
     height: 80%;
-    width: calc(100% - 1.8vw); /* 2vw de gap por cada lado */
+    width: calc(100% - 1.7vw); /* 2vw de gap por cada lado */
     min-height: 25px;
     border-radius: 15px;
     grid-column: 2/4;
