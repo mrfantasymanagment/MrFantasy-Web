@@ -60,12 +60,12 @@ body{
 
 .Imagen_Campo {
     grid-column: 2/4;
-    grid-row: 3;
+    grid-row: 4;
 }
 
 .PluginLink_Campo {
     grid-column: 2/4;
-    grid-row: 4;
+    grid-row: 3;
 }
 
 .Añadir_Campo{
