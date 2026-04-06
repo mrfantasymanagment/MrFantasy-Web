@@ -21,7 +21,6 @@ body{
     grid-column: 2;
     grid-row: 2;
     height: 80%;
-    width: 95%;
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
@@ -34,7 +33,7 @@ body{
 }
 
 .Nombre_Campo, .Descripcion_Campo{
-    width: calc(95% + 2vw);
+    width: 95%;
 }
 
 .Texto_Nombre, .Texto_Descripcion, .Texto_Comandos, .Texto_PluginLink{
