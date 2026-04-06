@@ -73,7 +73,7 @@ body{
 }
 
 
-.Login_Campo{
+.Añadir_Campo{
     background: rgb(26, 25, 25);
     height: 80%;
     width: 95%;
@@ -89,12 +89,12 @@ body{
     justify-content: center;
 }
 
-.Login_Campo:hover{
+.Añadir_Campo:hover{
     scale: 1.03;
     transform-origin: center;
 }
 
-.Fuente_Login{
+.Fuente_Aniadir{
     font-size: 3vw;
     text-align: center;
     margin-top: 0.5vw;
