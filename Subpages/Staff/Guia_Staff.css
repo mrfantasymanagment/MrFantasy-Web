@@ -58,15 +58,16 @@ body{
     grid-row: 2;
 }
 
+.PluginLink_Campo {
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
 .Imagen_Campo {
     grid-column: 2/4;
     grid-row: 4;
 }
 
-.PluginLink_Campo {
-    grid-column: 2/4;
-    grid-row: 3;
-}
 
 .Añadir_Campo{
     background: rgb(26, 25, 25);
