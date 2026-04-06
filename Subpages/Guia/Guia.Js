@@ -16,7 +16,7 @@ function crearPlugin(datos) {
         </div>
     </div>
     </a>`;
-
+}
 
 fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
     .then(r => r.json())
