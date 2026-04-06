@@ -17,12 +17,12 @@ function limitarPorEspacio(input) {
     limitarPorEspacio(this);
   });
   
-  document.querySelector('.Texto_Contraseña').addEventListener('input', function() {
+  document.querySelector('.Texto_Descripcion').addEventListener('input', function() {
     limitarPorEspacio(this);
   });
   
   //Recuperacion Datos Reportes
-  document.getElementById('Login_Campo').addEventListener('click', async function() {
+  document.getElementById('Añadi_Campo').addEventListener('click', async function() {
     const nickname = document.getElementById('Nickname').value;
     const contrasena = document.getElementById('Contraseña').value;
   
