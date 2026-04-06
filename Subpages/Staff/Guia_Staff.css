@@ -21,7 +21,7 @@ body{
     grid-column: 2;
     grid-row: 2;
     height: 80%;
-    width: calc(95% + 10vw);
+    width: calc(100% + 4vw);
     min-height: 25px;
     margin: 2vw;
     border-radius: 15px;
