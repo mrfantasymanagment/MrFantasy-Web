@@ -53,12 +53,12 @@ body{
     grid-row: 2;
 }
 
-.Descripcion_Campo {
+.Imagen_Campo {
     grid-column: 3;
     grid-row: 2;
 }
 
-.Imagen_Campo {
+.PluginLink_Campo {
     grid-column: 3;
     grid-row: 2;
 }
