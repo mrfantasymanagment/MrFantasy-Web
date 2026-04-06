@@ -52,8 +52,6 @@ body{
     margin: 2vw;
     border-radius: 15px;
     display: flex;
-    align-items: center;  
-    justify-content: center;
 }
 
 .Texto_Descripcion{
@@ -84,8 +82,6 @@ body{
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
-    align-items: center;  
-    justify-content: center;
 }
 
 .Añadir_Campo:hover{
