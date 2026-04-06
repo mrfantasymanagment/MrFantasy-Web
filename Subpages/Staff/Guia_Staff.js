@@ -42,7 +42,7 @@ function limitarPorEspacio(input) {
   
         if (response.ok) {
             localStorage.setItem('token', data.token);
-            localStorage.setItem('nickname', data.nickname);
+            localStorage.setItem('nombre', data.nombre);
             document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
             document.getElementById('Nickname').value = '';
             document.getElementById('Contraseña').value = '';
