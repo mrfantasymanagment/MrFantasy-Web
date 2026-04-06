@@ -28,7 +28,7 @@ body{
     display: flex;
 }
 
-.Texto_Nombre, .Texto_Descripcion, .Texto_PluginLink{
+.Texto_Nombre, .Texto_Descripcion, .Texto_Comandos, .Texto_PluginLink{
     width: 100%;
     box-sizing: border-box;
     padding: 0.5vw 1vw;
