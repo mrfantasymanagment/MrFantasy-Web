@@ -16,7 +16,7 @@ body{
     justify-items: center;
 }
 
-.Nombre_Campo, .Descripcion_Campo, Comandos_Campo, .Imagen_Campo, .PluginLink_Campo {
+.Nombre_Campo, .Descripcion_Campo, .Comandos_Campo, .Imagen_Campo, .PluginLink_Campo {
     background: rgb(26, 25, 25);
     grid-column: 2;
     grid-row: 2;
