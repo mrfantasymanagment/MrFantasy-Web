@@ -13,6 +13,7 @@ body{
     grid-template-columns: 15% 35% 35% 15%;
     grid-template-rows: repeat(6VW, 6VW, 6VW, 6VW);
     align-items: center;
+    justify-items: center;
 }
 
 .Nombre_Campo {
