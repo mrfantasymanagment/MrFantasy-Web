@@ -28,6 +28,10 @@ body{
     display: flex;
 }
 
+.Comandos_Campo, .PluginLink_Campo, .Imagen_Campo, .Añadir_Campo {
+    width: calc(95% + 4vw);
+}
+
 .Texto_Nombre, .Texto_Descripcion, .Texto_Comandos, .Texto_PluginLink{
     width: 100%;
     box-sizing: border-box;
