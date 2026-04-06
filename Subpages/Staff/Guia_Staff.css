@@ -83,6 +83,7 @@ body{
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
+    text-align: center;
 }
 
 .Añadir_Campo:hover{
@@ -92,7 +93,7 @@ body{
 
 .Fuente_Añadir{
     font-size: 3vw;
-    text-align: center;
+
     margin-top: 1vw;
     color:rgb(103, 3, 233);
     font-family: sans-serif;
