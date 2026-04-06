@@ -83,6 +83,7 @@ body{
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
+    text-align: left;
 }
 
 .Añadir_Campo:hover{
