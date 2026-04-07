@@ -84,6 +84,11 @@ body {
     height: auto;
 }
 
+.Plugin_Imagen {
+    width: 100%;
+    height: auto;
+}
+
 .hproyectos {
     font-size: 3.1vw;
     /* margin-top eliminado — era el culpable original */
