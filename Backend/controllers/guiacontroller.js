@@ -5,8 +5,6 @@ const obtenerPlugins = async (req, res) => {
     res.json(plugins);
 };
 
-app.use(express.json({ limit: '10mb' }));
-
 //Creacion de Archivos .html, .css y .js
 
 const crearArchivosPlugin = async (req, res) => {
