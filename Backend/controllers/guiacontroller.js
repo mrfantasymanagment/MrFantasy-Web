@@ -49,13 +49,14 @@ const crearArchivosPlugin = async (req, res) => {
 };
 
 const agregarPlugin = async (req, res) => {
-    const { nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagen, enlace } = req.body;
+    const { nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, enlace } = req.body;
     
     const enlaceGenerado = `https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Guia/Plugins/${nombre}/${nombre}.html`;
+    const imagenUrl = `https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/main/Subpages/Guia/Plugins/${nombre}/${nombre}.png`;
 
     await db.query(
         'INSERT INTO Plugins (Nombre, Descripcion, Comando1, Comando2, Comando3, Comando4, Comando5, Comando6, Comando7, Comando8, Imagen, Enlace, Url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-        [nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagen, enlaceGenerado, enlace]
+        [nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, imagenUrl, enlaceGenerado, enlace]
     );
 
     res.json({ ok: true });
