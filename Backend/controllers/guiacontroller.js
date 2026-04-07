@@ -9,7 +9,7 @@ const obtenerPlugins = async (req, res) => {
 //Creacion de Archivos .html, .css y .js
 
 const crearArchivosPlugin = async (req, res) => {
-    const { nombre } = req.body;
+    const { nombre, imagen } = req.body;
     const TOKEN = process.env.GITHUB_TOKEN;
     const REPO = 'mrfantasymanagment/MrFantasy-Web';
     const BASE = `Subpages/Guia/Plugins/${nombre}`;
@@ -25,6 +25,22 @@ const crearArchivosPlugin = async (req, res) => {
             body: JSON.stringify({
                 message: `add: archivos ${nombre}`,
                 content: Buffer.from('').toString('base64')
+            })
+        });
+    }
+
+    // Guardar imagen si existe
+    if (imagen) {
+        const base64Puro = imagen.split(',')[1]; // Quitá el prefijo data:image/...;base64,
+        await fetch(`https://api.github.com/repos/${REPO}/contents/${BASE}/${nombre}.png`, {
+            method: 'PUT',
+            headers: {
+                Authorization: `Bearer ${TOKEN}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: `add: imagen ${nombre}`,
+                content: base64Puro
             })
         });
     }
