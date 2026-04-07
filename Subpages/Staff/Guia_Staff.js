@@ -1,4 +1,6 @@
 //Campos Texto
+let imagenBase64 = ''; // ← variable global
+
 function limitarPorEspacio(input) {
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
@@ -33,7 +35,10 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
       await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre })
+          body: JSON.stringify({ 
+              nombre,
+              imagen: imagenBase64  // ← agregado
+          })
       });
 
       const response = await fetch('https://mrfantasy-backend.onrender.com/guia/agregar', {
@@ -50,7 +55,6 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
               comando6: document.getElementById('Comando_6').value,
               comando7: document.getElementById('Comando_7').value,
               comando8: document.getElementById('Comando_8').value,
-              imagen: imagenBase64,
               enlace: document.getElementById('PluginLink').value
           })
       });
@@ -60,6 +64,7 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
       if (response.ok) {
           document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
           document.getElementById('Nombre').value = '';
+          imagenBase64 = ''; // ← limpiar después de subir
       } else {
           document.getElementById('Reportes_Incompleto').style.display = 'flex';
       }
@@ -82,12 +87,12 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
   if (archivo) {
       const reader = new FileReader();
       reader.onload = function(e) {
+          imagenBase64 = e.target.result; // ← guardar en variable global
           const imagen = document.getElementById('Imagen_Campo');
-          imagen.style.backgroundImage = `url(${e.target.result})`;
+          imagen.style.backgroundImage = `url(${imagenBase64})`;
           imagen.style.backgroundSize = 'cover';
           imagen.style.backgroundPosition = 'center';
       };
       reader.readAsDataURL(archivo);
   }
 });
-
