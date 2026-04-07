@@ -6,6 +6,8 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.json({ limit: '10mb' }));
+
 // Middlewares
 app.use(cors({
     origin: ['https://mrfantasymanagment.github.io', 'http://127.0.0.1:5501', 'http://127.0.0.1:9000', 'http://localhost:5501', 'http://localhost:9000']
