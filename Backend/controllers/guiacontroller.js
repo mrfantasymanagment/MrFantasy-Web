@@ -31,8 +31,8 @@ const crearArchivosPlugin = async (req, res) => {
 
     // Guardar imagen si existe
     if (imagen) {
-        const base64Puro = imagen.split(',')[1];
-        const respuesta = await fetch(`https://api.github.com/repos/${REPO}/contents/${BASE}/${nombre}.png`, {
+        const base64Puro = imagen.split(',')[1]; // Quitá el prefijo data:image/...;base64,
+        await fetch(`https://api.github.com/repos/${REPO}/contents/${BASE}/${nombre}.png`, {
             method: 'PUT',
             headers: {
                 Authorization: `Bearer ${TOKEN}`,
@@ -43,9 +43,8 @@ const crearArchivosPlugin = async (req, res) => {
                 content: base64Puro
             })
         });
-        const data = await respuesta.json();
-        console.log('Imagen GitHub response:', data); // <-- esto
     }
+
     res.json({ ok: true });
 };
 
