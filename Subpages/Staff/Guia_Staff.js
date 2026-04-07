@@ -90,3 +90,4 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
       reader.readAsDataURL(archivo);
   }
 });
+
