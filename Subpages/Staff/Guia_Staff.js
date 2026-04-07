@@ -50,7 +50,7 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
               comando6: document.getElementById('Comando_6').value,
               comando7: document.getElementById('Comando_7').value,
               comando8: document.getElementById('Comando_8').value,
-              imagen: document.getElementById('imagen: imagenBase64,').value,
+              
               enlace: document.getElementById('PluginLink').value
           })
       });
