@@ -87,11 +87,21 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
   if (archivo) {
       const reader = new FileReader();
       reader.onload = function(e) {
-          imagenBase64 = e.target.result; // ← guardar en variable global
-          const imagen = document.getElementById('Imagen_Campo');
-          imagen.style.backgroundImage = `url(${imagenBase64})`;
-          imagen.style.backgroundSize = 'cover';
-          imagen.style.backgroundPosition = 'center';
+          const img = new Image();
+          img.onload = function() {
+              const canvas = document.createElement('canvas');
+              canvas.width = 48;
+              canvas.height = 48;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, 48, 48);
+              imagenBase64 = canvas.toDataURL('image/png');
+
+              const campo = document.getElementById('Imagen_Campo');
+              campo.style.backgroundImage = `url(${imagenBase64})`;
+              campo.style.backgroundSize = 'cover';
+              campo.style.backgroundPosition = 'center';
+          };
+          img.src = e.target.result;
       };
       reader.readAsDataURL(archivo);
   }
