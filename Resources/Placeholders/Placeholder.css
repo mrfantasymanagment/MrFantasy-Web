@@ -27,9 +27,6 @@ body{
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
     align-self: center;
     text-align: center;
 }
@@ -37,7 +34,6 @@ body{
 .hproyectos_Menus{
     font-size: 3.1vw;
     align-items: center;
-    align-self: center;
 }
 
 @keyframes ZoomPulsante{
