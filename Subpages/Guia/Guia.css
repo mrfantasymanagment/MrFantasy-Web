@@ -14,6 +14,11 @@ body {
     min-height: 50px;  /* ← nunca se achica de esto */
 }
 
+.contenedor-plugins{
+    
+}
+
+
 .Plugin_Container {
     background: rgb(39, 38, 39);
     color: black;
