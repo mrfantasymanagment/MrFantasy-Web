@@ -20,8 +20,8 @@ body{
 }
 
 .EnProceso_Texto {
-    width: 80%;
-    height:80%;          /* la mitad del width */
+    width: 85%;
+    height:85%;          /* la mitad del width */
     background: rgba(40, 10, 10, 0.821);
     color: rgb(225, 205, 205);
     border-radius: 10px;  /* solo redondea la parte de abajo */
