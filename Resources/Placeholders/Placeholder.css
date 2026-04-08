@@ -24,7 +24,7 @@ body{
     height: 4vw;          /* la mitad del width */
     background: rgb(45, 40, 75);
     border-radius: 100px 0 0 0;  /* solo redondea la parte de abajo */
-    grid-column: 2/4;
+    grid-column: 2;
     grid-row: 2;
     display: flex;
     justify-content: center;
