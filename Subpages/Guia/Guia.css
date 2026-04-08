@@ -116,8 +116,8 @@ body {
     transition-duration: 1s;
 }
 
-.Plugin_Container:hover{
-    scale: 1.1;
+.Editar_Plugin_Boton:hover{
+    scale: 1.01;
 }
 
 .Plugin_Link {
