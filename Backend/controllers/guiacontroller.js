@@ -37,7 +37,7 @@ const crearArchivosPlugin = async (req, res) => {
         <div class="hproyectos_Menus">Proximamente</div>
     </div>
 
-    <script src="Placeholder.js"> </script>
+    <script src="Placeholder.js"> <\/script>
 
 </body>
 </html>
