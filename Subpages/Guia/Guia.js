@@ -14,11 +14,13 @@ function crearPlugin(datos) {
         <div class="Imagen_Campo">
             <img src="${datos.Imagen}" class="Plugin_Imagen">
         </div>
-        </div>
         <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">E</button>
-        </div>
     </div>
     </a>`;
+}
+
+function editarPlugin(nombre) {
+    window.location.href = `https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Staff/Guia_Edit.html?nombre=${nombre}`;
 }
 
 fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
