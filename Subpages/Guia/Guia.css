@@ -111,6 +111,7 @@ body {
     align-items: center;  
     justify-content: center;
     justify-self: end;
+    z-index: 10;
 }
 
 @keyframes ZoomPulsante {
