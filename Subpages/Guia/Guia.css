@@ -28,9 +28,7 @@ body {
     position: relative;
     z-index: 1;
     grid-column: 2/4;
-    text-align: center;
-    justify-items: center;
-    justify-content: center;
+    
 }
 
 .Plugin_Container {
