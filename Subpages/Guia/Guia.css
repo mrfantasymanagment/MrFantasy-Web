@@ -22,14 +22,12 @@ body {
     margin: 2vw;
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
-
+    grid-column: 1/4;
 }
 
 .Plugin_Link {
     position: relative;
     z-index: 1;
-    grid-column: 1/4;
-    
 }
 
 .Plugin_Container {
