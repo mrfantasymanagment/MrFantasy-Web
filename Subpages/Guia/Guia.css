@@ -15,7 +15,9 @@ body {
 }
 
 .contenedor-plugins{
-    
+    display: grid;
+    grid-template-columns: repeat(3, 31.7%);
+    grid-template-rows: repeat(2, 12.5vw);
 }
 
 
