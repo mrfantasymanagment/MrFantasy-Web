@@ -26,11 +26,6 @@ body{
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
-    border-radius: 15px;
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
-    font-size: 2vw;
     justify-content: center;
     justify-self: center;
     align-items: center;
