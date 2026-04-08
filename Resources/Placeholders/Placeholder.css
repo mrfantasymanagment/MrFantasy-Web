@@ -26,7 +26,6 @@ body{
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
-    display: flex;
     justify-content: center;
     justify-self: center;
     align-items: center;
