@@ -27,11 +27,12 @@ body{
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
-    text-align: center;
+
 }
 
 .hproyectos_Menus{
     font-size: 3.1vw;
+    display: flex;        
     align-items: center;        /* ← centra en Y */
     justify-content: center;    /* ← centra en X (reemplaza text-align) */
 }
