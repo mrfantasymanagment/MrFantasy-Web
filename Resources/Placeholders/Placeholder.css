@@ -23,7 +23,7 @@ body{
     width: 90%;
     height:90%;          /* la mitad del width */
     background: rgb(40, 10, 10);
-    opacity: 60%;
+    opacity: 100%;
     color: rgb(225, 205, 205);
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
