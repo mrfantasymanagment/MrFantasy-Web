@@ -21,7 +21,7 @@ body {
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
     display: grid;
-    grid-template-columns: repeat(3, 31.7%);
+    grid-template-columns: repeat(4, 25%);
 }
 
 
