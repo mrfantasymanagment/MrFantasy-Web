@@ -24,7 +24,7 @@ const crearArchivosPlugin = async (req, res) => {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>En Proceso</title>
-    <link rel="stylesheet" href="Placeholder.css" />
+    <link rel="stylesheet" href="${nombre}.css" />
     <style>
     </style>
 
