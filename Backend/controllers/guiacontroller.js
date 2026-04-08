@@ -5,6 +5,13 @@ const obtenerPlugins = async (req, res) => {
     res.json(plugins);
 };
 
+//Obtener Plugin Para Editar
+const obtenerPluginPorNombre = async (req, res) => {
+    const { nombre } = req.params;
+    const [plugin] = await db.query('SELECT * FROM Plugins WHERE Nombre = ?', [nombre]);
+    res.json(plugin[0]);
+};
+
 //Creacion de Archivos .html, .css y .js
 
 const crearArchivosPlugin = async (req, res) => {
