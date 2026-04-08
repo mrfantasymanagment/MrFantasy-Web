@@ -14,6 +14,12 @@ const crearArchivosPlugin = async (req, res) => {
     const BASE = `Subpages/Guia/Plugins/${nombre}`;
     const extensiones = ['html', 'css', 'js'];
 
+    const contenidos = {
+        html: `TEXTO_HTML`,
+        css: `TEXTO_CSS`,
+        js: `TEXTO_JS`
+    };
+
     for (const ext of extensiones) {
         await fetch(`https://api.github.com/repos/${REPO}/contents/${BASE}/${nombre}.${ext}`, {
             method: 'PUT',
@@ -23,7 +29,7 @@ const crearArchivosPlugin = async (req, res) => {
             },
             body: JSON.stringify({
                 message: `add: archivos ${nombre}`,
-                content: Buffer.from('').toString('base64')
+                content: Buffer.from(contenidos[ext]).toString('base64')
             })
         });
     }
