@@ -104,7 +104,8 @@ body {
     grid-column: 3;
     grid-row: 1;
     width: 25%;
-    height: 5vw;
+    height: 25%;
+    aspect-ratio: 1;
     border-radius: 5vw;
     display: flex;
     align-items: center;  
