@@ -28,11 +28,11 @@ body{
     grid-column: 2/4;
     grid-row: 2;
     text-align: center;
+    align-items: center;
 }
 
 .hproyectos_Menus{
     font-size: 3.1vw;
-    align-items: center;
 }
 
 @keyframes ZoomPulsante{
