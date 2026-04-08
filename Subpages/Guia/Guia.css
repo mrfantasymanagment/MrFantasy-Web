@@ -102,6 +102,7 @@ body {
 .Editar_Plugin_Boton {
     
 }
+
 @keyframes ZoomPulsante {
     0%   { transform: scale(1); }
     50%  { transform: scale(1.021); }
