@@ -5,5 +5,6 @@ const { obtenerPlugins, crearArchivosPlugin, agregarPlugin } = require('../contr
 router.get('/plugins', obtenerPlugins);
 router.post('/crear-archivos', crearArchivosPlugin);
 router.post('/agregar', agregarPlugin);
+router.get('/plugin/:nombre', obtenerPluginPorNombre);
 
 module.exports = router;
