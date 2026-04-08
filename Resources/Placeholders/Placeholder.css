@@ -24,7 +24,7 @@ body{
     height:85%;          /* la mitad del width */
     background: rgba(40, 10, 10, 0.821);
     color: rgb(225, 205, 205);
-    border-radius: 10px;  /* solo redondea la parte de abajo */
+    border-radius: 15px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
 
