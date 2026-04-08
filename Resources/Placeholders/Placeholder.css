@@ -26,7 +26,6 @@ body{
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
-    background: rgb(12, 11, 11);
     border-radius: 15px;
     padding: 3vw 4vw;
     text-align: center;
