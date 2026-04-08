@@ -14,7 +14,7 @@ body {
     min-height: 50px;  /* ← nunca se achica de esto */
 }
 
-.contenedor-plugins{
+#contenedor-plugins{
     background: rgb(39, 38, 39);
     color: black;
     margin: 2vw;
