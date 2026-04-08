@@ -29,7 +29,6 @@ body{
     grid-row: 2;
     text-align: center;
     align-items: center;
-    justify-content: center; /* centra en X */
 }
 
 .hproyectos_Menus{
