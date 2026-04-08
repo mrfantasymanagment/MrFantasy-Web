@@ -103,7 +103,7 @@ body {
     background: rgb(240, 6, 6);
     grid-column: 3;
     grid-row: 1;
-    width: 100%;
+    width: 25%;
     border-radius: 1vw;
     display: flex;
     align-items: center;  
