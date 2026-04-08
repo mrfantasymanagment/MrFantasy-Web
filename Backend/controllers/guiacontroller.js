@@ -176,4 +176,4 @@ const agregarPlugin = async (req, res) => {
     res.json({ ok: true });
 };
 
-module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin };
+module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin, obtenerPluginPorNombre };
