@@ -22,10 +22,11 @@ body{
     background: rgb(45, 40, 75);
     border-radius: 100px 0 0 0;  /* solo redondea la parte de abajo */
     grid-column: 1;
-    justify-self: center;
+
     grid-row: 1;
     display: flex;
     justify-content: center;
+    justify-self: center;
     align-items: center;
     align-self: end;
 }
