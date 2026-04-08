@@ -6,7 +6,7 @@
 }
 
 body{
-    background: rgb(12, 11, 11);
+    background: rgb(51, 0, 255);
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;        
@@ -22,7 +22,7 @@ body{
 .EnProceso_Texto {
     width: 90%;
     height:90%;          /* la mitad del width */
-    background: rgb(40, 10, 10);
+    background: rgba(40, 10, 10, 0.674);
     color: rgb(225, 205, 205);
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
