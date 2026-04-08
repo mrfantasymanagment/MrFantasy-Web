@@ -27,7 +27,7 @@ body {
 .Plugin_Link {
     position: relative;
     z-index: 1;
-    grid-column: 2/4;
+    grid-column: 1/4;
     
 }
 
