@@ -115,6 +115,11 @@ body {
     z-index: 10;
 }
 
+.Plugin_Link {
+    position: relative;
+    z-index: 1;
+}
+
 @keyframes ZoomPulsante {
     0%   { transform: scale(1); }
     50%  { transform: scale(1.021); }
