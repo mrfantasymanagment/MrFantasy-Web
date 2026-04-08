@@ -113,6 +113,11 @@ body {
     justify-self: end;
     position: relative;
     z-index: 10;
+    transition-duration: 1s;
+}
+
+.Plugin_Container:hover{
+    scale: 1.01;
 }
 
 .Plugin_Link {
