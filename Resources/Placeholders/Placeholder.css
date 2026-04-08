@@ -22,8 +22,8 @@ body{
 .EnProceso_Texto {
     width: 90%;
     height:90%;          /* la mitad del width */
-    background: rgb(45, 40, 75);
-    opacity: 90%;
+    background: rgb(0, 0, 0);
+    opacity: 50%;
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
