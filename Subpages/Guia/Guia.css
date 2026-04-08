@@ -12,6 +12,8 @@ body {
     font-family: Arial, Helvetica, sans-serif; 
     min-width: 100px;   /* ← nunca se achica de esto */
     min-height: 50px;  /* ← nunca se achica de esto */
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
 }
 
 #contenedor-plugins{
@@ -20,8 +22,7 @@ body {
     margin: 2vw;
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
+
 }
 
 .Plugin_Link {
