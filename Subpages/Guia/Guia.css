@@ -106,6 +106,7 @@ body {
     width: 15%;
     aspect-ratio: 1;
     border-radius: 5vw;
+    margin: 1vw;
     display: flex;
     align-items: center;  
     justify-content: center;
