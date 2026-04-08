@@ -33,8 +33,8 @@ body{
 .hproyectos_Menus{
     font-size: 3.1vw;
     display: flex;        
-    align-items: center;        /* ← centra en Y */
-    justify-content: center;    /* ← centra en X (reemplaza text-align) */
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes ZoomPulsante{
