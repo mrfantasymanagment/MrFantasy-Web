@@ -27,8 +27,8 @@ body{
     border-radius: 10px;  /* solo redondea la parte de abajo */
     grid-column: 2/4;
     grid-row: 2;
-    text-align: center;
-    align-items: center;
+     justify-content: center; /* centra en X */
+     text-align: center;
 }
 
 .hproyectos_Menus{
