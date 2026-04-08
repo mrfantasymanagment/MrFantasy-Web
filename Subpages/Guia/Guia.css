@@ -104,7 +104,7 @@ body {
     grid-column: 3;
     grid-row: 1;
     width: 25%;
-    height: 10%;
+    height: 25%;
     border-radius: 15px;
     display: flex;
     align-items: center;  
