@@ -15,7 +15,34 @@ const crearArchivosPlugin = async (req, res) => {
     const extensiones = ['html', 'css', 'js'];
 
     const contenidos = {
-        html: `TEXTO_HTML`,
+        html: `<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>En Proceso</title>
+    <link rel="stylesheet" href="Placeholder.css" />
+    <style>
+    </style>
+
+</head>
+
+
+<body>
+    
+    <div class="EnProceso_Texto">  
+        <div class="hproyectos_Menus">Proximamente</div>
+    </div>
+
+    <script src="Placeholder.js"> </script>
+
+</body>
+</html>
+`,
+
         css: `
         *{
     margin: 0;
