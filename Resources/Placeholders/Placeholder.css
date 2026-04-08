@@ -15,7 +15,7 @@ body{
     justify-items: center;
 }
 
-.Test_Texto {
+.EnProceso_Texto {
     width: 12vw;
     height: 4vw;          /* la mitad del width */
     background: rgb(45, 40, 75);
