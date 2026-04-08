@@ -28,6 +28,9 @@ body {
     position: relative;
     z-index: 1;
     grid-column: 2/4;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
 }
 
 .Plugin_Container {
@@ -36,7 +39,6 @@ body {
     margin: 2vw;
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
-
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
     grid-template-rows: repeat(2, 12.5vw);
