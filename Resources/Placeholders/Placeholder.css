@@ -37,6 +37,7 @@ body{
 .hproyectos_Menus{
     font-size: 3.1vw;
     align-items: center;
+    align-self: center;
 }
 
 @keyframes ZoomPulsante{
