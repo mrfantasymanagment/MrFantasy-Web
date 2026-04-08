@@ -20,7 +20,7 @@ function crearPlugin(datos) {
 }
 
 function editarPlugin(nombre) {
-    window.location.href = `https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Staff/Guia_Edit.html?nombre=${nombre}`;
+    window.location.href = `https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Staff/Editar/Guia_Edit.html?nombre=${nombre}`;
 }
 
 fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
