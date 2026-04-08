@@ -6,6 +6,6 @@ router.get('/plugins', obtenerPlugins);
 router.post('/crear-archivos', crearArchivosPlugin);
 router.post('/agregar', agregarPlugin);
 router.get('/plugin/:nombre', obtenerPluginPorNombre);
-
+router.put('/modificar', modificarPlugin);
 
 module.exports = router;
