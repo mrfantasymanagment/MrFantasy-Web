@@ -15,8 +15,15 @@ body {
 }
 
 .contenedor-plugins{
+    background: rgb(39, 38, 39);
+    color: black;
+    margin: 2vw;
+    padding: max(8px, 1.5vw);
+    border-radius: 2vw;
+    grid-column: 2/4;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(3, 31.7%);
+    grid-template-rows: repeat(2, 12.5vw);
 }
 
 
