@@ -37,3 +37,7 @@ fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
             document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
         }
     });
+
+    document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
+        document.getElementById('Reportes_Agradecimiento').style.display = 'none';
+    });
