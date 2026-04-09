@@ -31,3 +31,9 @@ fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
             contenedor.insertAdjacentHTML('beforeend', crearPlugin(plugin));
         });
     });
+
+    window.addEventListener('load', function() {
+        if (new URLSearchParams(window.location.search).get('exito') === '1') {
+            document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+        }
+    });
