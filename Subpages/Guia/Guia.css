@@ -16,6 +16,10 @@ body {
     grid-template-columns: repeat(4, 25%);
 }
 
+.Banner_Guia_Container{
+    height: 100%;
+}
+
 .Banner_Guia_Imagen{
     background: rgb(45, 40, 75);
     height: auto;
