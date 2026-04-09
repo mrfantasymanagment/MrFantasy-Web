@@ -19,7 +19,7 @@ document.querySelector('.Texto_Nombre').addEventListener('input', function() {
   limitarPorEspacio(this);
 });
 
-document.querySelector('.Texto_Descripcion').addEventListener('input', function() {
+document.querySelector('.Texto_Descripcion', '.Texto_Comando_1').addEventListener('input', function() {
   limitarPorEspacio(this);
 });
 
