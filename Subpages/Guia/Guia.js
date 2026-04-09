@@ -27,8 +27,15 @@ fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
     .then(r => r.json())
     .then(plugins => {
         const contenedor = document.getElementById('contenedor-plugins');
-        plugins.forEach(plugin => {
-            contenedor.insertAdjacentHTML('beforeend', crearPlugin(plugin));
+        const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+        letras.forEach(letra => {
+            contenedor.insertAdjacentHTML('beforeend', `<div class="Letras_Estilo">${letra}</div>`);
+            
+            const pluginsDeLetra = plugins.filter(p => p.Nombre[0].toUpperCase() === letra);
+            pluginsDeLetra.forEach(plugin => {
+                contenedor.insertAdjacentHTML('beforeend', crearPlugin(plugin));
+            });
         });
     });
 
