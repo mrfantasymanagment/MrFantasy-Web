@@ -58,7 +58,11 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
       const data = await response.json();
 
       if (response.ok) {
-          window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Guia/Guia.html';
+        window.addEventListener('load', function() {
+          if (new URLSearchParams(window.location.search).get('exito') === '1') {
+              document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+          }
+      });
       } else {
           document.getElementById('Reportes_Incompleto').style.display = 'flex';
       }
