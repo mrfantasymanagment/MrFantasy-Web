@@ -67,9 +67,6 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
 
       if (response.ok) {
           document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
-          document.querySelectorAll(selectores).forEach(function(el) {
-            el.value = '';
-        });
           imagenBase64 = ''; // ← limpiar después de subir
       } else {
           document.getElementById('Reportes_Incompleto').style.display = 'flex';
