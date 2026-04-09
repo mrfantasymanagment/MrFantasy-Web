@@ -17,11 +17,13 @@ body {
 }
 
 .Banner_Guia_Container{
+    grid-column: 1/5;
     height: 100%;
 }
 
 .Banner_Guia_Imagen{
     background: rgb(45, 40, 75);
+    height: auto;
     width: 100%;
 }
 
