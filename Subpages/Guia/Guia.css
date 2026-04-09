@@ -30,7 +30,6 @@ body {
     background: rgb(224, 0, 224);
     color: black;
     margin: 1vw;
-    padding: max(8px, 1.5vw);
     border-radius: 2vw;
     grid-column: 1/4;
 }
