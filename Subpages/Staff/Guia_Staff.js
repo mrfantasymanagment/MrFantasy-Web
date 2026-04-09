@@ -16,15 +16,7 @@ function limitarPorEspacio(input) {
 }
 
 
-const selectores = '.Texto_Nombre, .Texto_Descripcion, .Texto_Comando_1, .Texto_Comando_2, ' +
-                   '.Texto_Comando_3, .Texto_Comando_4, .Texto_Comando_5, .Texto_Comando_6, ' +
-                   '.Texto_Comando_7, .Texto_Comando_8, .Texto_PluginLink';
 
-document.querySelectorAll(selectores).forEach(function(el) {
-    el.addEventListener('input', function() {
-        limitarPorEspacio(this);
-    });
-});
 
 
 document.getElementById('Añadir_Campo').addEventListener('click', async function() {
