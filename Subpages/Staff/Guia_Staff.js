@@ -23,6 +23,8 @@ document.querySelector('.Texto_Descripcion').addEventListener('input', function(
   limitarPorEspacio(this);
 });
 
+
+
 document.getElementById('Añadir_Campo').addEventListener('click', async function() {
   const nombre = document.getElementById('Nombre').value;
 
