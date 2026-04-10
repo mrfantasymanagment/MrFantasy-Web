@@ -52,7 +52,7 @@ body {
 .Plugin_Container {
     background: rgb(39, 38, 39);
     color: black;
-    margin-top: 2vw;
+    margin-top: 1.5vw;
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
     display: grid;
