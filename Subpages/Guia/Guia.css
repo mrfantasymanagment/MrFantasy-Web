@@ -63,11 +63,11 @@ body {
     text-align: center;
     justify-items: center;
     justify-content: center;
-    transition-duration: 2s;
+    transition-duration: 3s;
 }
 
 .Plugin_Container:hover{
-    scale: 1.03;
+    scale: 1.02;
 }
 
 .Nombre_Campo {
