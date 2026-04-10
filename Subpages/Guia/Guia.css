@@ -18,13 +18,13 @@ body {
 
 .Letras_Estilo {
     font-size: 3vw;
-    color: rgb(103, 3, 233);
+    color: rgb(0, 0, 0);
     font-family: sans-serif;
     padding: 1vw 0.5vw;
     margin-top: 2vw;
     margin-bottom: 1vw;
     width: 100%;
-    border-bottom: 3px solid rgb(241, 1, 169);
+    border-bottom: 3px solid rgb(0, 0, 0);
 }
 
 .Banner_Guia_Container{
