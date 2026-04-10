@@ -57,7 +57,7 @@ body {
     border-radius: 2vw;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
-    grid-template-rows: 12.5vw, 12.5vw;
+    grid-template-rows: 12vw, 12vw;
     column-gap: 1.3%;
     row-gap: 1vw;
     text-align: center;
