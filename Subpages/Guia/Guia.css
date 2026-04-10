@@ -16,6 +16,16 @@ body {
     grid-template-columns: repeat(4, 25%);
 }
 
+.Letras_Estilo {
+    font-size: 3vw;
+    color: rgb(103, 3, 233);
+    font-family: sans-serif;
+    padding: 1vw 2vw;
+    margin-top: 2vw;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
 .Banner_Guia_Container{
     grid-column: 1/5;
 }
@@ -186,15 +196,7 @@ body {
     font-size: 2vw;
 }
 
-.Letras_Estilo {
-    font-size: 3vw;
-    color: rgb(103, 3, 233);
-    font-family: sans-serif;
-    padding: 1vw 2vw;
-    margin-top: 2vw;
-    width: 100%;
-    border-bottom: 1px solid black;
-}
+
 
 @keyframes ZoomPulsante {
     0%   { transform: scale(1); }
