@@ -47,6 +47,24 @@
             </div>
             </a>
 
+            <a href="$https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" style="text-decoration: none;">
+                <div class="Plugin_Container">
+                    <div class="Nombre_Campo">
+                        <div class="hproyectos">${datos.Nombre}</div>
+                    </div>
+                    <div class="Descripcion_Campo">
+                        <div class="hproyectos2">${datos.Descripcion}</div>
+                    </div>
+                    <div class="Comandos_Campo">
+                        <div class="hproyectos2">${datos.Comando1}</div>
+                    </div>
+                    <div class="Imagen_Campo">
+                        <img src="${datos.Imagen}" class="Plugin_Imagen">
+                    </div>
+                    <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">E</button>
+                </div>
+                </a>
+
             <div id="Reportes_Agradecimiento">
                 <div id="Reportes_Modal">
                     <p>Sesion Iniciada</p>
