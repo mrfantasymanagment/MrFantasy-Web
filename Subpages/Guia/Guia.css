@@ -40,6 +40,7 @@ body {
     color: black;
     border-radius: 2vw;
     grid-column: 1/4;
+    margin: 1vw;
 }
 
 .Plugin_Link {
@@ -50,7 +51,6 @@ body {
 .Plugin_Container {
     background: rgb(39, 38, 39);
     color: black;
-    margin: 1vw;
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
     display: grid;
