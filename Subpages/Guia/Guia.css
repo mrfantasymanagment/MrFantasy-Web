@@ -63,7 +63,7 @@ body {
     text-align: center;
     justify-items: center;
     justify-content: center;
-    transition-duration: 1s;
+    transition-duration: 2s;
 }
 
 .Plugin_Container:hover{
