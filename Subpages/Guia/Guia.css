@@ -28,7 +28,7 @@ body {
 
 #contenedor-plugins{
     color: black;
-    margin: 1vw;
+    margin: 0.5vw;
     border-radius: 2vw;
     grid-column: 1/4;
 }
