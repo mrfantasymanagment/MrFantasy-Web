@@ -40,7 +40,7 @@ body {
 .Plugin_Container {
     background: rgb(39, 38, 39);
     color: black;
-    margin: 2vw;
+    margin: 1vw;
     padding: max(8px, 1.5vw);
     border-radius: 2vw;
     display: grid;
