@@ -116,6 +116,7 @@ body {
     outline: none;
     resize: none;
     text-align: center;
+    text-justify: center;
 }
 
 .Comandos_Campo div:nth-child(1) { grid-column: 1; grid-row: 1; }
