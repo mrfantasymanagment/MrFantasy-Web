@@ -1,6 +1,6 @@
 function crearPlugin(datos) {
     return `
-            <a href="https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" style="text-decoration: none;">
+            <a href="$https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" style="text-decoration: none;">
                 <div class="Plugin_Container">
                     <div class="Nombre_Campo">
                         <div class="hproyectos">TestCss</div>
