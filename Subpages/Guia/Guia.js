@@ -21,7 +21,7 @@ function crearPlugin(datos) {
             <div class="Imagen_Campo">
                 <img src="${datos.Imagen}" class="Plugin_Imagen">
             </div>
-            <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">E</button>
+            <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">Edit</button>
         </div>
     </a>`;
 }
