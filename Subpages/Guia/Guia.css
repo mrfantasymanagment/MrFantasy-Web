@@ -127,6 +127,21 @@ body {
 .Comandos_Campo div:nth-child(7) { grid-column: 1; grid-row: 4; }
 .Comandos_Campo div:nth-child(8) { grid-column: 2; grid-row: 4; }
 
+.Texto_Nombre, .Texto_Descripcion, .Texto_PluginLink{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5vw 1vw;
+    border-radius: 10px;
+    border: none;
+    background: rgb(26, 25, 25);
+    color: white;
+    font-size: 3vw;
+    font-family: sans-serif;
+    outline: none;
+    resize: none;
+    text-align: center;
+}
+
 .Imagen_Campo {
     background: rgb(26, 25, 25);
     grid-column: 3;
