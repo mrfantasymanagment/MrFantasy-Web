@@ -105,7 +105,6 @@ body {
     grid-template-rows: 4;
     justify-items: center;
     align-items: center;
-    justify-content: center;
 }
 
 [class^="Comando_Campo_"] {
