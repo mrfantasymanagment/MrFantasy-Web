@@ -100,7 +100,7 @@ body {
     width: 100%;
     border-radius: 1vw;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 45%;
     grid-template-rows: 4;
 }
 
@@ -108,7 +108,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 0.25vw;
+    padding: 5%;
     border: none;
     background: rgb(245, 2, 2);
     color: white;
