@@ -108,7 +108,6 @@ body {
 [class^="Comando_Campo_"] {
     width: 100%;
     box-sizing: border-box;
-    border-radius: 10px;
     border: none;
     background: rgb(245, 2, 2);
     color: white;
