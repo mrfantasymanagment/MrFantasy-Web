@@ -115,7 +115,6 @@ body {
     font-family: sans-serif;
     outline: none;
     resize: none;
-    display: flex;
     text-align: center;
     text-justify: center;
 }
