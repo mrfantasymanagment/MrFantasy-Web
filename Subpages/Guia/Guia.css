@@ -116,6 +116,7 @@ body {
     outline: none;
     resize: none;
     text-align: center;
+    align-items: center;
     text-justify: center;
 }
 
