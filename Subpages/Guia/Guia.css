@@ -88,8 +88,8 @@ body {
     width: 100%;
     border-radius: 1vw;
     display: flex;
-    align-items: center;  
-    justify-content: center;
+    align-items: top;  
+    justify-content: left;
 }
 
 .Comandos_Campo {
@@ -99,8 +99,8 @@ body {
     width: 100%;
     border-radius: 1vw;
     display: flex;
-    align-items: top;  
-    justify-content: left;
+    align-items: center;  
+    justify-content: center;
 }
 
 .Imagen_Campo {
