@@ -103,6 +103,7 @@ body {
     grid-template-columns: 48% 48%;
     column-gap: 4%;
     grid-template-rows: 4;
+    justify-items: center;
 }
 
 [class^="Comando_Campo_"] {
