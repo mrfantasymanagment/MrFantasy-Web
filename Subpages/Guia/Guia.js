@@ -1,21 +1,28 @@
 function crearPlugin(datos) {
     return `
     <a href="${datos.Enlace}" style="text-decoration: none;">
-    <div class="Plugin_Container">
-        <div class="Nombre_Campo">
-            <div class="hproyectos">${datos.Nombre}</div>
+        <div class="Plugin_Container">
+            <div class="Nombre_Campo">
+                <div class="hproyectos">${datos.Nombre}</div>
+            </div>
+            <div class="Descripcion_Campo">
+                <div class="hproyectos2">${datos.Descripcion}</div>
+            </div>
+            <div class="Comandos_Campo">
+                <div class="Comando_Campo_1">${datos.Comando1}</div>
+                <div class="Comando_Campo_2">${datos.Comando2}</div>
+                <div class="Comando_Campo_3">${datos.Comando3}</div>
+                <div class="Comando_Campo_4">${datos.Comando4}</div>
+                <div class="Comando_Campo_5">${datos.Comando5}</div>
+                <div class="Comando_Campo_6">${datos.Comando6}</div>
+                <div class="Comando_Campo_7">${datos.Comando7}</div>
+                <div class="Comando_Campo_8">${datos.Comando8}</div>
+            </div>
+            <div class="Imagen_Campo">
+                <img src="${datos.Imagen}" class="Plugin_Imagen">
+            </div>
+            <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">E</button>
         </div>
-        <div class="Descripcion_Campo">
-            <div class="hproyectos2">${datos.Descripcion}</div>
-        </div>
-        <div class="Comandos_Campo">
-            <div class="hproyectos2">${datos.Comando1}</div>
-        </div>
-        <div class="Imagen_Campo">
-            <img src="${datos.Imagen}" class="Plugin_Imagen">
-        </div>
-        <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">E</button>
-    </div>
     </a>`;
 }
 
