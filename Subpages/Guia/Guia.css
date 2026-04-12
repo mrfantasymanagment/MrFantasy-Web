@@ -43,15 +43,16 @@ html, body {
 
 .Panel_Busqueda {
     grid-column: 4;
-    grid-row: 2;          /* misma fila que contenedor-plugins */
-    position: sticky;     /* ← esto es lo que lo hace seguir la pantalla */
-    top: 12px;                    /* ← espacio arriba siempre */
-    max-height: calc(100vh - 24px);  /* ← max-height en vez de height */
-    overflow-y: auto;     /* scroll interno si el contenido es largo */
+    grid-row: 2;        
+    position: sticky;    
+    top: 12px;                    
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;   
     background: rgb(244, 0, 244);
     padding: 12px;
     margin: 1cqw;
     border-radius: 12px;
+
 }
 
 #contenedor-plugins {
