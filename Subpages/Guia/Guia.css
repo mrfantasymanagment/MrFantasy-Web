@@ -18,6 +18,7 @@ body {
     min-height: 50px;
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 25%));
+    
 }
 .Letras_Estilo {
     font-size: 3vw;
