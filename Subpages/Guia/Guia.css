@@ -120,7 +120,7 @@ html, body {
     width: 95%;
     height: 100%;
     border-radius: 1cqw;
-    justify-self: end;
+    justify-self: center;
 }
 
 #contenedor-plugins {
