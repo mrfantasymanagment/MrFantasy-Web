@@ -132,7 +132,7 @@ body {
 .Comandos_Campo div:nth-child(7) { grid-column: 1; grid-row: 4; }
 .Comandos_Campo div:nth-child(8) { grid-column: 2; grid-row: 4; }
 
-.Comando_Campo_0{
+.Comando_campo_0{
     width: 93%;
     height: 90%;
     grid-column: 1/3;
