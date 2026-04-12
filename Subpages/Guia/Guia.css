@@ -118,22 +118,28 @@ html, body {
 }
 
 .Seccion_Boton {
-    background: rgb(60, 60, 60);      /* color no seleccionado */
-    border: 3px solid rgb(100, 100, 100);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     cursor: pointer;
+    padding: 4px;
+    color: white;
+    /* sacar background, border, border-radius, width, height — eso era del diseño viejo */
+}
+
+.Seccion_Boton::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    border: 3px solid rgb(100, 100, 100);
     transition: background 0.2s;
 }
 
-.Seccion_Boton:active {
-    background: rgb(20, 20, 20);      /* mientras se presiona */
-}
-
-.Seccion_Boton.seleccionado {
-    background: rgb(20, 20, 20);      /* seleccionado */
-    border-color: rgb(150, 150, 150);
+.Seccion_Boton:active::before {
+    background: rgb(20, 20, 20);
 }
 
 .Seccion_Boton.seleccionado::before {
