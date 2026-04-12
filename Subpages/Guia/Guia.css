@@ -114,7 +114,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-self: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .Seccion_Boton {
