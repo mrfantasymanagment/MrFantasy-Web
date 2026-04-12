@@ -52,6 +52,11 @@ body {
     overflow: hidden; 
 }
 
+#contenedor-plugins > a {
+    display: block;
+    width: 100%;
+}
+
 .Plugin_Link {
     position: relative;
     z-index: 1;
