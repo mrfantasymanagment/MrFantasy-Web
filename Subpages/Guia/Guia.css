@@ -42,7 +42,7 @@ html, body {
     width: 100%;
 }
 
-#Panel_Busqueda {
+.Panel_Busqueda {
     grid-column: 4;
     grid-row: 2;          /* misma fila que contenedor-plugins */
     position: sticky;     /* ← esto es lo que lo hace seguir la pantalla */
