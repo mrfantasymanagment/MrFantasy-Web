@@ -17,7 +17,7 @@ function crearPlugin(datos) {
             <div class="Comandos_Campo">
                 ${comandos.length > 0
                     ? comandos.map((c, i) => `<div class="Comando_Campo_${i + 1}">${c}</div>`).join('')
-                    : `<div class="Comando_Campo_0">Uso interno</div>`
+                    : `<div class="Comando_campo_0">Uso interno</div>`
                 }
             </div>
     
