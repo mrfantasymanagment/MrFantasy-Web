@@ -26,6 +26,13 @@ function crearPlugin(datos) {
     </a>`;
 }
 
+document.querySelectorAll('.Seccion_Boton').forEach(boton => {
+    boton.addEventListener('click', function() {
+        document.querySelectorAll('.Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
+        this.classList.add('seleccionado');
+    });
+});
+
 function renderPlugins(plugins) {
     const contenedor = document.getElementById('contenedor-plugins');
     const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
