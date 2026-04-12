@@ -107,6 +107,14 @@ html, body {
 }
 
 .PanelBusqueda_Tags{
+    grid-row: 3;  
+    background: rgb(255, 119, 0); 
+    width: 95%;
+    height: 100%;
+    border-radius: 1cqw;
+}
+
+.PanelBusqueda_Tags{
     grid-column: 3/5;
     grid-row: 3;  
     background: rgb(255, 119, 0); 
