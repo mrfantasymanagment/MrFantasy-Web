@@ -48,6 +48,8 @@ body {
     border-radius: 2vw;
     grid-column: 1/4;
     margin: 1vw;
+    min-width: 0;     
+    overflow: hidden; 
 }
 
 .Plugin_Link {
