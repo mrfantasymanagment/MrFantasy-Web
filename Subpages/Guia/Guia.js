@@ -8,6 +8,7 @@ function crearPlugin(datos) {
             <div class="Descripcion_Campo">
                 <div class="hproyectos2">${datos.Descripcion}</div>
             </div>
+            
             const comandos = [datos.Comando1, datos.Comando2, datos.Comando3, datos.Comando4,
                               datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
                             .filter(c => c);
