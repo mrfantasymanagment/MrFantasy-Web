@@ -6,6 +6,7 @@
 
 html {
     min-width: 400px;
+    overflow-x: auto;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 25%);
     width: 100%;
+    overflow-x: auto;
 }
 
 
