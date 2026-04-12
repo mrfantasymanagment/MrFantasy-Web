@@ -4,31 +4,25 @@
     box-sizing: border-box;
 }
 
-html {
-    min-width: 400px;
-}
-
 body {
     background: rgb(20, 20, 20);
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif; 
-    min-width: 400px;
-    width: 100%;
-    overflow-x: auto;
-    min-height: 50px;
+    min-width: 100px;   /* ← nunca se achica de esto */
+    min-height: 50px;  /* ← nunca se achica de esto */
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 25%));
-    
+    grid-template-columns: repeat(4, 25%);
 }
+
 .Letras_Estilo {
-    font-size: clamp(14px, 3vw, 42px); 
+    font-size: 3vw;
     color: rgb(0, 0, 0);
     font-family: sans-serif;
-    padding: clamp(4px, 1vw, 14px) clamp(2px, 0.5vw, 8px);
-    margin-top: clamp(8px, 2vw, 28px);
-    margin-bottom: clamp(4px, 1vw, 14px);
+    padding: 1vw 0.5vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
     width: 100%;
     border-bottom: 3px solid rgb(0, 0, 0);
 }
@@ -48,13 +42,6 @@ body {
     border-radius: 2vw;
     grid-column: 1/4;
     margin: 1vw;
-    min-width: 0;     
-    overflow: hidden; 
-}
-
-#contenedor-plugins > a {
-    display: block;
-    width: 100%;
 }
 
 .Plugin_Link {
@@ -173,7 +160,6 @@ body {
     display: flex;
     align-items: center;  
     justify-content: center;
-    overflow: hidden;
 }
 
 .Instagram_Imagen {
@@ -200,23 +186,18 @@ body {
     background: rgb(67, 1, 78);
     grid-column: 3;
     grid-row: 1;
-    width: 4vw;
-    height: 4vw;
-    border-radius: 50%;
+    width: 15%;
+    aspect-ratio: 1;
+    border-radius: 5vw;
+    margin: 1vw;
     display: flex;
     align-items: center;  
     justify-content: center;
     justify-self: end;
-    align-self: start;
     position: relative;
     z-index: 10;
     cursor: pointer;
     transition-duration: 1s;
-    font-size: 1.2vw;
-    color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0.5vw;
 }
 
 .Editar_Plugin_Boton:hover{
@@ -264,6 +245,7 @@ body {
     font-family: sans-serif;
     font-size: 2vw;
 }
+
 
 
 @keyframes ZoomPulsante {
