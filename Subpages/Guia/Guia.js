@@ -8,13 +8,18 @@ function crearPlugin(datos) {
             <div class="Descripcion_Campo">
                 <div class="hproyectos2">${datos.Descripcion}</div>
             </div>
+            const comandos = [datos.Comando1, datos.Comando2, datos.Comando3, datos.Comando4,
+                              datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
+                            .filter(c => c);
+
+            // y en el template:
             <div class="Comandos_Campo">
-                ${[datos.Comando1, datos.Comando2, datos.Comando3, datos.Comando4,
-                   datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
-                    .filter(c => c)
-                    .map((c, i) => `<div class="Comando_Campo_${i + 1}">${c}</div>`)
-                    .join('')}
+                ${comandos.length > 0
+                    ? comandos.map((c, i) => `<div class="Comando_Campo_${i + 1}">${c}</div>`).join('')
+                    : `<div class="Comandos_No_Disponibles">Uso interno</div>`
+                }
             </div>
+            
             <div class="Imagen_Campo">
                 <img src="${datos.Imagen}" class="Plugin_Imagen">
             </div>
