@@ -132,6 +132,9 @@ body {
 .Comandos_Campo div:nth-child(7) { grid-column: 1; grid-row: 4; }
 .Comandos_Campo div:nth-child(8) { grid-column: 2; grid-row: 4; }
 
+.Comando_Campo0{
+    
+}
 
 .Imagen_Campo {
     background: rgb(26, 25, 25);
