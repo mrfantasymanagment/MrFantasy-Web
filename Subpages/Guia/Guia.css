@@ -134,7 +134,7 @@ body {
 
 .Comando_Campo0{
     width: 93%;
-    height: 90%;
+    height: 50%;
     grid-column: 1/3;
     grid-row: 1/5;
     box-sizing: border-box;
