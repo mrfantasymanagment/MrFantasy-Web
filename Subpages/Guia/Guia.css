@@ -14,13 +14,11 @@ body {
     background-position: center center; 
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif; 
-    min-width: 400px;   /* ← nunca se achica de esto */
-    min-height: 50px;  /* ← nunca se achica de esto */
+    min-width: 400px;
+    min-height: 50px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    width: max(400px, 100vw);
 }
-
 .Letras_Estilo {
     font-size: 3vw;
     color: rgb(0, 0, 0);
