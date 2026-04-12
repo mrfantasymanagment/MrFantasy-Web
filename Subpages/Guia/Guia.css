@@ -52,7 +52,7 @@ html, body {
     padding: 12px;
     margin: 1cqw;
     border-radius: 12px;
-    grid-template-columns:repeat(2, 50%) ;
+    grid-template-columns:repeat(4, 25%) ;
 }
 
 .PanelBusqueda_Imagen{
