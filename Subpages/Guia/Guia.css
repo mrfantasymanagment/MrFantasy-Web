@@ -23,7 +23,7 @@ body {
     
 }
 .Letras_Estilo {
-    font-size: clamp(14px, 3vw, 42px);   /* ← clamp para evitar lag en resize */
+    font-size: clamp(14px, 3vw, 42px); 
     color: rgb(0, 0, 0);
     font-family: sans-serif;
     padding: clamp(4px, 1vw, 14px) clamp(2px, 0.5vw, 8px);
