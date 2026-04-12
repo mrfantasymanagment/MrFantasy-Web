@@ -5,6 +5,12 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+    if (screen.width < 400) {
+      document.querySelector('meta[name="viewport"]')
+        .setAttribute('content', 'width=400');
+    }
+</script>
 
     <title>Guia</title>
     <link rel="stylesheet" href="Guia.css" />
