@@ -21,6 +21,21 @@ body {
     width: 100%;
 }
 
+
+/* ← el wrapper reemplaza al body como contenedor principal */
+#wrapper {
+    container-type: inline-size;
+    container-name: principal;
+    min-width: 400px;
+    width: 100%;
+    background: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+
 .Letras_Estilo {
     font-size: 3cqw;
     color: rgb(0, 0, 0);
