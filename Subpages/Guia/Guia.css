@@ -47,7 +47,7 @@ html, body {
     position: sticky;     /* ← esto es lo que lo hace seguir la pantalla */
     top: 12px;                    /* ← espacio arriba siempre */
     bottom: 12px;
-    height: calc(100vh - 24px);   /* ← 12px arriba + 12px abajo */
+    max-height: calc(100vh - 24px);  /* ← max-height en vez de height */
     height: 100vh;        /* ocupa toda la altura visible */
     overflow-y: auto;     /* scroll interno si el contenido es largo */
     background: rgb(244, 0, 244);
