@@ -17,6 +17,13 @@ body {
     overflow-x: auto; /* permite scroll horizontal */
 }
 
+#Limitador {
+    min-width: 400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
 .Letras_Estilo {
     font-size: 3vw;
     color: rgb(0, 0, 0);
