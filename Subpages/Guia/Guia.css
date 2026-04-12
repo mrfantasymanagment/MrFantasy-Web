@@ -55,6 +55,7 @@ html, body {
 }
 
 #contenedor-plugins {
+    container-type: inline-size;
     color: black;
     border-radius: 2cqw;
     grid-column: 1/4;
