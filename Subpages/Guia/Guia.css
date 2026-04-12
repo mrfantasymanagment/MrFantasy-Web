@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif; 
     min-width: 400px;   /* ← nunca se achica de esto */
+    min-height: 50px;  /* ← nunca se achica de esto */
     display: grid;
     grid-template-columns: repeat(4, 25%);
 }
