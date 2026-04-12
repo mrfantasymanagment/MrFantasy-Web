@@ -19,7 +19,7 @@ function crearPlugin(datos) {
                     : `<div class="Comandos_No_Disponibles">Uso interno</div>`
                 }
             </div>
-            
+    
             <div class="Imagen_Campo">
                 <img src="${datos.Imagen}" class="Plugin_Imagen">
             </div>
