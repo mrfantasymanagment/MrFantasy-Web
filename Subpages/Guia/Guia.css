@@ -111,6 +111,9 @@ html, body {
     width: 95%;
     height: 100%;
     border-radius: 1cqw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .PanelBusqueda_Tags{
@@ -120,9 +123,6 @@ html, body {
     width: 95%;
     height: 100%;
     border-radius: 1cqw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #contenedor-plugins {
