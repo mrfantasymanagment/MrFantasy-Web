@@ -1,8 +1,8 @@
 function crearPlugin(datos) {
 
     const comandos = [datos.Comando1, datos.Comando2, datos.Comando3, datos.Comando4,
-                    datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
-      .filter(c => c);
+                      datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
+                      .filter(c => c);
 
     return `
     <a href="${datos.Enlace}" style="text-decoration: none;">
