@@ -131,10 +131,7 @@ html, body {
     background: rgb(20, 20, 20);      /* mientras se presiona */
 }
 
-.Seccion_Boton.seleccionado {
-    background: rgb(20, 20, 20);      /* seleccionado */
-    border-color: rgb(150, 150, 150);
-}
+
 
 .Seccion_Boton.seleccionado::before {
     background: rgb(20, 20, 20);
