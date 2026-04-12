@@ -117,7 +117,7 @@ html, body {
     justify-content: left;
 }
 
-.Plugins, .Guias, .Commandos, .Items, .Enchants, .Quests, .NPCs, .Eventos, .Changelog, .Bugs{
+.Economia, .Guias, .Commandos, .Items, .Enchants, .Quests, .NPCs, .Eventos, .Changelog, .Bugs{
     background: rgb(255, 119, 0); 
     width: 95%;
     height: 100%;
