@@ -55,6 +55,7 @@ document.querySelector('.PanelBusqueda_Lupa').addEventListener('click', function
         ? 'https://mrfantasy-backend.onrender.com/guia/plugins'
         : `https://mrfantasy-backend.onrender.com/guia/plugins/buscar?q=${query}`;
     fetch(url).then(r => r.json()).then(plugins => renderPlugins(plugins));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 window.addEventListener('load', function() {
