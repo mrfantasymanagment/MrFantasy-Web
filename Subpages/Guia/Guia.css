@@ -10,7 +10,6 @@ html, body {
 
 /* ← el wrapper reemplaza al body como contenedor principal */
 #wrapper {
-    container-type: inline-size;
     container-name: principal;
     min-width: 400px;
     width: 100%;
