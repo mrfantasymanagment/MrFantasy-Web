@@ -1,7 +1,7 @@
 const db = require('../config/database');
 
 const obtenerPlugins = async (req, res) => {
-    const [plugins] = await db.query('SELECT * FROM Plugins ORDER BY Nombre ASC'); //WHERE Checkout = 1 
+    const [plugins] = await db.query('SELECT * FROM Plugins ORDER BY Nombre ASC'); //SELECT * FROM Plugins WHERE Checkout = 1 ORDER BY Nombre ASC
     res.json(plugins);
 };
 
