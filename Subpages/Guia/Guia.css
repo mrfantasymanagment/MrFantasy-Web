@@ -14,10 +14,12 @@ body {
     background-position: center center; 
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif; 
+    min-width: 400px;   /* ← nunca se achica de esto */
     min-height: 50px;  /* ← nunca se achica de esto */
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    width: max(200px, 10vw);
+    width: max(400px, 100vw);
+    overflow-x: auto; /* ← permite el scroll horizontal */
 }
 
 .Letras_Estilo {
