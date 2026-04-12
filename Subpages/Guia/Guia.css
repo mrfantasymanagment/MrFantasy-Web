@@ -56,24 +56,28 @@ html, body {
 }
 
 .PanelBusqueda_Imagen{
+    grid-column: 1/3;
+    grid-row: 1;    
+}
+
+.PanelBusqueda_Buscador{
     grid-column: 4;
     grid-row: 2;    
 }
 
-.PanelBusqueda_Buscador{
-    
-}
-
 .PanelBusqueda_Lupa{
-    
+    grid-column: 4;
+    grid-row: 2;    
 }
 
 .PanelBusqueda_Secciones{
-    
+    grid-column: 4;
+    grid-row: 2;    
 }
 
 .PanelBusqueda_Tags{
-    
+    grid-column: 4;
+    grid-row: 2;     
 }
 
 #contenedor-plugins {
