@@ -2,11 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
-}
-
-html {
-    overflow-x: auto;
 }
 
 body {
@@ -15,12 +10,10 @@ body {
     background-position: center center; 
     background-repeat: no-repeat;        
     font-family: Arial, Helvetica, sans-serif; 
-    min-width: 400px;   /* ← nunca se achica de esto */
+    min-width: 100px;   /* ← nunca se achica de esto */
     min-height: 50px;  /* ← nunca se achica de esto */
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    width: 100%;          /* ← reemplaza max(400px, 100vw) */
-    overflow-x: visible;
 }
 
 .Letras_Estilo {
