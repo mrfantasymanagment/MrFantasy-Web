@@ -1,51 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configuracion Guia</title>
+    <link rel="stylesheet" href="Guia_Staff.css" />
+    <style>
+    </style>
+
+
+</head>
+
+
 <body>
-    <div id="wrapper_staff">
-        <div class="Plugin_Container_Staff">
-
-            <div class="Nombre_Campo">
-                <input type="text" class="Texto_Nombre" placeholder="Nombre" id="Nombre" spellcheck="false" autocomplete="off">
-            </div>
-
-            <div class="Descripcion_Campo">
-                <textarea class="Texto_Descripcion" placeholder="Descripcion" id="Descripcion" spellcheck="false"></textarea>
-            </div>
-
-            <div class="Comandos_Campo">
-                <input type="text" class="Texto_Comando_1" placeholder="Comando 1" id="Comando_1" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_2" placeholder="Comando 2" id="Comando_2" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_3" placeholder="Comando 3" id="Comando_3" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_4" placeholder="Comando 4" id="Comando_4" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_5" placeholder="Comando 5" id="Comando_5" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_6" placeholder="Comando 6" id="Comando_6" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_7" placeholder="Comando 7" id="Comando_7" spellcheck="false" autocomplete="off">
-                <input type="text" class="Texto_Comando_8" placeholder="Comando 8" id="Comando_8" spellcheck="false" autocomplete="off">
-            </div>
-
-            <div class="Imagen_Campo" id="Imagen_Campo">
-                <div class="AñadirImagen_Campo">
-                    <input type="file" id="Imagen_Input" accept="image/*">
-                    <div class="Fuente_Añadir">Añadir Imagen</div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="PluginLink_Campo">
-            <input type="text" class="Texto_PluginLink" placeholder="Url" id="PluginLink" spellcheck="false" autocomplete="off">
-        </div>
-
-        <div class="Añadir_Campo" id="Añadir_Campo">
-            <div class="Fuente_Añadir">Añadir</div>
-        </div>
-
+    
+    <div class="Nombre_Campo" >
+        <input type="text" class="Texto_Nombre"  placeholder="Nombre" id="Nombre" name="Nombre" spellcheck="false" autocomplete="off">
     </div>
 
-    <div id="Reportes_Incompleto">
-        <div id="Reportes_Error_Incompleto">
-            <p>Por favor completár los datos.</p>
-            <div id="Reportes_Error_Cerrar">Cerrar</div>
-        </div>
+
+    <div class="Descripcion_Campo" >
+        <input type="text" class="Texto_Descripcion"  placeholder="Descripcion" id="Descripcion" name="Descripcion" spellcheck="false" autocomplete="off">
     </div>
 
-    <script src="Guia_Staff.js"></script>
+    <div class="Imagen_Campo" id="Imagen_Campo">
+    </div>
+
+    <div class="Comandos_Campo" >
+        <input type="text" class="Texto_Comando_1"  placeholder="Comando 1" id="Comando_1" name="Comando_1" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_2"  placeholder="Comando 2" id="Comando_2" name="Comando_2" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_3"  placeholder="Comando 3" id="Comando_3" name="Comando_3" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_4"  placeholder="Comando 4" id="Comando_4" name="Comando_4" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_5"  placeholder="Comando 5" id="Comando_5" name="Comando_5" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_6"  placeholder="Comando 6" id="Comando_6" name="Comando_6" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_7"  placeholder="Comando 7" id="Comando_7" name="Comando_7" spellcheck="false" autocomplete="off">
+        <input type="text" class="Texto_Comando_8"  placeholder="Comando 8" id="Comando_8" name="Comando_8" spellcheck="false" autocomplete="off">
+    </div>
+
+    <div class="PluginLink_Campo" >
+        <input type="text" class="Texto_PluginLink"  placeholder="Url" id="PluginLink" name="PluginLink" spellcheck="false" autocomplete="off">
+    </div>
+
+    <div class="AñadirImagen_Campo" id="AñadirImagen_Campo">
+        <input type="file" id="Imagen_Input" accept="image/*">
+        <div class="Fuente_Añadir">Añadir Imagen</div>
+    </div>
+
+    <div class="Añadir_Campo" id="Añadir_Campo">
+        <div class="Fuente_Añadir">Añadir</div>
+    </div>
+
+<div id="Reportes_Incompleto">
+    <div id="Reportes_Error_Incompleto">
+        <p>Por favor completár los datos.</p>
+        <div id="Reportes_Error_Cerrar">Cerrar</div>
+    </div>
+</div>
+
+
+    <script src="Guia_Staff.js"> </script>
 </body>
+</html>
