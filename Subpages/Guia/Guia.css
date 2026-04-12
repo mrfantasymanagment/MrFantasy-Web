@@ -52,7 +52,7 @@ html, body {
     padding: 12px;
     margin: 1cqw;
     border-radius: 12px;
-
+    grid-template-columns:repeat(2, 50%) ;
 }
 
 #contenedor-plugins {
