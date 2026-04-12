@@ -113,7 +113,7 @@ html, body {
     border-radius: 1cqw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-self: center;
 }
 
 .PanelBusqueda_Tags{
