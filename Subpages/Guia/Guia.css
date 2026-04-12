@@ -56,7 +56,8 @@ html, body {
 }
 
 .PanelBusqueda_Imagen{
-
+    grid-column: 4;
+    grid-row: 2;    
 }
 
 .PanelBusqueda_Buscador{
