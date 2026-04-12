@@ -14,13 +14,6 @@ body {
     min-height: 50px;  /* ← nunca se achica de esto */
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    overflow-x: auto; /* permite scroll horizontal */
-}
-
-#Limitador {
-    min-width: 400px;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
 }
 
 .Letras_Estilo {
