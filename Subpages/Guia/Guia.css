@@ -106,7 +106,7 @@ html, body {
     grid-template-rows: repeat(10, 10%);
 }
 
-.PanelBusqueda_Tags, .Plugins, .Guias, .Commandos, .Items, .Enchants, .{
+.PanelBusqueda_Tags, .Plugins, .Guias, .Commandos, .Items, .Enchants, .Quests, .NPCs, .Eventos{
   
     background: rgb(255, 119, 0); 
     width: 95%;
