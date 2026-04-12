@@ -4,31 +4,15 @@
     box-sizing: border-box;
 }
 
-html {
-    min-width: 500px;
-    overflow-x: auto;
+html, body {
+    overflow-x: auto;   /* scroll horizontal si pantalla < 400px */
 }
-
-body {
-    background: rgb(20, 20, 20);
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat;        
-    font-family: Arial, Helvetica, sans-serif; 
-    min-width: 500px;   /* ← nunca se achica de esto */
-    min-height: 50px;  /* ← nunca se achica de esto */
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    width: 100%;
-    overflow-x: auto;
-}
-
 
 /* ← el wrapper reemplaza al body como contenedor principal */
 #wrapper {
     container-type: inline-size;
     container-name: principal;
-    min-width: 500px;
+    min-width: 400px;
     width: 100%;
     background: rgb(20, 20, 20);
     font-family: Arial, Helvetica, sans-serif;
@@ -37,9 +21,8 @@ body {
     grid-template-columns: repeat(4, 25%);
 }
 
-
 .Letras_Estilo {
-    font-size: 3cqw;
+    font-size: 3cqw;       /* ← cqw en vez de vw */
     color: rgb(0, 0, 0);
     font-family: sans-serif;
     padding: 1cqw 0.5cqw;
@@ -49,26 +32,22 @@ body {
     border-bottom: 3px solid rgb(0, 0, 0);
 }
 
-.Banner_Guia_Container{
+.Banner_Guia_Container {
     grid-column: 1/5;
 }
 
-.Banner_Guia_Imagen{
+.Banner_Guia_Imagen {
     background: rgb(45, 40, 75);
     height: 200px;
     width: 100%;
 }
 
-#contenedor-plugins{
+#contenedor-plugins {
     color: black;
     border-radius: 2cqw;
     grid-column: 1/4;
     margin: 1cqw;
-}
-
-.Plugin_Link {
-    position: relative;
-    z-index: 1;
+    min-width: 0;
 }
 
 .Plugin_Container {
@@ -85,12 +64,10 @@ body {
     text-align: center;
     justify-items: center;
     justify-content: center;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
 }
 
-.Plugin_Container:hover{
-    scale: 1.015;
-}
+.Plugin_Container:hover { scale: 1.015; }
 
 .Nombre_Campo {
     background: rgb(26, 25, 25);
@@ -99,7 +76,7 @@ body {
     width: 100%;
     border-radius: 1cqw;
     display: flex;
-    align-items: center;  
+    align-items: center;
     justify-content: center;
 }
 
@@ -111,7 +88,7 @@ body {
     padding: 1cqw;
     border-radius: 1cqw;
     display: flex;
-    align-items: top;  
+    align-items: top;
     justify-content: left;
 }
 
@@ -130,7 +107,7 @@ body {
 
 [class^="Comando_Campo_"] {
     width: 93%;
-    height: 2.2em;   /* o el valor que te quede bien visualmente */
+    height: 2.2em;
     box-sizing: border-box;
     border-radius: 13px;
     border: none;
@@ -154,7 +131,7 @@ body {
 .Comandos_Campo div:nth-child(7):not(.Comando_Campo0) { grid-column: 1; grid-row: 4; }
 .Comandos_Campo div:nth-child(8):not(.Comando_Campo0) { grid-column: 2; grid-row: 4; }
 
-.Comando_Campo0{
+.Comando_Campo0 {
     width: 93%;
     height: 90%;
     grid-column: 1/3;
@@ -180,30 +157,15 @@ body {
     width: 100%;
     border-radius: 1cqw;
     display: flex;
-    align-items: center;  
+    align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-.Instagram_Imagen {
-    width: 100%;
-    height: auto;
-}
+.Instagram_Imagen, .Plugin_Imagen { width: 100%; height: auto; }
 
-.Plugin_Imagen {
-    width: 100%;
-    height: auto;
-}
-
-.hproyectos {
-    font-size: 3.1cqw;
-    /* margin-top eliminado — era el culpable original */
-}
-
-.hproyectos2 {
-    font-size: 1.5cqw;
-    /* margin-top eliminado — era el culpable original */
-}
+.hproyectos  { font-size: 3.1cqw; }
+.hproyectos2 { font-size: 1.5cqw; }
 
 .Editar_Plugin_Boton {
     background: rgb(67, 1, 78);
@@ -213,35 +175,29 @@ body {
     height: 4cqw;
     border-radius: 50%;
     display: flex;
-    align-items: center;  
+    align-items: center;
     justify-content: center;
     justify-self: end;
     align-self: start;
     position: relative;
     z-index: 10;
     cursor: pointer;
-    transition-duration: 1s;
+    transition-duration: 0.3s;
     font-size: 1.2cqw;
     color: white;
     overflow: hidden;
     white-space: nowrap;
     margin: 0.5cqw;
+    border: none;
 }
 
-.Editar_Plugin_Boton:hover{
-    scale: 1.1;
-}
-
-
-
+.Editar_Plugin_Boton:hover { scale: 1.1; }
 
 #Reportes_Agradecimiento {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 30%;
+    width: 60%; height: 30%;
     display: none;
     justify-content: center;
     align-items: center;
@@ -260,9 +216,7 @@ body {
     margin-top: 1cqw;
 }
 
-#Reportes_Cerrar:hover {
-    background: rgb(65, 58, 110);
-}
+#Reportes_Cerrar:hover { background: rgb(65, 58, 110); }
 
 #Reportes_Modal {
     background: rgb(12, 11, 11);
@@ -273,8 +227,6 @@ body {
     font-family: sans-serif;
     font-size: 2cqw;
 }
-
-
 
 @keyframes ZoomPulsante {
     0%   { transform: scale(1); }
