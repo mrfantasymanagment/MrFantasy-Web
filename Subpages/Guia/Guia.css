@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    min-width: 400px;
+}
+
 body {
     background: rgb(20, 20, 20);
     background-size: cover; 
