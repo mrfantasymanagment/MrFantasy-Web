@@ -106,27 +106,7 @@ html, body {
     grid-template-rows: repeat(10, 10%);
 }
 
-.Plugins, .Guias, .Commandos, .Items, .Enchants, .Quests, .NPCs, .Eventos, .Changelog, .Bugs{
-    background: rgb(255, 119, 0); 
-    width: 95%;
-    height: 100%;
-    border-radius: 1cqw;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    justify-content: left;
-}
 
-.Economia, .Mecanica, .RPG, .Building, .Social{
-    background: rgb(255, 119, 0); 
-    width: 95%;
-    height: 100%;
-    border-radius: 1cqw;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    justify-content: left;
-}
 
 .Seccion_Boton {
     display: flex;
