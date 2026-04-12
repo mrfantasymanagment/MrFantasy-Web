@@ -134,6 +134,8 @@ body {
 .Comandos_Campo div:nth-child(8):not(.Comando_Campo0) { grid-column: 2; grid-row: 4; }
 
 .Comando_Campo0{
+    width: 93%;
+    height: 90%;
 
     box-sizing: border-box;
     border-radius: 13px;
