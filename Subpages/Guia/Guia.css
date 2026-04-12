@@ -42,6 +42,18 @@ html, body {
     width: 100%;
 }
 
+#Panel_Busqueda {
+    grid-column: 4;
+    grid-row: 2;          /* misma fila que contenedor-plugins */
+    position: sticky;     /* ← esto es lo que lo hace seguir la pantalla */
+    top: 0;
+    height: 100vh;        /* ocupa toda la altura visible */
+    overflow-y: auto;     /* scroll interno si el contenido es largo */
+    background: rgb(39, 38, 39);
+    padding: 12px;
+    border-radius: 12px;
+}
+
 #contenedor-plugins {
     color: black;
     border-radius: 2cqw;
