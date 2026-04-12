@@ -136,6 +136,11 @@ html, body {
     border-color: rgb(150, 150, 150);
 }
 
+.Seccion_Boton.seleccionado::before {
+    background: rgb(20, 20, 20);
+    border-color: rgb(150, 150, 150);
+}
+
 .PanelBusqueda_Tags{
     grid-column: 3/5;
     grid-row: 3;  
