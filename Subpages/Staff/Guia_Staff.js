@@ -24,10 +24,10 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
   const descripcion = document.getElementById('Descripcion').value;
   const enlace = document.getElementById('PluginLink').value;
 
-  if (nombre.trim() === '') {
-      document.getElementById('Reportes_Incompleto').style.display = 'flex';
-      return;
-  }
+  if (nombre.trim() === '' || descripcion.trim() === '' || enlace.trim() === '' || imagenBase64 === '') {
+    document.getElementById('Reportes_Incompleto').style.display = 'flex';
+    return;
+    }
 
   try {
       await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
