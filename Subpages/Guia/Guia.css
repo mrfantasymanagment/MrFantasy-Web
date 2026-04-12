@@ -122,7 +122,7 @@ html, body {
     border-radius: 1cqw;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
 }
 
 #contenedor-plugins {
