@@ -54,7 +54,7 @@ html, body {
     background: rgb(39, 38, 39);
     color: rgb(255, 255, 255);
     margin-top: 1cqw;
-    padding: max(8px, 1.5cqw);
+    padding: 12px;
     border-radius: 2cqw;
     display: grid;
     grid-template-columns: repeat(3, 31.7%);
