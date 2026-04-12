@@ -102,6 +102,8 @@ html, body {
     width: 95%;
     height: 100%;
     border-radius: 1cqw;
+    display: grid;
+    grid-template-rows: repeat();
 }
 
 .PanelBusqueda_Tags{
