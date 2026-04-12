@@ -21,6 +21,8 @@ function limitarPorEspacio(input) {
 
 document.getElementById('Añadir_Campo').addEventListener('click', async function() {
   const nombre = document.getElementById('Nombre').value;
+  const descripcion = document.getElementById('Descripcion').value;
+  const enlace = document.getElementById('PluginLink').value;
 
   if (nombre.trim() === '') {
       document.getElementById('Reportes_Incompleto').style.display = 'flex';
