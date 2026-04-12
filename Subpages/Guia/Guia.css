@@ -46,6 +46,7 @@ html, body {
     grid-row: 2;          /* misma fila que contenedor-plugins */
     position: sticky;     /* ← esto es lo que lo hace seguir la pantalla */
     top: 12px;                    /* ← espacio arriba siempre */
+    bottom: 12px;
     height: calc(100vh - 24px);   /* ← 12px arriba + 12px abajo */
     height: 100vh;        /* ocupa toda la altura visible */
     overflow-y: auto;     /* scroll interno si el contenido es largo */
