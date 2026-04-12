@@ -107,7 +107,6 @@ html, body {
 }
 
 .PanelBusqueda_Tags, .Plugins, .Guias, .Commandos, .Items, .Enchants, .Quests, .NPCs, .Eventos, .Changelog, .Bugs{
-  
     background: rgb(255, 119, 0); 
     width: 95%;
     height: 100%;
