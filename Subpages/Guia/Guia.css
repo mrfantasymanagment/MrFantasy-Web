@@ -17,7 +17,7 @@ body {
     min-height: 50px;  /* ← nunca se achica de esto */
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    width: max(200px, 100vw);
+    width: max(200px, 10vw);
 }
 
 .Letras_Estilo {
