@@ -19,7 +19,6 @@ body {
 
 #Limitador {
     min-width: 400px;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 25%);
 }
