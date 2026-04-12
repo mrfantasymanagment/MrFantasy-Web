@@ -1,5 +1,5 @@
 //Campos Texto
-let imagenBase64 = ''; // ← variable global
+let imagenBase64 = '';
 
 function limitarPorEspacio(input) {
   const canvas = document.createElement('canvas');
@@ -15,10 +15,6 @@ function limitarPorEspacio(input) {
   }
 }
 
-
-
-
-
 document.getElementById('Añadir_Campo').addEventListener('click', async function() {
   const nombre = document.getElementById('Nombre').value;
   const descripcion = document.getElementById('Descripcion').value;
@@ -27,7 +23,7 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
   if (nombre.trim() === '' || descripcion.trim() === '' || enlace.trim() === '' || imagenBase64 === '') {
     document.getElementById('Reportes_Incompleto').style.display = 'flex';
     return;
-    }
+  }
 
   try {
       await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
@@ -35,7 +31,7 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ 
               nombre,
-              imagen: imagenBase64  // ← agregado
+              imagen: imagenBase64
           })
       });
 
@@ -68,10 +64,6 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
       console.log(error);
       document.getElementById('Reportes_Incompleto').style.display = 'flex';
   }
-});
-
-document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
-  document.getElementById('Reportes_Agradecimiento').style.display = 'none';
 });
 
 document.getElementById('Reportes_Error_Cerrar').addEventListener('click', function() {
