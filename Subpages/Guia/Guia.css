@@ -117,6 +117,25 @@ html, body {
     justify-content: center;
 }
 
+.Seccion_Boton {
+    background: rgb(60, 60, 60);      /* color no seleccionado */
+    border: 3px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.Seccion_Boton:active {
+    background: rgb(20, 20, 20);      /* mientras se presiona */
+}
+
+.Seccion_Boton.seleccionado {
+    background: rgb(20, 20, 20);      /* seleccionado */
+    border-color: rgb(150, 150, 150);
+}
+
 .PanelBusqueda_Tags{
     grid-column: 3/5;
     grid-row: 3;  
