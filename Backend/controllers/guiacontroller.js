@@ -5,6 +5,16 @@ const obtenerPlugins = async (req, res) => {
     res.json(plugins);
 };
 
+
+const buscarPlugins = async (req, res) => {
+    const { q } = req.query;
+    const [plugins] = await db.query(
+        'SELECT * FROM Plugins WHERE Checkout = 1 AND Nombre LIKE ? ORDER BY Nombre ASC',
+        [`%${q}%`]
+    );
+    res.json(plugins);
+};
+
 //Obtener Plugin Para Editar
 const obtenerPluginPorNombre = async (req, res) => {
     const { nombre } = req.params;
@@ -187,4 +197,4 @@ const modificarPlugin = async (req, res) => {
     res.json({ ok: true });
 };
 
-module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin, obtenerPluginPorNombre, modificarPlugin};
+module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin, obtenerPluginPorNombre, modificarPlugin, buscarPlugins};
