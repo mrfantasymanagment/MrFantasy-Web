@@ -187,11 +187,10 @@ body {
     background: rgb(67, 1, 78);
     grid-column: 3;
     grid-row: 1;
-    width: 2.5vw;
-    height: 2.5vw;
-    min-width: 28px;
-    min-height: 28px;
-    border-radius: 50%;
+    width: 15%;
+    aspect-ratio: 1;
+    border-radius: 5vw;
+    margin: 1vw;
     display: flex;
     align-items: center;  
     justify-content: center;
@@ -200,10 +199,6 @@ body {
     z-index: 10;
     cursor: pointer;
     transition-duration: 1s;
-    font-size: 1vw;
-    color: white;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 .Editar_Plugin_Boton:hover{
