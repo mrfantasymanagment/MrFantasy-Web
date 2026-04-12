@@ -6,6 +6,7 @@
 
 html {
     min-width: 400px;
+    overflow-x: auto; /* ← permite el scroll horizontal */
 }
 
 body {
