@@ -26,9 +26,16 @@ function crearPlugin(datos) {
     </a>`;
 }
 
-document.querySelectorAll('.Seccion_Boton').forEach(boton => {
+document.querySelectorAll('.PanelBusqueda_Secciones .Seccion_Boton').forEach(boton => {
     boton.addEventListener('click', function() {
-        document.querySelectorAll('.Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
+        document.querySelectorAll('.PanelBusqueda_Secciones .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
+        this.classList.add('seleccionado');
+    });
+});
+
+document.querySelectorAll('.PanelBusqueda_Tags .Seccion_Boton').forEach(boton => {
+    boton.addEventListener('click', function() {
+        document.querySelectorAll('.PanelBusqueda_Tags .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
         this.classList.add('seleccionado');
     });
 });
