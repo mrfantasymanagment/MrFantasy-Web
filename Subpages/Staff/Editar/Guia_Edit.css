@@ -1,125 +1,293 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: rgb(12, 11, 11);
-    background-size: cover; 
-    background-position: center center;
-    background-repeat: no-repeat;        
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-columns: 15% 35% 35% 15%;
-    align-items: center;
-    justify-items: center;
+
+html, body {
+    overflow-x: visible;
 }
 
-.Nombre_Campo, .Descripcion_Campo, .PluginLink_Campo, .Imagen_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 2;
-    grid-row: 2;
-    height: 80%;
-    min-height: 25px;
-    margin: 2vw;
-    border-radius: 15px;
-    display: flex;
-}
-.PluginLink_Campo, .Imagen_Campo, .Añadir_Campo {
-    width: calc(95% + 2vw);
-}
-
-.Nombre_Campo, .Descripcion_Campo {
-    width: 95%;
-}
-
-.Texto_Nombre, .Texto_Descripcion, .Texto_PluginLink{
+/* ── WRAPPER: mismo grid de 4 columnas que Guia.html ── */
+#wrapper_staff {
+    container-name: principal;
+    min-width: 400px;
     width: 100%;
-    box-sizing: border-box;
-    padding: 0.5vw 1vw;
-    border-radius: 10px;
-    border: none;
-    background: rgb(26, 25, 25);
+    background: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    align-items: start
+}
+
+/* ── BANNER ── */
+.Banner_Guia_Container {
+    grid-column: 1 / 5;
+}
+
+.Banner_Guia_Imagen {
+    background: rgb(45, 40, 75);
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── PANEL LATERAL (visual/referencia) ── */
+.Panel_Busqueda_Staff {
+    grid-column: 4;
+    grid-row: 2;
+    position: sticky;
+    top: 12px;
+    max-height: calc(100vh - 24px);
+    height: 414px;
+    overflow-y: auto;
+    background: rgb(39, 38, 39);
+    padding: 12px;
+    margin: 1cqw;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 90%;
+    opacity: 0.6;          /* visual / referencia: levemente atenuado */
+}
+
+
+
+.PanelBusqueda_Secciones_Ref {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background: rgb(30, 30, 30);
+    width: 95%;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+    display: grid;
+    grid-template-rows: repeat(11, 9.089%);
+    padding: 4px;
+}
+
+.PanelBusqueda_Tags_Ref {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    background: rgb(30, 30, 30);
+    width: 95%;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+    display: grid;
+    grid-template-rows: repeat(11, 9.089%);
+    padding: 4px;
+}
+
+.Seccion_Secciones, .Seccion_Tags{
+    grid-column: 1 / 2;
+    grid-row: 1;
+    background: rgb(30, 30, 30);
+    color:white;
+    width: 95%;
+    border-radius: 200px 200px 0 0; 
+    font-size: 1.75cqw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Seccion_Tags{
+    grid-column: 2 / 3;
+}
+
+
+.Seccion_Boton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
     color: white;
-    font-size: 3vw;
-    font-family: sans-serif;
-    outline: none;
-    resize: none;
-    text-align: center;
+    font-size: 1.1cqw;
+    cursor: default;
+}
+
+.Seccion_Boton::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    border: 2px solid rgb(100, 100, 100);
+}
+
+.Seccion_Boton.seleccionado::before {
+    background: rgb(20, 20, 20);
+    border-color: rgb(150, 150, 150);
+}
+
+/* ── CONTENEDOR PRINCIPAL (formulario) ── */
+#contenedor-staff {
+    container-type: inline-size;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin: 1cqw;
+    min-width: 0;
+}
+
+/* ── CARD DEL PLUGIN ── */
+.Plugin_Container_Staff {
+    background: rgb(39, 38, 39);
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 31.7%);
+    grid-template-rows: 5cqw 12.5cqw;
+    column-gap: 1.3%;
+    row-gap: 1cqw;
+    justify-content: center;
 }
 
 .Nombre_Campo {
-    grid-column: 2;
+    background: rgb(26, 25, 25);
+    grid-column: 1 / 3;
     grid-row: 1;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Descripcion_Campo {
-    grid-column: 3;
-    grid-row: 1;
+    background: rgb(26, 25, 25);
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
 }
 
 .Comandos_Campo {
-    grid-column: 1/5;
+    background: rgb(26, 25, 25);
+    grid-column: 2;
     grid-row: 2;
     width: 100%;
+    border-radius: 8px;
     display: grid;
-    grid-template-columns: 15% 35% 35% 15%;
-    grid-template-rows: repeat(4, 10vw);
-    align-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 25%);
     justify-items: center;
+    align-items: center;
+    padding: 0.2cqw;
+}
+
+.Imagen_Campo {
+    background: rgb(26, 25, 25);
+    grid-column: 3;
+    grid-row: 1 / 3;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Añadir_Campo {
+    background: rgb(26, 25, 25);
+    margin-top: 12px;
+    border-radius: 10px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: scale 0.3s;
+}
+
+.Añadir_Campo:hover { scale: 1.01; }
+
+.Fuente_Añadir {
+    font-size: clamp(12px, 3cqw, 28px);
+    text-align: center;
+    color: rgb(103, 3, 233);
+    font-family: sans-serif;
+    grid-row: 3
 }
 
 
-[class^="Texto_Comando_"] {
-    width: 95%;
-    box-sizing: border-box;
-    padding: 2vw;
-    border-radius: 10px;
+/* ── INPUTS ── */
+.Texto_Nombre,
+.Texto_Descripcion,
+.Texto_PluginLink {
+    width: 100%;
+    height: 100%;
+    background: transparent;
     border: none;
-    background: rgb(26, 25, 25);
     color: white;
-    font-size: 3vw;
+    font-size: clamp(10px, 1.5cqw, 20px);
+    font-family: sans-serif;
+    outline: none;
+    resize: none;
+    padding: 8px;
+    text-align: center;
+}
+
+.Texto_Nombre, .Texto_PluginLink{
+    font-size: clamp(10px, 2cqw, 20px);
+}
+
+[class^="Texto_Comando_"] {
+    width: 93%;
+    height: 2.25em;
+    padding-left: 1cqw;
+    padding-right: 1cqw;
+    box-sizing: border-box;
+    border-radius: 13px;
+    border: none;
+    background: rgb(11, 11, 11);
+    color: white;
+    font-size: clamp(9px, 1.2cqw, 13px);
     font-family: sans-serif;
     outline: none;
     resize: none;
     text-align: center;
 }
 
-.Comandos_Campo input:nth-child(1) { grid-column: 2; grid-row: 1; }
-.Comandos_Campo input:nth-child(2) { grid-column: 3; grid-row: 1; }
-.Comandos_Campo input:nth-child(3) { grid-column: 2; grid-row: 2; }
-.Comandos_Campo input:nth-child(4) { grid-column: 3; grid-row: 2; }
-.Comandos_Campo input:nth-child(5) { grid-column: 2; grid-row: 3; }
-.Comandos_Campo input:nth-child(6) { grid-column: 3; grid-row: 3; }
-.Comandos_Campo input:nth-child(7) { grid-column: 2; grid-row: 4; }
-.Comandos_Campo input:nth-child(8) { grid-column: 3; grid-row: 4; }
+.Comandos_Campo input:nth-child(1) { grid-column: 1; grid-row: 1; }
+.Comandos_Campo input:nth-child(2) { grid-column: 2; grid-row: 1; }
+.Comandos_Campo input:nth-child(3) { grid-column: 1; grid-row: 2; }
+.Comandos_Campo input:nth-child(4) { grid-column: 2; grid-row: 2; }
+.Comandos_Campo input:nth-child(5) { grid-column: 1; grid-row: 3; }
+.Comandos_Campo input:nth-child(6) { grid-column: 2; grid-row: 3; }
+.Comandos_Campo input:nth-child(7) { grid-column: 1; grid-row: 4; }
+.Comandos_Campo input:nth-child(8) { grid-column: 2; grid-row: 4; }
 
+/* ── URL del plugin ── */
+
+.Contenedor_Secundario{
+    background: rgb(39, 38, 39);
+    border-radius: 12px;
+    margin-top: 1.37cqw;
+    padding: 1cqw;
+}
 
 .PluginLink_Campo {
-    grid-column: 2/4;
-    grid-row: 3;
-}
-
-.Imagen_Campo {
-    grid-column: 2/4;
-    grid-row: 4;
-    min-height: 20vw;
-}
-
-
-.AñadirImagen_Campo{
     background: rgb(26, 25, 25);
-    height: 80%;
-    width: 95%;
-    min-height: 25px;
-    border-radius: 15px;
-    grid-column: 2/4;
-    grid-row: 5;
-    margin: 2vw;
-    transition-duration: 0.5s;
-    cursor: pointer;
+    margin-top: 12px;
+    border-radius: 10px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+}
+
+/* ── Añadir imagen ── */
+.AñadirImagen_Campo {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
     position: relative;
 }
 
@@ -131,115 +299,44 @@ body{
     cursor: pointer;
 }
 
-.Añadir_Campo{
-    background: rgb(26, 25, 25);
-    height: 80%;
-    width: 95%;
-    min-height: 25px;
-    border-radius: 15px;
-    grid-column: 2/4;
-    grid-row: 6;
-    margin: 2vw;
-    transition-duration: 0.5s;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-}
-
-.Añadir_Campo:hover{
-    scale: 1.03;
-    transform-origin: center;
-}
-
-.Fuente_Añadir{
-    font-size: 3vw;
+.Fuente_Añadir {
+    font-size: clamp(12px, 2cqw, 20px);
     text-align: center;
-    margin-top: 2vw;
-    color:rgb(103, 3, 233);
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
+    pointer-events: none;
 }
 
-
-
-/* Cerrre Login Temporal*/
-
-
-#Reportes_Agradecimiento {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 30%;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    border-radius: 15px;
-}
-
-#Reportes_Cerrar {
-    background: rgb(45, 40, 75);
-    border-radius: 10px;
-    padding: 0.75vw 2vw;
-    cursor: pointer;
-    font-size: 1.5vw;
-    text-align: center;
-    color: white;
-    margin-top: 1vw;
-}
-
-#Reportes_Cerrar:hover {
-    background: rgb(65, 58, 110);
-}
-
-#Reportes_Modal {
-    background: rgb(12, 11, 11);
-    border-radius: 15px;
-    padding: 3vw 4vw;
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
-    font-size: 2vw;
-}
-
+/* ── Modal error ── */
 #Reportes_Incompleto {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 30%;
+    width: 60%; height: 30%;
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 100;
-    border-radius: 15px;
 }
 
 #Reportes_Error_Incompleto {
     background: rgb(40, 10, 10);
     border-radius: 15px;
-    padding: 3vw 4vw;
+    padding: 3cqw 4cqw;
     text-align: center;
     color: white;
     font-family: sans-serif;
-    font-size: 2vw;
+    font-size: 2cqw;
 }
 
 #Reportes_Error_Cerrar {
     background: rgb(45, 40, 75);
     border-radius: 10px;
-    padding: 0.75vw 2vw;
+    padding: 8px 20px;
     cursor: pointer;
-    font-size: 1.5vw;
     text-align: center;
     color: white;
-    margin-top: 1vw;
+    margin-top: 10px;
 }
 
-#Reportes_Error_Cerrar:hover {
-    background: rgb(160, 40, 40);
-}
-
-
+#Reportes_Error_Cerrar:hover { background: rgb(160, 40, 40); }
