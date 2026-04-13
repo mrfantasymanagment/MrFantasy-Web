@@ -1,73 +1,92 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Configuracion Guia</title>
+    <title>Editar Guia</title>
     <link rel="stylesheet" href="Guia_Edit.css" />
-    <style>
-    </style>
-
-
 </head>
-
-
 <body>
-    
-    <div class="Nombre_Campo" >
-        <input type="text" class="Texto_Nombre"  placeholder="Nombre" id="Nombre" name="Nombre" spellcheck="false" autocomplete="off">
+    <div id="wrapper_staff">
+
+        <div class="Banner_Guia_Container">
+            <img src="https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" class="Banner_Guia_Imagen">
+        </div>
+
+        <div class="Panel_Busqueda_Staff">
+            <div class="Seccion_Secciones">Secciones</div>
+            <div class="PanelBusqueda_Secciones_Ref">
+                <div class="Seccion_Boton">Plugins</div>
+                <div class="Seccion_Boton">Guias</div>
+                <div class="Seccion_Boton">Commandos</div>
+                <div class="Seccion_Boton">Items</div>
+                <div class="Seccion_Boton">Enchants</div>
+                <div class="Seccion_Boton">Quests</div>
+                <div class="Seccion_Boton">NPCs</div>
+                <div class="Seccion_Boton">Eventos</div>
+                <div class="Seccion_Boton">Changelog</div>
+                <div class="Seccion_Boton">Bugs</div>
+            </div>
+            <div class="Seccion_Tags">Tags</div>
+            <div class="PanelBusqueda_Tags_Ref">
+                <div class="Seccion_Boton">Economia</div>
+                <div class="Seccion_Boton">Mecanica</div>
+                <div class="Seccion_Boton">RPG</div>
+                <div class="Seccion_Boton">Building</div>
+                <div class="Seccion_Boton">Sociales</div>
+            </div>
+        </div>
+
+        <div id="contenedor-staff">
+            <div class="Plugin_Container_Staff">
+                <div class="Nombre_Campo">
+                    <input type="text" class="Texto_Nombre" placeholder="Nombre" id="Nombre" spellcheck="false" autocomplete="off">
+                </div>
+                <div class="Descripcion_Campo">
+                    <textarea class="Texto_Descripcion" placeholder="Descripcion" id="Descripcion" spellcheck="false"></textarea>
+                </div>
+                <div class="Comandos_Campo">
+                    <input type="text" class="Texto_Comando_1" placeholder="Comando 1" id="Comando_1" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_2" placeholder="Comando 2" id="Comando_2" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_3" placeholder="Comando 3" id="Comando_3" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_4" placeholder="Comando 4" id="Comando_4" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_5" placeholder="Comando 5" id="Comando_5" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_6" placeholder="Comando 6" id="Comando_6" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_7" placeholder="Comando 7" id="Comando_7" spellcheck="false" autocomplete="off">
+                    <input type="text" class="Texto_Comando_8" placeholder="Comando 8" id="Comando_8" spellcheck="false" autocomplete="off">
+                </div>
+                <div class="Imagen_Campo" id="Imagen_Campo">
+                    <div class="AñadirImagen_Campo">
+                        <input type="file" id="Imagen_Input" accept="image/*">
+                        <div class="Fuente_Añadir">Añadir Imagen</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Contenedor_Secundario">
+                <div class="PluginLink_Campo">
+                    <input type="text" class="Texto_PluginLink" placeholder="Url" id="PluginLink" spellcheck="false" autocomplete="off">
+                </div>
+                <div class="Añadir_Campo" id="Añadir_Campo">
+                    <div class="Fuente_Añadir">Editar</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    <div class="Descripcion_Campo" >
-        <input type="text" class="Texto_Descripcion"  placeholder="Descripcion" id="Descripcion" name="Descripcion" spellcheck="false" autocomplete="off">
-    </div>
-
-    <div class="Imagen_Campo" id="Imagen_Campo">
-    </div>
-
-    <div class="Comandos_Campo" >
-        <input type="text" class="Texto_Comando_1"  placeholder="Comando 1" id="Comando_1" name="Comando_1" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_2"  placeholder="Comando 2" id="Comando_2" name="Comando_2" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_3"  placeholder="Comando 3" id="Comando_3" name="Comando_3" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_4"  placeholder="Comando 4" id="Comando_4" name="Comando_4" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_5"  placeholder="Comando 5" id="Comando_5" name="Comando_5" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_6"  placeholder="Comando 6" id="Comando_6" name="Comando_6" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_7"  placeholder="Comando 7" id="Comando_7" name="Comando_7" spellcheck="false" autocomplete="off">
-        <input type="text" class="Texto_Comando_8"  placeholder="Comando 8" id="Comando_8" name="Comando_8" spellcheck="false" autocomplete="off">
-    </div>
-
-    <div class="PluginLink_Campo" >
-        <input type="text" class="Texto_PluginLink"  placeholder="Url" id="PluginLink" name="PluginLink" spellcheck="false" autocomplete="off">
-    </div>
-
-    <div class="AñadirImagen_Campo" id="AñadirImagen_Campo">
-        <input type="file" id="Imagen_Input" accept="image/*">
-        <div class="Fuente_Añadir">Añadir Imagen</div>
-    </div>
-
-    <div class="Añadir_Campo" id="Añadir_Campo">
-        <div class="Fuente_Añadir">Editar</div>
+    <div id="Reportes_Incompleto">
+        <div id="Reportes_Error_Incompleto">
+            <p>Por favor completár los datos.</p>
+            <div id="Reportes_Error_Cerrar">Cerrar</div>
+        </div>
     </div>
 
     <div id="Reportes_Agradecimiento">
         <div id="Reportes_Modal">
-            <p>Sesion Iniciada</p>
+            <p>Guardado correctamente.</p>
             <div id="Reportes_Cerrar">Cerrar</div>
         </div>
     </div>
 
-<div id="Reportes_Incompleto">
-    <div id="Reportes_Error_Incompleto">
-        <p>Por favor completár los datos.</p>
-        <div id="Reportes_Error_Cerrar">Cerrar</div>
-    </div>
-</div>
-
-
-    <script src="Guia_Edit.js"> </script>
+    <script src="Guia_Edit.js"></script>
 </body>
 </html>
