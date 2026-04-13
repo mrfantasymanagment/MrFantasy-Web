@@ -184,7 +184,7 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: scale 0.3s;
+    transition: scale 0s;
 }
 
 .Añadir_Campo:hover { scale: 1.01; }
