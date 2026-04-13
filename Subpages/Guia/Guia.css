@@ -371,6 +371,19 @@ html, body {
 .Checkout_Plugin_Boton:hover { scale: 1.1; }
 
 
+.Checkout_Plugin_Boton.activo {
+    background: rgb(0, 180, 0);
+    border: 3px solid rgb(0, 180, 0);
+    filter: brightness(1.4);
+    color: white;
+}
+
+.Checkout_Plugin_Boton.inactivo {
+    background: rgb(180, 0, 0);
+    border: 3px solid rgb(180, 0, 0);
+    filter: brightness(1.4);
+    color: white;
+}
 
 #Reportes_Agradecimiento {
     position: fixed;
