@@ -9,7 +9,7 @@ const obtenerPlugins = async (req, res) => {
 const buscarPlugins = async (req, res) => {
     const { q } = req.query;
     const [plugins] = await db.query(
-        'SELECT * FROM Plugins WHERE Checkout = 1 AND Nombre LIKE ? ORDER BY Nombre ASC',
+        'SELECT * FROM Plugins AND Nombre LIKE ? ORDER BY Nombre ASC',
         [`%${q}%`]
     );
     res.json(plugins);
