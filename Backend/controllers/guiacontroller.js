@@ -155,16 +155,28 @@ imagenes.forEach(imagen => {
 
     // Guardar imagen si existe
     if (imagen) {
-        const base64Puro = imagen.split(',')[1]; // Quitá el prefijo data:image/...;base64,
-        await fetch(`https://api.github.com/repos/${REPO}/contents/${BASE}/${nombre}.png`, {
+        const base64Puro = imagen.split(',')[1];
+        const rutaImagen = `${BASE}/${nombre}.png`;
+    
+        let sha = undefined;
+        const getRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${rutaImagen}`, {
+            headers: { Authorization: `Bearer ${TOKEN}` }
+        });
+        if (getRes.ok) {
+            const getData = await getRes.json();
+            sha = getData.sha;
+        }
+    
+        await fetch(`https://api.github.com/repos/${REPO}/contents/${rutaImagen}`, {
             method: 'PUT',
             headers: {
                 Authorization: `Bearer ${TOKEN}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                message: `add: imagen ${nombre}`,
-                content: base64Puro
+                message: `update: imagen ${nombre}`,
+                content: base64Puro,
+                ...(sha && { sha })
             })
         });
     }
