@@ -197,4 +197,10 @@ const modificarPlugin = async (req, res) => {
     res.json({ ok: true });
 };
 
+const toggleCheckout = async (req, res) => {
+    const { nombre, checkout } = req.body;
+    await db.query('UPDATE Plugins SET Checkout=? WHERE Nombre=?', [checkout, nombre]);
+    res.json({ ok: true });
+};
+
 module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin, obtenerPluginPorNombre, modificarPlugin, buscarPlugins};
