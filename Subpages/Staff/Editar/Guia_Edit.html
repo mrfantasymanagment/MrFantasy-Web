@@ -3,16 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Guia</title>
-    <link rel="stylesheet" href="Guia_Edit.css" />
+    <title>Configuracion Guia</title>
+    <link rel="stylesheet" href="Guia_Staff.css" />
 </head>
+
 <body>
     <div id="wrapper_staff">
 
+        <!-- BANNER -->
         <div class="Banner_Guia_Container">
-            <img src="https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" class="Banner_Guia_Imagen">
+            <img
+            src="https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png"
+            class="Banner_Guia_Imagen">
         </div>
 
+        <!-- PANEL LATERAL (referencia visual) -->
         <div class="Panel_Busqueda_Staff">
             <div class="Seccion_Secciones">Secciones</div>
             <div class="PanelBusqueda_Secciones_Ref">
@@ -29,6 +34,7 @@
             </div>
             <div class="Seccion_Tags">Tags</div>
             <div class="PanelBusqueda_Tags_Ref">
+
                 <div class="Seccion_Boton">Economia</div>
                 <div class="Seccion_Boton">Mecanica</div>
                 <div class="Seccion_Boton">RPG</div>
@@ -37,14 +43,19 @@
             </div>
         </div>
 
+        <!-- CONTENIDO PRINCIPAL: formulario -->
         <div id="contenedor-staff">
+
             <div class="Plugin_Container_Staff">
+
                 <div class="Nombre_Campo">
                     <input type="text" class="Texto_Nombre" placeholder="Nombre" id="Nombre" spellcheck="false" autocomplete="off">
                 </div>
+
                 <div class="Descripcion_Campo">
                     <textarea class="Texto_Descripcion" placeholder="Descripcion" id="Descripcion" spellcheck="false"></textarea>
                 </div>
+
                 <div class="Comandos_Campo">
                     <input type="text" class="Texto_Comando_1" placeholder="Comando 1" id="Comando_1" spellcheck="false" autocomplete="off">
                     <input type="text" class="Texto_Comando_2" placeholder="Comando 2" id="Comando_2" spellcheck="false" autocomplete="off">
@@ -55,22 +66,25 @@
                     <input type="text" class="Texto_Comando_7" placeholder="Comando 7" id="Comando_7" spellcheck="false" autocomplete="off">
                     <input type="text" class="Texto_Comando_8" placeholder="Comando 8" id="Comando_8" spellcheck="false" autocomplete="off">
                 </div>
+
                 <div class="Imagen_Campo" id="Imagen_Campo">
                     <div class="AñadirImagen_Campo">
                         <input type="file" id="Imagen_Input" accept="image/*">
                         <div class="Fuente_Añadir">Añadir Imagen</div>
                     </div>
                 </div>
+
             </div>
             <div class="Contenedor_Secundario">
-                <div class="PluginLink_Campo">
-                    <input type="text" class="Texto_PluginLink" placeholder="Url" id="PluginLink" spellcheck="false" autocomplete="off">
-                </div>
-                <div class="Añadir_Campo" id="Añadir_Campo">
-                    <div class="Fuente_Añadir">Editar</div>
-                </div>
+            <div class="PluginLink_Campo">
+                <input type="text" class="Texto_PluginLink" placeholder="Url" id="PluginLink" spellcheck="false" autocomplete="off">
+            </div>
+
+            <div class="Añadir_Campo" id="Añadir_Campo">
+                <div class="Fuente_Añadir">Añadir</div>
             </div>
         </div>
+    </div>
     </div>
 
     <div id="Reportes_Incompleto">
@@ -79,7 +93,6 @@
             <div id="Reportes_Error_Cerrar">Cerrar</div>
         </div>
     </div>
-
 
     <script src="Guia_Edit.js"></script>
 </body>
