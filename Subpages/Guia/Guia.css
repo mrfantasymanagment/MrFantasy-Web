@@ -358,7 +358,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: start;
+    justify-self: end;
     align-self: end;
     position: relative;
     z-index: 10;
