@@ -59,9 +59,8 @@ function filtrarYRenderizar() {
 
 document.querySelectorAll('.PanelBusqueda_Secciones .Seccion_Boton').forEach(boton => {
     boton.addEventListener('click', function() {
-        const yaSeleccionado = this.classList.contains('seleccionado');
         document.querySelectorAll('.PanelBusqueda_Secciones .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
-        if (!yaSeleccionado) this.classList.add('seleccionado');
+        this.classList.add('seleccionado');
         filtrarYRenderizar();
     });
 });
