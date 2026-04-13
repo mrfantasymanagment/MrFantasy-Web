@@ -215,7 +215,7 @@ html, body {
     text-align: center;
 }
 
-.Texto_Nombre{
+.Texto_Nombre, .Texto_PluginLink{
     font-size: clamp(10px, 2cqw, 20px);
 }
 
