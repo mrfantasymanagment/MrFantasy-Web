@@ -361,6 +361,7 @@ html, body {
     position: relative;
     z-index: 10;
     cursor: pointer;
+    transition-duration: 0.3s;
     font-size: 1.2cqw;
     overflow: hidden;
     white-space: nowrap;
