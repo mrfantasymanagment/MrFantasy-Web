@@ -346,6 +346,8 @@ html, body {
     border: none;
 }
 
+.Editar_Plugin_Boton:hover { scale: 1.1; }
+
 .Checkout_Plugin_Boton {
     grid-column: 3;
     grid-row: 2;
@@ -370,7 +372,6 @@ html, body {
 
 .Checkout_Plugin_Boton:hover { scale: 1.1; }
 
-.Editar_Plugin_Boton:hover { scale: 1.1; }
 
 
 #Reportes_Agradecimiento {
