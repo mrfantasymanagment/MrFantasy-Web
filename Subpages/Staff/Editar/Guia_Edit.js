@@ -129,9 +129,6 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
     }
 });
 
-document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
-    document.getElementById('Reportes_Agradecimiento').style.display = 'none';
-});
 
 document.getElementById('Reportes_Error_Cerrar').addEventListener('click', function() {
     document.getElementById('Reportes_Incompleto').style.display = 'none';
