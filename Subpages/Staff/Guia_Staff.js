@@ -35,8 +35,7 @@ document.querySelectorAll('.PanelBusqueda_Secciones_Ref .Seccion_Boton').forEach
 
 document.querySelectorAll('.PanelBusqueda_Tags_Ref .Seccion_Boton').forEach(boton => {
     boton.addEventListener('click', function() {
-        document.querySelectorAll('.PanelBusqueda_Tags_Ref .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
-        this.classList.add('seleccionado');
+        this.classList.toggle('seleccionado');
     });
 });
 
