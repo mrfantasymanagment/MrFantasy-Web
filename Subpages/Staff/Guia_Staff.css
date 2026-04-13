@@ -223,6 +223,7 @@ html, body {
     width: 93%;
     height: 2.25em;
     padding-left: 1cqw;
+    padding-right: 1cqw;
     box-sizing: border-box;
     border-radius: 13px;
     border: none;
