@@ -1,3 +1,5 @@
+let todosLosPlugins = [];
+
 function crearPlugin(datos) {
     const comandos = [datos.Comando1, datos.Comando2, datos.Comando3, datos.Comando4,
                       datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
@@ -10,7 +12,7 @@ function crearPlugin(datos) {
                 <div class="hproyectos">${datos.Nombre}</div>
             </div>
             <div class="Descripcion_Campo">
-                <div class="hproyectos2">${datos.Descripcion.replace(/\n/g, '<br>')}</div>
+                <div class="hproyectos2" style="white-space: pre-wrap; word-break: break-word;">${datos.Descripcion.replace(/\n/g, '<br>')}</div>
             </div>
             <div class="Comandos_Campo">
                 ${comandos.length > 0
@@ -26,17 +28,46 @@ function crearPlugin(datos) {
     </a>`;
 }
 
+function filtrarYRenderizar() {
+    const query = document.getElementById('PanelBusqueda_Buscador').value.trim().toLowerCase();
+    const seccionSeleccionada = document.querySelector('.PanelBusqueda_Secciones .Seccion_Boton.seleccionado');
+    const tagsSeleccionados = [...document.querySelectorAll('.PanelBusqueda_Tags .Seccion_Boton.seleccionado')]
+                                .map(t => t.textContent.trim().toLowerCase());
+
+    let resultado = todosLosPlugins;
+
+    if (query !== '') {
+        resultado = resultado.filter(p => p.Nombre.toLowerCase().includes(query));
+    }
+
+    if (seccionSeleccionada) {
+        const seccion = seccionSeleccionada.textContent.trim().toLowerCase();
+        resultado = resultado.filter(p => (p.Seccion ?? '').toLowerCase() === seccion);
+    }
+
+    if (tagsSeleccionados.length > 0) {
+        resultado = resultado.filter(p => {
+            const tagsPlugin = (p.Tags ?? '').toLowerCase().split('||');
+            return tagsSeleccionados.some(tag => tagsPlugin.includes(tag));
+        });
+    }
+
+    renderPlugins(resultado);
+}
+
 document.querySelectorAll('.PanelBusqueda_Secciones .Seccion_Boton').forEach(boton => {
     boton.addEventListener('click', function() {
+        const yaSeleccionado = this.classList.contains('seleccionado');
         document.querySelectorAll('.PanelBusqueda_Secciones .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
-        this.classList.add('seleccionado');
+        if (!yaSeleccionado) this.classList.add('seleccionado');
+        filtrarYRenderizar();
     });
 });
 
 document.querySelectorAll('.PanelBusqueda_Tags .Seccion_Boton').forEach(boton => {
     boton.addEventListener('click', function() {
-        document.querySelectorAll('.PanelBusqueda_Tags .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
-        this.classList.add('seleccionado');
+        this.classList.toggle('seleccionado');
+        filtrarYRenderizar();
     });
 });
 
@@ -60,21 +91,21 @@ function editarPlugin(nombre) {
 
 fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
     .then(r => r.json())
-    .then(plugins => renderPlugins(plugins));
+    .then(plugins => {
+        todosLosPlugins = plugins;
+        renderPlugins(plugins);
+    });
 
 document.querySelector('.PanelBusqueda_Lupa').addEventListener('click', function(e) {
     e.preventDefault();
-    const query = document.getElementById('PanelBusqueda_Buscador').value.trim();
-    const url = query === '' 
-        ? 'https://mrfantasy-backend.onrender.com/guia/plugins'
-        : `https://mrfantasy-backend.onrender.com/guia/plugins/buscar?q=${query}`;
-    fetch(url).then(r => r.json()).then(plugins => renderPlugins(plugins));
+    filtrarYRenderizar();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 window.addEventListener('load', function() {
     if (new URLSearchParams(window.location.search).get('exito') === '1') {
         document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+        history.replaceState(null, '', window.location.pathname);
     }
 });
 
