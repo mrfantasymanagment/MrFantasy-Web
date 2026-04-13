@@ -47,8 +47,7 @@ html, body {
     margin: 1cqw;
     border-radius: 12px;
     display: grid;
-    grid-template-columns: 25% 25% 32% 18%;
-    grid-template-rows: 6cqw 3.5cqw 31.5cqw;
+    grid-template-columns: 50% 50%;
     row-gap: 0.75cqw;
     opacity: 0.6;          /* visual / referencia: levemente atenuado */
     pointer-events: none;
