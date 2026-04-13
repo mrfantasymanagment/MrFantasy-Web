@@ -79,6 +79,11 @@ html, body {
     padding: 4px;
 }
 
+.Seccion_Secciones{
+    
+}
+
+
 .Seccion_Boton {
     display: flex;
     align-items: center;
