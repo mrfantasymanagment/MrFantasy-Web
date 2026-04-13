@@ -81,6 +81,7 @@ html, body {
 
 .Seccion_Secciones{
     background: red;
+    border-radius: 0 0 200px 200px;  /* solo redondea la parte de abajo */
 }
 
 
