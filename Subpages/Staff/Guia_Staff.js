@@ -26,13 +26,7 @@ document.getElementById('Comando_7').addEventListener('input', function() { limi
 document.getElementById('Comando_8').addEventListener('input', function() { limitarPorEspacio(this); });
 document.getElementById('PluginLink').addEventListener('input', function() { limitarPorEspacio(this); });
 
-document.getElementById('Añadir_Campo').addEventListener('click', async function() {
-  const nombre = document.getElementById('Nombre').value;
-  const descripcion = document.getElementById('Descripcion').value;
-  const enlace = document.getElementById('PluginLink').value;
-
-
-  document.querySelectorAll('.PanelBusqueda_Secciones_Ref .Seccion_Boton').forEach(boton => {
+document.querySelectorAll('.PanelBusqueda_Secciones_Ref .Seccion_Boton').forEach(boton => {
     boton.addEventListener('click', function() {
         document.querySelectorAll('.PanelBusqueda_Secciones_Ref .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
         this.classList.add('seleccionado');
@@ -46,7 +40,13 @@ document.querySelectorAll('.PanelBusqueda_Tags_Ref .Seccion_Boton').forEach(boto
     });
 });
 
-  if (nombre.trim() === '' || descripcion.trim() === '' || enlace.trim() === '' || imagenBase64 === '') {
+document.getElementById('Añadir_Campo').addEventListener('click', async function() {
+  const nombre = document.getElementById('Nombre').value;
+  const descripcion = document.getElementById('Descripcion').value;
+  const enlace = document.getElementById('PluginLink').value;
+  const haySeccion = document.querySelector('.PanelBusqueda_Secciones_Ref .Seccion_Boton.seleccionado') !== null;
+
+  if (nombre.trim() === '' || descripcion.trim() === '' || enlace.trim() === '' || imagenBase64 === '' || !haySeccion) {
     document.getElementById('Reportes_Incompleto').style.display = 'flex';
     return;
   }
