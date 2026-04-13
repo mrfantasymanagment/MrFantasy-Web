@@ -1,4 +1,44 @@
 //Campos Texto
+let imagenBase64 = '';
+
+function limitarPorEspacio(input) {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  const estilo = window.getComputedStyle(input);
+  ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
+  
+  const anchoTexto = ctx.measureText(input.value).width;
+  const anchoDisponible = input.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
+  
+  if (anchoTexto > anchoDisponible) {
+      input.value = input.value.slice(0, -1);
+  }
+}
+
+document.getElementById('Nombre').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_1').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_2').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_3').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_4').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_5').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_6').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_7').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_8').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('PluginLink').addEventListener('input', function() { limitarPorEspacio(this); });
+
+document.querySelectorAll('.PanelBusqueda_Secciones_Ref .Seccion_Boton').forEach(boton => {
+    boton.addEventListener('click', function() {
+        document.querySelectorAll('.PanelBusqueda_Secciones_Ref .Seccion_Boton').forEach(b => b.classList.remove('seleccionado'));
+        this.classList.add('seleccionado');
+    });
+});
+
+document.querySelectorAll('.PanelBusqueda_Tags_Ref .Seccion_Boton').forEach(boton => {
+    boton.addEventListener('click', function() {
+        this.classList.toggle('seleccionado');
+    });
+});
+
 document.getElementById('Añadir_Campo').addEventListener('click', async function() {
   const nombre = document.getElementById('Nombre').value;
   const descripcion = document.getElementById('Descripcion').value;
@@ -59,47 +99,6 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
   }
 });
 
-  try {
-      await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-              nombre,
-              imagen: imagenBase64
-          })
-      });
-
-      const response = await fetch('https://mrfantasy-backend.onrender.com/guia/agregar', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-              nombre,
-              descripcion: document.getElementById('Descripcion').value,
-              comando1: document.getElementById('Comando_1').value,
-              comando2: document.getElementById('Comando_2').value,
-              comando3: document.getElementById('Comando_3').value,
-              comando4: document.getElementById('Comando_4').value,
-              comando5: document.getElementById('Comando_5').value,
-              comando6: document.getElementById('Comando_6').value,
-              comando7: document.getElementById('Comando_7').value,
-              comando8: document.getElementById('Comando_8').value,
-              enlace: document.getElementById('PluginLink').value
-          })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-          window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Guia/Guia.html?exito=1';
-      } else {
-          document.getElementById('Reportes_Incompleto').style.display = 'flex';
-      }
-  } catch (error) {
-      console.log(error);
-      document.getElementById('Reportes_Incompleto').style.display = 'flex';
-  }
-});
-
 document.getElementById('Reportes_Error_Cerrar').addEventListener('click', function() {
   document.getElementById('Reportes_Incompleto').style.display = 'none';
 });
@@ -138,48 +137,48 @@ function getCtxDesc(textarea) {
     const estilo = window.getComputedStyle(textarea);
     ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
     return ctx;
-  }
-  
-  function getAnchoDisponibleDesc(textarea) {
+}
+
+function getAnchoDisponibleDesc(textarea) {
     const estilo = window.getComputedStyle(textarea);
     const ancho = textarea.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
     return ancho * 0.93;
-  }
-  
-  function contarLineasVisualesDesc(textarea) {
+}
+
+function contarLineasVisualesDesc(textarea) {
     const ctx = getCtxDesc(textarea);
     const anchoDisponible = getAnchoDisponibleDesc(textarea);
     const lineas = textarea.value.split('\n');
-  
+
     let totalVisuales = 0;
     for (const linea of lineas) {
-      if (linea === '') {
-        totalVisuales += 1;
-        continue;
-      }
-      const anchoLinea = ctx.measureText(linea).width;
-      totalVisuales += Math.ceil(anchoLinea / anchoDisponible);
+        if (linea === '') {
+            totalVisuales += 1;
+            continue;
+        }
+        const anchoLinea = ctx.measureText(linea).width;
+        totalVisuales += Math.ceil(anchoLinea / anchoDisponible);
     }
     return totalVisuales;
-  }
-  
-  const descripcion = document.getElementById('Descripcion');
-  
-  descripcion.addEventListener('keydown', function(e) {
+}
+
+const descripcion = document.getElementById('Descripcion');
+
+descripcion.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
-      if (contarLineasVisualesDesc(this) >= 6) e.preventDefault();
-      return;
+        if (contarLineasVisualesDesc(this) >= 6) e.preventDefault();
+        return;
     }
-  });
-  
-  descripcion.addEventListener('input', function() {
+});
+
+descripcion.addEventListener('input', function() {
     const debeRevertir =
-      contarLineasVisualesDesc(this) > 6 ||
-      this.value.split('\n').length > 6;
-  
+        contarLineasVisualesDesc(this) > 6 ||
+        this.value.split('\n').length > 6;
+
     if (debeRevertir) {
-      this.value = this.dataset.lastValue ?? '';
+        this.value = this.dataset.lastValue ?? '';
     } else {
-      this.dataset.lastValue = this.value;
+        this.dataset.lastValue = this.value;
     }
-  });
+});
