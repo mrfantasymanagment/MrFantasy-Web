@@ -241,6 +241,7 @@ html, body {
 /* ── URL del plugin ── */
 
 .Contenedor_Secundario{
+    border-radius: 12px;
     background: rgb(39, 38, 39);
 }
 .PluginLink_Campo {
