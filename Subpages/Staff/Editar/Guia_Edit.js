@@ -162,7 +162,6 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
                 campo.style.backgroundImage = `url(${imagenBase64})`;
                 campo.style.backgroundSize = 'cover';
                 campo.style.backgroundPosition = 'center';
-                document.querySelector('#Imagen_Campo .AñadirImagen_Campo').style.display = 'none';
             };
             img.src = e.target.result;
         };
