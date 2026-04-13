@@ -95,7 +95,7 @@ fetch('https://mrfantasy-backend.onrender.com/guia/plugins')
     .then(r => r.json())
     .then(plugins => {
         todosLosPlugins = plugins;
-        renderPlugins(plugins);
+        filtrarYRenderizar();
     });
 
 document.querySelector('.PanelBusqueda_Lupa').addEventListener('click', function(e) {
