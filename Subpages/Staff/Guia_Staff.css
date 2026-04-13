@@ -239,6 +239,10 @@ html, body {
 .Comandos_Campo input:nth-child(8) { grid-column: 2; grid-row: 4; }
 
 /* ── URL del plugin ── */
+
+.Contenedor_Secundario{
+    background: rgb(60, 60, 60);
+}
 .PluginLink_Campo {
     background: rgb(26, 25, 25);
     margin-top: 12px;
