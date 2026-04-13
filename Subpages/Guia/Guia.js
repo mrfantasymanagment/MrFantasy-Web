@@ -5,6 +5,8 @@ function crearPlugin(datos) {
                       datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
                       .filter(c => c);
 
+    const checkoutColor = datos.Checkout === 1 ? 'rgb(0, 180, 0)' : 'rgb(180, 0, 0)';
+
     return `
     <a href="${datos.Enlace}" style="text-decoration: none;">
         <div class="Plugin_Container">
@@ -24,9 +26,30 @@ function crearPlugin(datos) {
                 <img src="${datos.Imagen}" class="Plugin_Imagen">
             </div>
             <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">Edit</button>
-            <button class="Checkout_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')"></button>
+            <button class="Checkout_Plugin_Boton" style="background:${checkoutColor}; border: 3px solid ${checkoutColor}; filter: brightness(1.4); color: white;" onclick="event.preventDefault(); toggleCheckout('${datos.Nombre}', ${datos.Checkout}, this)">✔</button>
         </div>
     </a>`;
+}
+
+async function toggleCheckout(nombre, actual, boton) {
+    const nuevo = actual === 1 ? 0 : 1;
+    try {
+        const response = await fetch('https://mrfantasy-backend.onrender.com/guia/checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nombre, checkout: nuevo })
+        });
+        if (response.ok) {
+            const color = nuevo === 1 ? 'rgb(0, 180, 0)' : 'rgb(180, 0, 0)';
+            boton.style.background = color;
+            boton.style.borderColor = color;
+            const plugin = todosLosPlugins.find(p => p.Nombre === nombre);
+            if (plugin) plugin.Checkout = nuevo;
+            boton.setAttribute('onclick', `event.preventDefault(); toggleCheckout('${nombre}', ${nuevo}, this)`);
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function filtrarYRenderizar() {
