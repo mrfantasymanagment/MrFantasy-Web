@@ -15,6 +15,17 @@ function limitarPorEspacio(input) {
   }
 }
 
+document.getElementById('Nombre').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_1').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_2').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_3').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_4').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_5').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_6').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_7').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('Comando_8').addEventListener('input', function() { limitarPorEspacio(this); });
+document.getElementById('PluginLink').addEventListener('input', function() { limitarPorEspacio(this); });
+
 document.getElementById('Añadir_Campo').addEventListener('click', async function() {
   const nombre = document.getElementById('Nombre').value;
   const descripcion = document.getElementById('Descripcion').value;
