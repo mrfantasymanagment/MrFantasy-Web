@@ -346,10 +346,7 @@ html, body {
     border: none;
 }
 
-.Checkout_Plugin_Boton:hover { scale: 1.1; }
-
 .Checkout_Plugin_Boton {
-    background: rgb(67, 1, 78);
     grid-column: 3;
     grid-row: 2;
     width: 4cqw;
@@ -369,8 +366,9 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0.5cqw;
-    border: none;
 }
+
+.Checkout_Plugin_Boton:hover { scale: 1.1; }
 
 .Editar_Plugin_Boton:hover { scale: 1.1; }
 
