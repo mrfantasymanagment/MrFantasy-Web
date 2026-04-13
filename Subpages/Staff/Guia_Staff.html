@@ -1,88 +1,57 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Configuracion Guia</title>
-    <link rel="stylesheet" href="Guia.css" />
     <link rel="stylesheet" href="Guia_Staff.css" />
+    <style>
+    </style>
+
+
 </head>
 
 <body>
-    <div id="wrapper">
+    <div id="wrapper_staff">
+        <div class="Plugin_Container_Staff">
 
-        <div class="Banner_Guia_Container">
-            <img src="https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" 
-            class="Banner_Guia_Imagen">
+            <div class="Nombre_Campo">
+                <input type="text" class="Texto_Nombre" placeholder="Nombre" id="Nombre" spellcheck="false" autocomplete="off">
+            </div>
+
+            <div class="Descripcion_Campo">
+                <textarea class="Texto_Descripcion" placeholder="Descripcion" id="Descripcion" spellcheck="false"></textarea>
+            </div>
+
+            <div class="Comandos_Campo">
+                <input type="text" class="Texto_Comando_1" placeholder="Comando 1" id="Comando_1" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_2" placeholder="Comando 2" id="Comando_2" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_3" placeholder="Comando 3" id="Comando_3" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_4" placeholder="Comando 4" id="Comando_4" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_5" placeholder="Comando 5" id="Comando_5" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_6" placeholder="Comando 6" id="Comando_6" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_7" placeholder="Comando 7" id="Comando_7" spellcheck="false" autocomplete="off">
+                <input type="text" class="Texto_Comando_8" placeholder="Comando 8" id="Comando_8" spellcheck="false" autocomplete="off">
+            </div>
+
+            <div class="Imagen_Campo" id="Imagen_Campo">
+                <div class="AñadirImagen_Campo">
+                    <input type="file" id="Imagen_Input" accept="image/*">
+                    <div class="Fuente_Añadir">Añadir Imagen</div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="Panel_Busqueda"> 
-            <div class="PanelBusqueda_Imagen">
-                <img src="https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/BannerMrFantasy.png" 
-                class="Banner_Guia_Imagen">
-            </div>  
-            <input type="text" class="PanelBusqueda_Buscador" placeholder="Buscar" spellcheck="false">
-            <button class="PanelBusqueda_Lupa">🔎︎</button>
-            <div class="PanelBusqueda_Secciones">
-                <div class="Seccion_Boton seleccionado">Plugins</div>
-                <div class="Seccion_Boton">Guias</div>
-                <div class="Seccion_Boton">Commandos</div>
-                <div class="Seccion_Boton">Items</div>
-                <div class="Seccion_Boton">Enchants</div>
-                <div class="Seccion_Boton">Quests</div>
-                <div class="Seccion_Boton">NPCs</div>
-                <div class="Seccion_Boton">Eventos</div>
-                <div class="Seccion_Boton">Changelog</div>
-                <div class="Seccion_Boton">Bugs</div>
-            </div>
-            <div class="PanelBusqueda_Tags">
-                <div class="Seccion_Boton">Economia</div>
-                <div class="Seccion_Boton">Mecanica</div>
-                <div class="Seccion_Boton">RPG</div>
-                <div class="Seccion_Boton">Building</div>
-                <div class="Seccion_Boton">Sociales</div>
-            </div>        
+        <div class="PluginLink_Campo">
+            <input type="text" class="Texto_PluginLink" placeholder="Url" id="PluginLink" spellcheck="false" autocomplete="off">
         </div>
 
-        <!-- FORMULARIO en lugar de contenedor-plugins -->
-        <div id="contenedor-staff">
-            <div class="Plugin_Container_Staff">
-
-                <div class="Nombre_Campo">
-                    <input type="text" class="Texto_Nombre" placeholder="Nombre" id="Nombre" spellcheck="false" autocomplete="off">
-                </div>
-
-                <div class="Descripcion_Campo">
-                    <textarea class="Texto_Descripcion" placeholder="Descripcion" id="Descripcion" spellcheck="false"></textarea>
-                </div>
-
-                <div class="Comandos_Campo">
-                    <input type="text" class="Texto_Comando_1" placeholder="Comando 1" id="Comando_1" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_2" placeholder="Comando 2" id="Comando_2" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_3" placeholder="Comando 3" id="Comando_3" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_4" placeholder="Comando 4" id="Comando_4" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_5" placeholder="Comando 5" id="Comando_5" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_6" placeholder="Comando 6" id="Comando_6" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_7" placeholder="Comando 7" id="Comando_7" spellcheck="false" autocomplete="off">
-                    <input type="text" class="Texto_Comando_8" placeholder="Comando 8" id="Comando_8" spellcheck="false" autocomplete="off">
-                </div>
-
-                <div class="Imagen_Campo" id="Imagen_Campo">
-                    <div class="AñadirImagen_Campo">
-                        <input type="file" id="Imagen_Input" accept="image/*">
-                        <div class="Fuente_Añadir">Añadir Imagen</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PluginLink_Campo">
-                <input type="text" class="Texto_PluginLink" placeholder="Url" id="PluginLink" spellcheck="false" autocomplete="off">
-            </div>
-
-            <div class="Añadir_Campo" id="Añadir_Campo">
-                <div class="Fuente_Añadir">Añadir</div>
-            </div>
+        <div class="Añadir_Campo" id="Añadir_Campo">
+            <div class="Fuente_Añadir">Añadir</div>
         </div>
 
     </div>
