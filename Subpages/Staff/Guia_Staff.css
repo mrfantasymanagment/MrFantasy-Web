@@ -193,7 +193,7 @@ html, body {
     text-align: center;
     color: rgb(103, 3, 233);
     font-family: sans-serif;
-    
+    grid-row: 3
 }
 
 
