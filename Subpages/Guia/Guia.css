@@ -48,7 +48,7 @@ html, body {
     top: 12px;                    
     max-height: calc(100vh - 24px);
     overflow-y: auto;   
-    background: rgba(0,0,0,0.842);
+    background: rgb(26, 25, 25);
     padding: 12px;
     margin: 1cqw;
     border-radius: 12px;
