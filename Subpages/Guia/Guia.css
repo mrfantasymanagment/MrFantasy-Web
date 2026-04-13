@@ -343,7 +343,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0.5cqw;
-    border: none;
 }
 
 .Editar_Plugin_Boton:hover { scale: 1.1; }
