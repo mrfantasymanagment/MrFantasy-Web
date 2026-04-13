@@ -4,22 +4,145 @@
     box-sizing: border-box;
 }
 
-body {
-    background: rgb(12, 11, 11);
+html, body {
+    overflow-x: visible;
+}
+
+/* ── WRAPPER: mismo grid de 4 columnas que Guia.html ── */
+#wrapper_staff {
+    container-name: principal;
+    container-type: inline-size;
+    min-width: 400px;
+    width: 100%;
+    background: rgb(20, 20, 20);
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
 }
 
-#wrapper_staff {
+/* ── BANNER ── */
+.Banner_Guia_Container {
+    grid-column: 1 / 5;
+}
+
+.Banner_Guia_Imagen {
+    background: rgb(45, 40, 75);
+    height: 200px;
     width: 100%;
-    max-width: 900px;
-    container-type: inline-size;
+    object-fit: cover;
+    display: block;
 }
 
+/* ── PANEL LATERAL (visual/referencia) ── */
+.Panel_Busqueda_Staff {
+    grid-column: 4;
+    grid-row: 2;
+    position: sticky;
+    top: 12px;
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
+    background: rgb(39, 38, 39);
+    padding: 12px;
+    margin: 1cqw;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 25% 25% 32% 18%;
+    grid-template-rows: 6cqw 3.5cqw 31.5cqw;
+    row-gap: 0.75cqw;
+    opacity: 0.6;          /* visual / referencia: levemente atenuado */
+    pointer-events: none;
+}
+
+.PanelBusqueda_Imagen {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 1cqw;
+}
+
+.PanelBusqueda_Buscador_Ref {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background: rgb(26, 25, 25);
+    border-radius: 10px;
+    width: 95%;
+}
+
+.PanelBusqueda_Lupa_Ref {
+    grid-column: 4;
+    grid-row: 2;
+    background: rgb(255, 0, 13);
+    width: 100%;
+    height: 100%;
+    border-radius: 1cqw;
+    font-size: 1.6cqw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PanelBusqueda_Secciones_Ref {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    background: rgb(30, 30, 30);
+    width: 95%;
+    height: 100%;
+    border-radius: 1cqw;
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    padding: 4px;
+}
+
+.PanelBusqueda_Tags_Ref {
+    grid-column: 3 / 5;
+    grid-row: 3;
+    background: rgb(30, 30, 30);
+    width: 95%;
+    height: 100%;
+    border-radius: 1cqw;
+    display: grid;
+    grid-template-rows: repeat(5, 20%);
+    padding: 4px;
+}
+
+.Seccion_Boton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    color: white;
+    font-size: 1.1cqw;
+    cursor: default;
+}
+
+.Seccion_Boton::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    border: 2px solid rgb(100, 100, 100);
+}
+
+.Seccion_Boton.seleccionado::before {
+    background: rgb(20, 20, 20);
+    border-color: rgb(150, 150, 150);
+}
+
+/* ── CONTENEDOR PRINCIPAL (formulario) ── */
+#contenedor-staff {
+    container-type: inline-size;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    margin: 1cqw;
+    min-width: 0;
+}
+
+/* ── CARD DEL PLUGIN ── */
 .Plugin_Container_Staff {
     background: rgb(39, 38, 39);
     color: rgb(255, 255, 255);
@@ -35,7 +158,7 @@ body {
 
 .Nombre_Campo {
     background: rgb(26, 25, 25);
-    grid-column: 1/3;
+    grid-column: 1 / 3;
     grid-row: 1;
     width: 100%;
     border-radius: 8px;
@@ -69,7 +192,7 @@ body {
 .Imagen_Campo {
     background: rgb(26, 25, 25);
     grid-column: 3;
-    grid-row: 1/3;
+    grid-row: 1 / 3;
     width: 100%;
     border-radius: 8px;
     display: flex;
@@ -78,7 +201,10 @@ body {
     overflow: hidden;
 }
 
-.Texto_Nombre, .Texto_Descripcion, .Texto_PluginLink {
+/* ── INPUTS ── */
+.Texto_Nombre,
+.Texto_Descripcion,
+.Texto_PluginLink {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -107,7 +233,6 @@ body {
     text-align: center;
 }
 
-/* posicionamiento de los inputs de comandos */
 .Comandos_Campo input:nth-child(1) { grid-column: 1; grid-row: 1; }
 .Comandos_Campo input:nth-child(2) { grid-column: 2; grid-row: 1; }
 .Comandos_Campo input:nth-child(3) { grid-column: 1; grid-row: 2; }
@@ -117,6 +242,7 @@ body {
 .Comandos_Campo input:nth-child(7) { grid-column: 1; grid-row: 4; }
 .Comandos_Campo input:nth-child(8) { grid-column: 2; grid-row: 4; }
 
+/* ── URL del plugin ── */
 .PluginLink_Campo {
     background: rgb(26, 25, 25);
     margin-top: 12px;
@@ -126,28 +252,7 @@ body {
     display: flex;
 }
 
-.Añadir_Campo {
-    background: rgb(26, 25, 25);
-    margin-top: 12px;
-    border-radius: 10px;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: scale 0.3s;
-}
-
-.Añadir_Campo:hover { scale: 1.03; }
-
-.Fuente_Añadir {
-    font-size: clamp(12px, 3cqw, 28px);
-    text-align: center;
-    color: rgb(103, 3, 233);
-    font-family: sans-serif;
-}
-
+/* ── Añadir imagen ── */
 .AñadirImagen_Campo {
     width: 100%;
     height: 100%;
@@ -166,6 +271,15 @@ body {
     cursor: pointer;
 }
 
+.Fuente_Añadir {
+    font-size: clamp(12px, 1.5cqw, 20px);
+    text-align: center;
+    color: rgb(150, 150, 150);
+    font-family: sans-serif;
+    pointer-events: none;
+}
+
+/* ── Modal error ── */
 #Reportes_Incompleto {
     position: fixed;
     top: 50%; left: 50%;
