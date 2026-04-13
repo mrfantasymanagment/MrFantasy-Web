@@ -220,8 +220,7 @@ html, body {
 
 [class^="Texto_Comando_"] {
     width: 93%;
-    height: 2.4em;
-    padding: 1cqw;
+    height: 2.3em;
     box-sizing: border-box;
     border-radius: 13px;
     border: none;
