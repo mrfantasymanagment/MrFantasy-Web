@@ -84,6 +84,7 @@ html, body {
     border-radius: 200px 200px 0 0;  /* solo redondea la parte de abajo */
     display: flex;
     justify-content: center;
+    justify-self: center;
 }
 
 
