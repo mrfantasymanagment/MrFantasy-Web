@@ -115,3 +115,23 @@ window.addEventListener('load', function() {
 document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
     document.getElementById('Reportes_Agradecimiento').style.display = 'none';
 });
+
+async function toggleCheckout(nombre, actual, boton) {
+    const nuevo = actual === 1 ? 0 : 1;
+    try {
+        const response = await fetch('https://mrfantasy-backend.onrender.com/guia/checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nombre, checkout: nuevo })
+        });
+        if (response.ok) {
+            boton.classList.remove('activo', 'inactivo');         // saca la clase actual
+            boton.classList.add(nuevo === 1 ? 'activo' : 'inactivo'); // pone la nueva
+            const plugin = todosLosPlugins.find(p => p.Nombre === nombre);
+            if (plugin) plugin.Checkout = nuevo;
+            boton.setAttribute('onclick', `event.preventDefault(); toggleCheckout('${nombre}', ${nuevo}, this)`);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
