@@ -289,26 +289,32 @@ html, body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: absolute;   /* ← antes era relative */
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.4);
 }
 
 #Imagen_Input {
+    position: absolute;   /* ← agregar esto */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
     cursor: pointer;
+    z-index: 3;           /* ← por encima del texto para capturar el click */
 }
 
-.Fuente_Añadir {
+.AñadirImagen_Campo .Fuente_Añadir {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
     font-size: clamp(12px, 2cqw, 20px);
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: sans-serif;
-    pointer-events: none;
 }
 
 /* ── Modal error ── */
