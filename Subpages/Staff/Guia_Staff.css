@@ -226,7 +226,7 @@ html, body {
     border: none;
     background: rgb(11, 11, 11);
     color: white;
-    font-size: clamp(9px, 1.5cqw, 13px);
+    font-size: clamp(9px, 1.2cqw, 13px);
     font-family: sans-serif;
     outline: none;
     resize: none;
