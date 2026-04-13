@@ -54,7 +54,7 @@ html, body {
     border-radius: 12px;
     display: grid;
     grid-template-columns: 25% 25% 32% 18% ;
-    grid-template-rows: 4cqw 3.5cqw 2cqw 29.75cqw;
+    grid-template-rows: 4cqw 3.5cqw 2cqw 29.9cqw;
     row-gap: 0.5cqw;
     opacity: 0.6;          
 }
