@@ -97,6 +97,8 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
                     .map(t => t.textContent.trim())
                     .join('||');
 
+
+
     try {
         const response = await fetch('https://mrfantasy-backend.onrender.com/guia/modificar', {
             method: 'PUT',
