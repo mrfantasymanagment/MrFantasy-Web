@@ -41,7 +41,7 @@ html, body {
     position: sticky;
     top: 12px;
     max-height: calc(100vh - 24px);
-    height: 416px;
+    height: 414px;
     overflow-y: auto;
     background: rgb(39, 38, 39);
     padding: 12px;
