@@ -222,6 +222,7 @@ html, body {
 [class^="Texto_Comando_"] {
     width: 93%;
     height: 2.25em;
+    paddin;
     box-sizing: border-box;
     border-radius: 13px;
     border: none;
