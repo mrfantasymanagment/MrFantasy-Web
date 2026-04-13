@@ -97,9 +97,18 @@ document.getElementById('Añadir_Campo').addEventListener('click', async functio
                     .map(t => t.textContent.trim())
                     .join('||');
 
+try {
+        if (imagenBase64 !== '') {
+            await fetch('https://mrfantasy-backend.onrender.com/guia/crear-archivos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    nombre,
+                    imagen: imagenBase64
+                })
+            });
+        }
 
-
-    try {
         const response = await fetch('https://mrfantasy-backend.onrender.com/guia/modificar', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
