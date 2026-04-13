@@ -366,7 +366,6 @@ html, body {
     overflow: hidden;
     white-space: nowrap;
     margin: 0.5cqw;
-    background: red;
 }
 
 .Checkout_Plugin_Boton:hover { scale: 1.1; }
