@@ -187,11 +187,11 @@ const agregarPlugin = async (req, res) => {
 };
 
 const modificarPlugin = async (req, res) => {
-    const { nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, enlace } = req.body;
+    const { nombre, descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, enlace, seccion, tags } = req.body;
 
     await db.query(
-        'UPDATE Plugins SET Descripcion=?, Comando1=?, Comando2=?, Comando3=?, Comando4=?, Comando5=?, Comando6=?, Comando7=?, Comando8=?, Url=? WHERE Nombre=?',
-        [descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, enlace, nombre]
+        'UPDATE Plugins SET Descripcion=?, Comando1=?, Comando2=?, Comando3=?, Comando4=?, Comando5=?, Comando6=?, Comando7=?, Comando8=?, Url=?, Seccion=?, Tags=? WHERE Nombre=?',
+        [descripcion, comando1, comando2, comando3, comando4, comando5, comando6, comando7, comando8, enlace, seccion ?? '', tags ?? '', nombre]
     );
 
     res.json({ ok: true });
