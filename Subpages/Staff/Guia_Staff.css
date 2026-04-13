@@ -278,7 +278,7 @@ html, body {
 .Fuente_Añadir {
     font-size: clamp(12px, 2cqw, 20px);
     text-align: center;
-    color: rgb(150, 150, 150);
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
     pointer-events: none;
 }
