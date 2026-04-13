@@ -206,7 +206,7 @@ html, body {
     background: transparent;
     border: none;
     color: white;
-    font-size: clamp(10px, 1.9cqw, 30px);
+    font-size: clamp(10px, 3cqw, 30px);
     font-family: sans-serif;
     outline: none;
     resize: none;
