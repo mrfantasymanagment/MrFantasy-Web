@@ -203,4 +203,4 @@ const toggleCheckout = async (req, res) => {
     res.json({ ok: true });
 };
 
-module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin, obtenerPluginPorNombre, modificarPlugin, buscarPlugins};
+module.exports = { obtenerPlugins, crearArchivosPlugin, agregarPlugin, obtenerPluginPorNombre, modificarPlugin, buscarPlugins, toggleCheckout};
