@@ -8,5 +8,6 @@ router.post('/crear-archivos', crearArchivosPlugin);
 router.post('/agregar', agregarPlugin);
 router.get('/plugin/:nombre', obtenerPluginPorNombre);
 router.put('/modificar', modificarPlugin);
+router.post('/guia/checkout', toggleCheckout);
 
 module.exports = router;
