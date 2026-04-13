@@ -120,3 +120,57 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
       reader.readAsDataURL(archivo);
   }
 });
+
+// ── Textarea Descripcion ──────────────────────────────────────────
+
+function getCtxDesc(textarea) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const estilo = window.getComputedStyle(textarea);
+    ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
+    return ctx;
+  }
+  
+  function getAnchoDisponibleDesc(textarea) {
+    const estilo = window.getComputedStyle(textarea);
+    const ancho = textarea.clientWidth - (parseFloat(estilo.paddingLeft) + parseFloat(estilo.paddingRight));
+    return ancho * 0.93;
+  }
+  
+  function contarLineasVisualesDesc(textarea) {
+    const ctx = getCtxDesc(textarea);
+    const anchoDisponible = getAnchoDisponibleDesc(textarea);
+    const lineas = textarea.value.split('\n');
+  
+    let totalVisuales = 0;
+    for (const linea of lineas) {
+      if (linea === '') {
+        totalVisuales += 1;
+        continue;
+      }
+      const anchoLinea = ctx.measureText(linea).width;
+      totalVisuales += Math.ceil(anchoLinea / anchoDisponible);
+    }
+    return totalVisuales;
+  }
+  
+  const descripcion = document.getElementById('Descripcion');
+  
+  descripcion.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      if (contarLineasVisualesDesc(this) >= 6) e.preventDefault();
+      return;
+    }
+  });
+  
+  descripcion.addEventListener('input', function() {
+    const debeRevertir =
+      contarLineasVisualesDesc(this) > 6 ||
+      this.value.split('\n').length > 6;
+  
+    if (debeRevertir) {
+      this.value = this.dataset.lastValue ?? '';
+    } else {
+      this.dataset.lastValue = this.value;
+    }
+  });

@@ -10,7 +10,7 @@ function crearPlugin(datos) {
                 <div class="hproyectos">${datos.Nombre}</div>
             </div>
             <div class="Descripcion_Campo">
-                <div class="hproyectos2">${datos.Descripcion}</div>
+                <div class="hproyectos2">${datos.Descripcion.replace(/\n/g, '<br>')}</div>
             </div>
             <div class="Comandos_Campo">
                 ${comandos.length > 0
