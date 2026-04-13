@@ -11,7 +11,6 @@ html, body {
 /* ── WRAPPER: mismo grid de 4 columnas que Guia.html ── */
 #wrapper_staff {
     container-name: principal;
-    container-type: inline-size;
     min-width: 400px;
     width: 100%;
     background: rgb(20, 20, 20);
