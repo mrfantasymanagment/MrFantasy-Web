@@ -361,15 +361,14 @@ html, body {
     position: relative;
     z-index: 10;
     cursor: pointer;
-    transition: transform 0.3s;
     font-size: 1.2cqw;
     overflow: hidden;
     white-space: nowrap;
     margin: 0.5cqw;
+    transition: transform 0.3s;
 }
 
-.Checkout_Plugin_Boton:hover { scale: 1.1; }
-
+.Checkout_Plugin_Boton:hover { transform: scale(1.1); }
 
 .Checkout_Plugin_Boton.activo {
     background: rgb(0, 180, 0);
