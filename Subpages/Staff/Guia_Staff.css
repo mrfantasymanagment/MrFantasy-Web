@@ -41,7 +41,7 @@ html, body {
     position: sticky;
     top: 12px;
     max-height: calc(100vh - 24px);
-    height: 412px;
+    height: 414px;
     overflow-y: auto;
     background: rgb(39, 38, 39);
     padding: 12px;
@@ -243,7 +243,7 @@ html, body {
 .Contenedor_Secundario{
     background: rgb(39, 38, 39);
     border-radius: 12px;
-    margin-top: 1.5cqw;
+    margin-top: 1cqw;
     padding: 0.5cqw;
 }
 .PluginLink_Campo {
