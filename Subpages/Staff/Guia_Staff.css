@@ -84,7 +84,7 @@ html, body {
     grid-row: 1;
     background: red;
     width: 95%;
-    border-radius: 200px 200px 0 0;  /* solo redondea la parte de abajo */
+    border-radius: 200px 200px 0 0; 
     display: flex;
     justify-content: center;
     align-items: center;
