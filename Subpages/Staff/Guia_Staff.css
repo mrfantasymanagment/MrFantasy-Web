@@ -243,9 +243,10 @@ html, body {
 .Contenedor_Secundario{
     background: rgb(39, 38, 39);
     border-radius: 12px;
-    margin-top: 1cqw;
+    margin-top: 2cqw;
     padding: 0.5cqw;
 }
+
 .PluginLink_Campo {
     background: rgb(26, 25, 25);
     margin-top: 12px;
