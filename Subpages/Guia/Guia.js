@@ -5,6 +5,8 @@ function crearPlugin(datos) {
                       datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
                       .filter(c => c);
 
+    const checkoutColor = datos.Checkout === 1 ? 'rgb(0, 180, 0)' : 'rgb(180, 0, 0)';
+
     return `
     <a href="${datos.Enlace}" style="text-decoration: none;">
         <div class="Plugin_Container">
