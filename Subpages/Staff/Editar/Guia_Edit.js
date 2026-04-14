@@ -24,7 +24,6 @@ if (nombreParam) {
                 campo.style.backgroundImage = `url(${data.Imagen})`;
                 campo.style.backgroundSize = 'cover';
                 campo.style.backgroundPosition = 'center';
-                document.querySelector('#Imagen_Campo .AñadirImagen_Campo').style.display = 'none';
             }
 
             // Autocompletar sección
