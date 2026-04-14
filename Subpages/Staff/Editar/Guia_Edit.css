@@ -292,7 +292,7 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -304,7 +304,7 @@ html, body {
     height: 100%;
     opacity: 0;
     cursor: pointer;
-    z-index: 1000;           /* ← por encima del texto para capturar el click */
+    z-index: 3;           /* ← por encima del texto para capturar el click */
 }
 
 .AñadirImagen_Campo .Fuente_Añadir {
