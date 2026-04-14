@@ -120,9 +120,7 @@ document.getElementById('Imagen_Input').addEventListener('change', function(e) {
               const campo = document.getElementById('Imagen_Campo');
               campo.style.backgroundImage = `url(${imagenBase64})`;
               campo.style.backgroundSize = 'cover';
-              campo.style.backgroundPosition = 'center';
-              document.querySelector('#Imagen_Campo .AñadirImagen_Campo').style.display = 'none';
-          };
+              campo.style.backgroundPosition = 'center';          };
           img.src = e.target.result;
       };
       reader.readAsDataURL(archivo);
