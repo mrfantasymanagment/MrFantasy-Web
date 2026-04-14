@@ -300,8 +300,8 @@ html, body {
     position: absolute;   /* ← agregar esto */
     top: 0;
     left: 0;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     cursor: pointer;
     z-index: 3;           /* ← por encima del texto para capturar el click */
