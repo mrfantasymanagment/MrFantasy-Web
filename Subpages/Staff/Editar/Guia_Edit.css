@@ -309,7 +309,7 @@ html, body {
 
 .AñadirImagen_Campo .Fuente_Añadir {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     pointer-events: none;
     font-size: clamp(12px, 2cqw, 20px);
     text-align: center;
