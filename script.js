@@ -174,25 +174,41 @@ btnMenu.addEventListener('click', () => {
 
 // Funcion en Vivo
 
-async function verificarDirecto() {
-  try {
-      const res = await fetch('/api/directo');
-      const data = await res.json();
+// Consultar el caché en DB
+async function obtenerEstadoDirecto(pool) {
+  const { rows } = await pool.query(
+      `SELECT en_vivo, video_id, actualizado_en 
+       FROM directo_cache 
+       ORDER BY id DESC LIMIT 1`
+  );
 
-      const contenedor = document.getElementById('Directo');
-      const frame = document.getElementById('Directo_Frame');
+  if (rows.length === 0) return null;
 
-      if (data.en_vivo) {
-          frame.src = `https://www.youtube.com/embed/${data.video_id}?autoplay=1`;
-          contenedor.style.display = 'block';
-      } else {
-          contenedor.style.display = 'none';
-          frame.src = '';
-      }
-  } catch (e) {
-      console.error('Error verificando directo:', e);
-  }
+  const antiguedad = Date.now() - new Date(rows[0].actualizado_en).getTime();
+  if (antiguedad < 15 * 60 * 1000) return rows[0]; // caché fresco
+  return null; // caché vencido
 }
 
-verificarDirecto();
-setInterval(verificarDirecto, 120000); // cada 2 minutos
+// Guardar resultado en DB
+async function guardarCacheDirecto(pool, enVivo, videoId) {
+  await pool.query(
+      `INSERT INTO directo_cache (en_vivo, video_id, actualizado_en)
+       VALUES ($1, $2, NOW())`
+  , [enVivo, videoId]);
+}
+
+app.get('/api/directo', async (req, res) => {
+  // 1. Intentar caché de DB
+  const cache = await obtenerEstadoDirecto(pool);
+  if (cache) return res.json({ en_vivo: cache.en_vivo, video_id: cache.video_id });
+
+  // 2. Caché vencido → llamar YouTube API
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&key=${API_KEY}`;
+  const ytData = await fetch(url).then(r => r.json());
+
+  const enVivo = ytData.items?.length > 0;
+  const videoId = enVivo ? ytData.items[0].id.videoId : null;
+
+  await guardarCacheDirecto(pool, enVivo, videoId);
+  res.json({ en_vivo: enVivo, video_id: videoId });
+});
