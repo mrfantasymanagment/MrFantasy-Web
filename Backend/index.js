@@ -20,6 +20,9 @@ app.use('/auth', authRoutes);
 const guiaRoutes = require('./routes/guia');
 app.use('/guia', guiaRoutes);
 
+const directoRoutes = require('./routes/directo');
+app.use('/api/directo', directoRoutes);
+
 // Ruta de prueba para UptimeRobot
 app.get('/health', (req, res) => {
     res.json({ status: 'ok' });

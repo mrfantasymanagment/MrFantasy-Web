@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
-const pool = require('../db'); // ajustá el path a como tengas la conexión a Aiven
+const pool = require('../db');
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 
 async function obtenerCacheDB() {
-    const { rows } = await pool.query(
+    const [rows] = await pool.query(
         `SELECT en_vivo, video_id, actualizado_en 
          FROM directo_cache 
          ORDER BY id DESC LIMIT 1`
@@ -22,7 +22,7 @@ async function obtenerCacheDB() {
 async function guardarCacheDB(enVivo, videoId) {
     await pool.query(
         `INSERT INTO directo_cache (en_vivo, video_id, actualizado_en)
-         VALUES ($1, $2, NOW())`,
+         VALUES (?, ?, NOW())`,
         [enVivo, videoId]
     );
 }
