@@ -177,7 +177,7 @@ btnMenu.addEventListener('click', () => {
 
 async function verificarDirecto() {
   try {
-      const res = await fetch('/api/directo');
+      const res = await fetch('https://mrfantasy-backend.onrender.com/api/directo');
       const data = await res.json();
 
       const contenedor = document.getElementById('Directo');
