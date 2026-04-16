@@ -171,3 +171,28 @@ const menuLateral = document.querySelector('.Menu-Lateral');
 btnMenu.addEventListener('click', () => {
     menuLateral.classList.toggle('abierto');
 }); */
+
+// Funcion en Vivo
+
+async function verificarDirecto() {
+  try {
+      const res = await fetch('/api/directo');
+      const data = await res.json();
+
+      const contenedor = document.getElementById('Directo');
+      const frame = document.getElementById('Directo_Frame');
+
+      if (data.en_vivo) {
+          frame.src = `https://www.youtube.com/embed/${data.video_id}?autoplay=1`;
+          contenedor.style.display = 'block';
+      } else {
+          contenedor.style.display = 'none';
+          frame.src = '';
+      }
+  } catch (e) {
+      console.error('Error verificando directo:', e);
+  }
+}
+
+verificarDirecto();
+setInterval(verificarDirecto, 120000); // cada 2 minutos
