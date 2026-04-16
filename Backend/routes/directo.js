@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const fetch = require('node-fetch');
 const pool = require('../db');
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
