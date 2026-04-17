@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
         const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&key=${API_KEY}`;
         const ytData = await fetch(url).then(r => r.json());
-
+        console.log('YT RAW:', JSON.stringify(ytData, null, 2));
         const enVivo = ytData.items?.length > 0;
         const videoId = enVivo ? ytData.items[0].id.videoId : null;
 
