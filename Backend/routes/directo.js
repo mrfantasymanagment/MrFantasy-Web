@@ -5,8 +5,6 @@ const pool = require('../config/database');
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 
-const ytData = await fetch(url).then(r => r.json());
-console.log('YT RAW:', JSON.stringify(ytData, null, 2));
 
 async function obtenerCacheDB() {
     const [rows] = await pool.query(
