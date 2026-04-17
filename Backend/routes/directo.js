@@ -36,7 +36,6 @@ router.get('/', async (req, res) => {
         const ytData = await fetch(url).then(r => r.json());
 
         const enVivo = ytData.items?.length > 0;
-        
         const videoId = enVivo ? ytData.items[0].id.videoId : null;
 
         await guardarCacheDB(enVivo, videoId);
