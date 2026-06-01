@@ -15,7 +15,7 @@ async function obtenerCacheDB() {
     if (rows.length === 0) return null;
 
     const antiguedad = Date.now() - new Date(rows[0].actualizado_en).getTime();
-    if (antiguedad < 15 * 60 * 1000) return rows[0];
+    if (antiguedad < 5 * 60 * 1000) return rows[0];
     return null;
 }
 
