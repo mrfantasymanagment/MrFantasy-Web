@@ -336,9 +336,9 @@ body{
 }
 
 .Directo {
-    display: none; /* cuando lo actives, cámbialo a flex */
-    justify-content: center;  /* centra horizontalmente */
-    align-items: center;      /* centra verticalmente */
+    display: none; 
+    justify-content: center;  
+    align-items: center;      
     margin: 1.2vw;
     border-radius: 12px;
     overflow: hidden;
