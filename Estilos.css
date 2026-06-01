@@ -337,8 +337,9 @@ body{
 
 .Directo {
     display: none; 
-    justify-content: center;  
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr; /* dos columnas iguales */
+    justify-items: center;   /* centra horizontalmente cada celda */
+    align-items: center;  
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 16 / 9;
