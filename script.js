@@ -196,4 +196,4 @@ async function verificarDirecto() {
 }
 
 verificarDirecto();
-setInterval(verificarDirecto, 5 * 60 * 1000); // cada 15 minuto
+setInterval(verificarDirecto, 5 * 60 * 1000); // cada 5 minuto
