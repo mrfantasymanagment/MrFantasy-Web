@@ -342,6 +342,7 @@ body{
     overflow: hidden;
     aspect-ratio: 16 / 9;
     width: calc(100% - 2.4vw);
+    scale: 10%
 }
 
 .Directo_Frame {
