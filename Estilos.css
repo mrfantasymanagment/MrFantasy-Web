@@ -338,6 +338,7 @@ body{
 .Directo {
     display: none; 
     grid-template-columns: 1fr; /* dos columnas iguales */
+    grid-template-rows: 100%;
     justify-items: center;   /* centra horizontalmente cada celda */
     align-items: center;  
     border-radius: 12px;
