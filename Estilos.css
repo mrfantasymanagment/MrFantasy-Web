@@ -338,8 +338,7 @@ body{
 .Directo {
     display: none; 
     justify-content: center;  
-    align-items: center;      
-    margin: 1.2vw;
+    align-items: center;
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 16 / 9;
