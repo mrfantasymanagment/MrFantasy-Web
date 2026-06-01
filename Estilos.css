@@ -347,7 +347,7 @@ body{
     width: calc(100% - 2.4vw);
 }
 
-.Directo_Titulo {
+.Directo_Anuncio {
     grid-row: 2/3;
     width: 80%;
     height: 80%;
@@ -355,7 +355,7 @@ body{
     display: block;
 }
 
-.Directo_Frame {
+.Directo_Titulo {
     grid-row: 2/3;
     width: 80%;
     height: 80%;
