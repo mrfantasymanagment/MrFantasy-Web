@@ -185,7 +185,7 @@ async function verificarDirecto() {
 
       if (data.en_vivo) {
           frame.src = `https://www.youtube.com/embed/${data.video_id}?autoplay=1`;
-          contenedor.style.display = 'flex';
+          contenedor.style.display = 'grid';
       } else {
           contenedor.style.display = 'none';
           frame.src = '';
