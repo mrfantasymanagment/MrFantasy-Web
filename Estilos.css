@@ -340,10 +340,8 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;   
-    align-items: center;  
-    border-radius: 12px;
+    align-items: center;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
     width: calc(100% - 2.4vw);
 }
 
