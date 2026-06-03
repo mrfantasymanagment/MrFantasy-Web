@@ -338,7 +338,7 @@ body{
 .Directo {
     display: none; 
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 10vw 10vw 40vw;
     justify-items: center;   
     align-items: center;
     overflow: hidden;
@@ -348,8 +348,8 @@ body{
 
 .Directo_Anuncio {
     grid-row: 1;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     border: none;
     display: block;
     justify-items: center;   
