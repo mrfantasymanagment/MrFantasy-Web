@@ -338,7 +338,7 @@ body{
 .Directo {
     display: none; 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 0.05fr 0.3fr 1fr;
     justify-items: center;   
     align-items: center;
     overflow: hidden;
@@ -358,7 +358,7 @@ body{
 
 .Directo_Titulo {
     grid-row: 2;
-    width: 50%;
+    width: 70%;
     height: 100%;
     border: none;
     display: block;
