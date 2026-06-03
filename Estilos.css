@@ -336,6 +336,7 @@ body{
 }
 
 .Directo {
+    background-color: black;
     display: none; 
     grid-template-columns: 1fr;
     grid-template-rows: 0.05fr 0.3fr 10fr;
