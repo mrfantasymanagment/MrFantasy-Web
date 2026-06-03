@@ -371,8 +371,8 @@ body{
 
 .Directo_Frame {
     grid-row: 3;
-    width: 87%;
-    height: 100%;
+    width: 85%;
+    height: 87%;
     border: none;
     display: block;
 }
