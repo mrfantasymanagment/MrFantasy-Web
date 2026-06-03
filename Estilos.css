@@ -352,6 +352,8 @@ body{
     height: 80%;
     border: none;
     display: block;
+    justify-items: center;   
+    align-items: center;
 }
 
 .Directo_Titulo {
@@ -360,6 +362,8 @@ body{
     height: 80%;
     border: none;
     display: block;
+    justify-items: center;   
+    align-items: center;
 }
 
 .Directo_Frame {
