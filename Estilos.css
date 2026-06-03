@@ -337,7 +337,7 @@ body{
 
 .Directo {
     display: none; 
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;   
     align-items: center;  
