@@ -349,7 +349,7 @@ body{
     margin: 0 auto;
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
-    border-radius: 10%;
+    border-radius: 150px 150px 150px 150px;
 }
 
 .Directo_Anuncio {
