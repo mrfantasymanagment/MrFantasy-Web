@@ -382,6 +382,7 @@ body{
     padding-bottom: 3vw;
     border: none;
     display: block;
+    border-radius: 30px 30px 30px 30px;
 }
 
 
