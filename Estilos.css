@@ -342,6 +342,7 @@ body{
     justify-items: center;   
     align-items: center;
     overflow: hidden;
+    aspect-ratio: 16 / 9;
     width: calc(100% - 2.4vw);
 }
 
