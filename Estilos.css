@@ -343,7 +343,7 @@ body{
     align-items: center;
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    width: calc(100% - 2.4vw);
+    width: 100%;
 }
 
 .Directo_Anuncio {
