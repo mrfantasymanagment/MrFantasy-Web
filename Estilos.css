@@ -356,6 +356,11 @@ body{
     align-items: center;
 }
 
+.Directo_Anuncio_Imagen {
+    width: 100%;
+    height: 100%;
+}
+
 .Directo_Titulo {
     grid-row: 2;
     width: 50%;
@@ -367,7 +372,8 @@ body{
 }
 
 .Directo_Titulo_Imagen {
-
+    width: 100%;
+    height: 100%;
 }
 
 .Directo_Frame {
