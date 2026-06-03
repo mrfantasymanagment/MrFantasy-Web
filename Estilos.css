@@ -339,6 +339,7 @@ body{
     display: none; 
     grid-template-columns: 1fr;
     grid-template-rows: 0.05fr 0.3fr 1fr;
+    row-gap: 0.02fr;
     justify-items: center;   
     align-items: center;
     overflow: hidden;
@@ -354,6 +355,7 @@ body{
     display: block;
     justify-items: center;   
     align-items: center;
+
 }
 
 .Directo_Titulo {
