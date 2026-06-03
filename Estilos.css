@@ -367,12 +367,6 @@ body{
     align-items: center;
 }
 
-.Directo_Anuncio img,
-.Directo_Titulo img {
-    width: auto;
-    height: 100%;
-    display: block;
-}
 
 .Directo_Frame {
     grid-row: 3;
