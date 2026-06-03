@@ -339,7 +339,7 @@ body{
     display: none; 
     grid-template-columns: 1fr;
     grid-template-rows: 0.05fr 0.3fr 10fr;
-    row-gap: 10vw;
+    row-gap: 1vw;
     justify-items: center;   
     align-items: center;
     overflow: hidden;
