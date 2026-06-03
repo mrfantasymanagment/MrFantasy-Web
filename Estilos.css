@@ -345,13 +345,18 @@ body{
     align-items: center;
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    border-radius: 10%;
 }
 
 .Directo_Anuncio {
     grid-row: 1;
     width: 50%;
     height: 100%;
+    padding-top: 1.1vw;
     border: none;
     display: block;
     justify-items: center;   
