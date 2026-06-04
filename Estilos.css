@@ -332,7 +332,8 @@ body{
     cursor: pointer;
     display: flex;        
     justify-content: center;   
-    align-items: center;     
+    align-items: center;
+    margin-right: 5vw;     
 }
 
 .Directo {
