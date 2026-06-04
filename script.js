@@ -206,7 +206,7 @@ if (usuario) {
 
 //Login Correcto
 window.addEventListener('load', function() {
-  if (new URLSearchParams(window.location.search).get('exito') === '1') {
+  if (new URLSearchParams(window.location.search).get('Login') === '1') {
       document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
       history.replaceState(null, '', window.location.pathname);
   }
