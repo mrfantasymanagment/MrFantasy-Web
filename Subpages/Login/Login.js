@@ -23,7 +23,7 @@ document.getElementById('Google_Campo').addEventListener('click', function() {
             .then(r => r.json())
             .then(session => {
                 localStorage.setItem('usuario', JSON.stringify(session));
-                window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/index.html';
+                window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/index.html?Login=1';
             });
         }
     });
@@ -52,6 +52,6 @@ if (code) {
     .then(r => r.json())
     .then(session => {
         localStorage.setItem('usuario', JSON.stringify(session));
-        window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/index.html';
+        window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/index.html?Login=1';
     });
 }
