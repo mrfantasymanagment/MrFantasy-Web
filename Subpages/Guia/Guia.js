@@ -140,10 +140,3 @@ const usuario = JSON.parse(localStorage.getItem('usuario'));
 if (usuario) {
     document.getElementById('Login_Nombre').textContent = usuario.nickname;
 }
-
-const usuario = JSON.parse(localStorage.getItem('usuario'));
-const esStaff = usuario && usuario.rango === 'Staff';
-
-if (usuario) {
-    document.getElementById('Login_Nombre').textContent = usuario.nickname;
-}
