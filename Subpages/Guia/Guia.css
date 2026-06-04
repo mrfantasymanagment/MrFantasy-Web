@@ -418,3 +418,33 @@ html, body {
     50%  { transform: scale(1.021); }
     100% { transform: scale(1); }
 }
+
+.Login_Boton {
+    position: fixed;
+    top: 1vw;
+    right: 1vw;
+    z-index: 10;
+    width: clamp(50px, 3vw, 90px);
+    height: clamp(50px, 3vw, 90px);
+    border-radius: 50%;
+    background: rgb(45, 40, 75);
+    color: rgb(0, 0, 0);
+    font-size: clamp(10px, 2vw, 40px);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;
+    margin-right: 1.2vw;
+    padding: 0.5vw;
+    text-decoration: none;
+}
+
+#Login_Nombre {
+    font-size: clamp(6px, 0.8vw, 11px);
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: clamp(40px, 5vw, 80px);
+}
