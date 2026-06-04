@@ -67,7 +67,7 @@ body{
 
 .Discord_Campo{
     background-image: url(https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/Login_Discord_Imagen.png);
-    background-size: 50%; 
+    background-size: contain; 
     background-position: center center;
     background-repeat: no-repeat;       
     height: 100%;
