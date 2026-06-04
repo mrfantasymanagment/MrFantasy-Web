@@ -23,7 +23,7 @@
   // Login Con Discord
 document.getElementById('Discord_Campo').addEventListener('click', function() {
   const clientId = '1512083761695821946';
-  const redirectUri = encodeURIComponent('http://127.0.0.1:5500/Subpages/Login/Login.html');
+  const redirectUri = encodeURIComponent('https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Login/Login.html');
   const scope = 'identify email';
   
   window.location.href = `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
