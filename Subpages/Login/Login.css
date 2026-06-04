@@ -31,11 +31,6 @@ body{
 }
 
 
-.Sesion_Campo:hover{
-    scale: 1.03;
-    transform-origin: center;
-}
-
 .Fuente_Sesion{
     font-size: 3vw;
     text-align: center;
