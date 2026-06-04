@@ -138,5 +138,5 @@ async function toggleCheckout(nombre, actual, boton) {
 //Mostrar Nombre Usuario Login
 const usuario = JSON.parse(localStorage.getItem('usuario'));
 if (usuario) {
-    document.getElementById('Login_Nombre').textContent = usuario.nickname;
+    document.getElementById('Login_Nombre').textContent = usuario.rango;
 }
