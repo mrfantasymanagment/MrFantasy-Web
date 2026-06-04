@@ -24,8 +24,8 @@ function crearPlugin(datos) {
             <div class="Imagen_Campo">
                 <img src="${datos.Imagen}" class="Plugin_Imagen">
             </div>
-            ${esStaff ? `<button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">Edit</button>` : ''}
-            ${esStaff ? `<button class="Checkout_Plugin_Boton ${datos.Checkout === 1 ? 'activo' : 'inactivo'}" onclick="event.preventDefault(); toggleCheckout('${datos.Nombre}', ${datos.Checkout}, this)"></button>` : ''}
+            ${Staff ? `<button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">Edit</button>` : ''}
+            ${Staff ? `<button class="Checkout_Plugin_Boton ${datos.Checkout === 1 ? 'activo' : 'inactivo'}" onclick="event.preventDefault(); toggleCheckout('${datos.Nombre}', ${datos.Checkout}, this)"></button>` : ''}
         </div>
     </a>`;
 }
