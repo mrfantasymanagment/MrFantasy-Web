@@ -317,23 +317,33 @@ body{
 }
 
 
-
 .Login_Boton {
     position: fixed;
     top: 1vw;
     right: 1vw;
     z-index: 10;
     width: clamp(15px, 4vw, 60px);
-    height: clamp(15px, 4vw, 60px);
-    border-radius: 50%;
+    height: auto;            /* ← era fijo, ahora crece con el contenido */
+    min-height: clamp(15px, 4vw, 60px);
+    border-radius: 20px;     /* ← era 50%, lo cambiamos para que no quede raro con texto */
     background: rgb(45, 40, 75);
     color: white;
     font-size: clamp(10px, 2vw, 40px);
     cursor: pointer;
-    display: flex;        
+    display: flex;
+    flex-direction: column;  /* ← ícono arriba, nombre abajo */
     justify-content: center;   
     align-items: center;
-    margin-right: 1.2vw;     
+    margin-right: 1.2vw;
+    padding: 0.3vw;
+}
+
+#Login_Nombre {
+    font-size: clamp(6px, 0.9vw, 12px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: clamp(15px, 4vw, 60px);
 }
 
 .Directo {
