@@ -1,105 +1,109 @@
 const db = require('../config/database');
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
-// Registro con nickname y contraseña
-const registrar = async (req, res) => {
-    const { nickname, contrasena } = req.body;
-
-    if (!nickname || !contrasena) {
-        return res.status(400).json({ error: 'Faltan datos' });
-    }
-
-    try {
-        const hash = await bcrypt.hash(contrasena, 10);
-        await db.execute(
-            'INSERT INTO usuarios (nickname, contrasena, metodo_login) VALUES (?, ?, ?)',
-            [nickname, hash, 'nickname']
-        );
-        res.json({ mensaje: 'Usuario registrado correctamente' });
-    } catch (error) {
-        console.log(Error);
-        if (error.code === 'ER_DUP_ENTRY') {
-            return res.status(400).json({ error: 'El nickname ya existe' });
-        }
-        res.status(500).json({ error: 'Error del servidor' });
-    }
-};
-
-// Login con nickname y contraseña
-const login = async (req, res) => {
-    const { nickname, contrasena } = req.body;
-
-    if (!nickname || !contrasena) {
-        return res.status(400).json({ error: 'Faltan datos' });
-    }
-
-    try {
-        const [rows] = await db.execute(
-            'SELECT * FROM usuarios WHERE nickname = ?',
-            [nickname]
-        );
-
-        if (rows.length === 0) {
-            return res.status(401).json({ error: 'Usuario no encontrado' });
-        }
-
-        const usuario = rows[0];
-        const coincide = await bcrypt.compare(contrasena, usuario.contrasena);
-
-        if (!coincide) {
-            return res.status(401).json({ error: 'Contraseña incorrecta' });
-        }
-
-        const token = jwt.sign(
-            { id: usuario.id, nickname: usuario.nickname },
-            process.env.JWT_SECRET,
-            { expiresIn: '7d' }
-        );
-
-        res.json({ token, nickname: usuario.nickname });
-    } catch (error) {
-        res.status(500).json({ error: 'Error del servidor' });
-    }
-};
 
 // Login con Google
 const loginGoogle = async (req, res) => {
-    const { email, nombre } = req.body;
+    const { nombre, proveedor_id } = req.body;
 
-    if (!email) {
+    if (!nombre || !proveedor_id) {
         return res.status(400).json({ error: 'Faltan datos' });
     }
 
     try {
         const [rows] = await db.execute(
-            'SELECT * FROM usuarios WHERE email = ?',
-            [email]
+            'SELECT * FROM usuarios WHERE proveedor = ? AND proveedor_id = ?',
+            ['google', proveedor_id]
         );
 
         let usuario;
 
         if (rows.length === 0) {
-            // Usuario nuevo, lo registramos
+            // Usuario nuevo
             const [result] = await db.execute(
-                'INSERT INTO usuarios (email, metodo_login) VALUES (?, ?)',
-                [email, 'google']
+                'INSERT INTO usuarios (nickname, proveedor, proveedor_id) VALUES (?, ?, ?)',
+                [nombre, 'google', proveedor_id]
             );
-            usuario = { id: result.insertId, email, nickname: nombre };
+            usuario = { id: result.insertId, nickname: nombre, Rango: 'User' };
         } else {
             usuario = rows[0];
         }
 
         const token = jwt.sign(
-            { id: usuario.id, email: usuario.email },
+            { id: usuario.id, nickname: usuario.nickname, rango: usuario.Rango },
             process.env.JWT_SECRET,
             { expiresIn: '7d' }
         );
 
-        res.json({ token, email: usuario.email });
+        res.json({ token, nickname: usuario.nickname, rango: usuario.Rango });
     } catch (error) {
+        console.error('Error en loginGoogle:', error);
         res.status(500).json({ error: 'Error del servidor' });
     }
 };
 
-module.exports = { registrar, login, loginGoogle };
+// Login con Discord
+const loginDiscord = async (req, res) => {
+    const { code } = req.body;
+
+    if (!code) {
+        return res.status(400).json({ error: 'Faltan datos' });
+    }
+
+    try {
+        // Intercambiamos el code por un token
+        const tokenRes = await fetch('https://discord.com/api/oauth2/token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+                client_id: process.env.DISCORD_CLIENT_ID,
+                client_secret: process.env.DISCORD_CLIENT_SECRET,
+                grant_type: 'authorization_code',
+                code,
+                redirect_uri: process.env.DISCORD_REDIRECT_URI
+            })
+        });
+
+        const tokenData = await tokenRes.json();
+        if (!tokenData.access_token) {
+            return res.status(401).json({ error: 'Token de Discord inválido' });
+        }
+
+        // Obtenemos los datos del usuario
+        const userRes = await fetch('https://discord.com/api/users/@me', {
+            headers: { Authorization: `Bearer ${tokenData.access_token}` }
+        });
+
+        const discordUser = await userRes.json();
+
+        const [rows] = await db.execute(
+            'SELECT * FROM usuarios WHERE proveedor = ? AND proveedor_id = ?',
+            ['discord', discordUser.id]
+        );
+
+        let usuario;
+
+        if (rows.length === 0) {
+            // Usuario nuevo
+            const [result] = await db.execute(
+                'INSERT INTO usuarios (nickname, proveedor, proveedor_id) VALUES (?, ?, ?)',
+                [discordUser.username, 'discord', discordUser.id]
+            );
+            usuario = { id: result.insertId, nickname: discordUser.username, Rango: 'User' };
+        } else {
+            usuario = rows[0];
+        }
+
+        const token = jwt.sign(
+            { id: usuario.id, nickname: usuario.nickname, rango: usuario.Rango },
+            process.env.JWT_SECRET,
+            { expiresIn: '7d' }
+        );
+
+        res.json({ token, nickname: usuario.nickname, rango: usuario.Rango });
+    } catch (error) {
+        console.error('Error en loginDiscord:', error);
+        res.status(500).json({ error: 'Error del servidor' });
+    }
+};
+
+module.exports = { loginGoogle, loginDiscord };
