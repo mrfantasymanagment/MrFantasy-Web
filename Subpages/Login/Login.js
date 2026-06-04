@@ -1,13 +1,5 @@
 
 
-//Campos Texto
-function limitarPorEspacio(input) {
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  const estilo = window.getComputedStyle(input);
-  ctx.font = `${estilo.fontSize} ${estilo.fontFamily}`;
-  
-
   // Login Con Google
 
   document.getElementById('Google_Campo').addEventListener('click', function() {
