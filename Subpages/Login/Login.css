@@ -41,7 +41,6 @@ body{
 .Fuente_Sesion{
     font-size: 3vw;
     text-align: center;
-    margin-top: 0.5vw;
     color:rgb(103, 3, 233);
     font-family: sans-serif;
 }
@@ -69,7 +68,6 @@ body{
 .Fuente_Google{
     font-size: 3vw;
     text-align: center;
-    margin-top: 0.5vw;
     color:rgb(103, 3, 233);
     font-family: sans-serif;
 }
@@ -97,7 +95,6 @@ body{
 .Fuente_Discord{
     font-size: 3vw;
     text-align: center;
-    margin-top: 0.5vw;
     color:rgb(103, 3, 233);
     font-family: sans-serif;
 }
