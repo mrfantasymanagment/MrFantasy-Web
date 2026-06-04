@@ -207,11 +207,7 @@ if (usuario) {
 //Login Correcto
 window.addEventListener('load', function() {
   if (new URLSearchParams(window.location.search).get('Login') === '1') {
-      document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+      document.getElementById('Login_Exitoso').style.display = 'flex';
       history.replaceState(null, '', window.location.pathname);
   }
-});
-
-document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
-  document.getElementById('Reportes_Agradecimiento').style.display = 'none';
 });
