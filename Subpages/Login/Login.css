@@ -15,6 +15,7 @@ body{
     row-gap: 0.1vw;
     align-items: center;
     justify-items: center;
+    height: 100vh; 
 }
 
 .Sesion_Campo{
