@@ -17,6 +17,35 @@ body{
     justify-items: center;
 }
 
+.Sesion_Campo{
+    background: rgb(26, 25, 25);
+    height: 80%;
+    width: 95%;
+    min-height: 25px;
+    border-radius: 15px;
+    grid-column: 2/4;
+    grid-row: 1;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+
+
+.Sesion_Campo:hover{
+    scale: 1.03;
+    transform-origin: center;
+}
+
+.Fuente_Sesion{
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 0.5vw;
+    color:rgb(103, 3, 233);
+    font-family: sans-serif;
+}
+
 .Google_Campo{
     background: rgb(26, 25, 25);
     height: 80%;
@@ -25,7 +54,6 @@ body{
     border-radius: 15px;
     grid-column: 2;
     grid-row: 2;
-    margin: 2vw;
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
@@ -54,7 +82,6 @@ body{
     border-radius: 15px;
     grid-column: 3;
     grid-row: 2;
-    margin: 2vw;
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
@@ -75,35 +102,6 @@ body{
     font-family: sans-serif;
 }
 
-.Sesion_Campo{
-    background: rgb(26, 25, 25);
-    height: 80%;
-    width: 95%;
-    min-height: 25px;
-    border-radius: 15px;
-    grid-column: 2/4;
-    grid-row: 1;
-    margin: 2vw;
-    transition-duration: 0.5s;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;   
-    align-items: center;
-}
-
-
-.Sesion_Campo:hover{
-    scale: 1.03;
-    transform-origin: center;
-}
-
-.Fuente_Sesion{
-    font-size: 3vw;
-    text-align: center;
-    margin-top: 0.5vw;
-    color:rgb(103, 3, 233);
-    font-family: sans-serif;
-}
 
 @keyframes ZoomPulsante{
     0%{
