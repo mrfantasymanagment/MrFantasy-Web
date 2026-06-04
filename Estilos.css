@@ -641,7 +641,8 @@ body{
 }
 
 #Reportes_Agradecimiento,
-#Reportes_Incompleto {
+#Reportes_Incompleto,
+#Login_Exitoso {
     position: fixed;
     top: 50%;
     left: 50%;
