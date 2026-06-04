@@ -625,7 +625,8 @@ body{
   }
 
 
-#Reportes_Cerrar {
+#Reportes_Cerrar,
+#Login_Exitoso_Cerrar {
     background: rgb(45, 40, 75);
     border-radius: 10px;
     padding: 0.75vw 2vw;
@@ -636,7 +637,8 @@ body{
     margin-top: 1vw;
 }
 
-#Reportes_Cerrar:hover {
+#Reportes_Cerrar:hover,
+#Login_Exitoso_Cerrar:hover {
     background: rgb(65, 58, 110);
 }
 
