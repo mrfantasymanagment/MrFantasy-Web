@@ -22,7 +22,7 @@
 
   // Login Con Discord
 document.getElementById('Discord_Campo').addEventListener('click', function() {
-  const clientId = '1488985476793630810';
+  const clientId = '1512083761695821946';
   const redirectUri = encodeURIComponent('http://127.0.0.1:5500/Subpages/Login/Login.html');
   const scope = 'identify email';
   
