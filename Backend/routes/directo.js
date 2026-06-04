@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../config/database');
 
 const API_KEY = process.env.YOUTUBE_API_KEY;
-const VIDEO_ID = process.env.YOUTUBE_VIDEO_ID; // ID fijo del stream
+const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
 
 async function obtenerCacheDB() {
     const [rows] = await pool.query(
@@ -30,19 +30,53 @@ async function guardarCacheDB(enVivo, videoId) {
     );
 }
 
+async function buscarStreamActivo() {
+    // search: 100 unidades — solo se llama cuando no hay video_id guardado
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&key=${API_KEY}`;
+    const ytData = await fetch(url).then(r => r.json());
+    console.log('YT SEARCH RAW:', JSON.stringify(ytData, null, 2));
+
+    if (!ytData.items?.length) return null;
+    return ytData.items[0].id.videoId;
+}
+
+async function verificarStreamActivo(videoId) {
+    // videos: 1 unidad — se llama cuando ya tenemos el video_id
+    const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`;
+    const ytData = await fetch(url).then(r => r.json());
+    console.log('YT VIDEOS RAW:', JSON.stringify(ytData, null, 2));
+
+    const item = ytData.items?.[0];
+    return item?.snippet?.liveBroadcastContent === 'live';
+}
+
 router.get('/', async (req, res) => {
     try {
         const cache = await obtenerCacheDB();
         if (cache) return res.json({ en_vivo: cache.en_vivo, video_id: cache.video_id });
 
-        // Usa videos en lugar de search (1 unidad vs 100)
-        const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${VIDEO_ID}&key=${API_KEY}`;
-        const ytData = await fetch(url).then(r => r.json());
-        console.log('YT RAW:', JSON.stringify(ytData, null, 2));
+        // Obtenemos el ultimo video_id guardado aunque el cache haya expirado
+        const [rows] = await pool.query(`SELECT video_id FROM directo_cache WHERE id = 1`);
+        const videoIdGuardado = rows[0]?.video_id;
 
-        const item = ytData.items?.[0];
-        const enVivo = item?.snippet?.liveBroadcastContent === 'live';
-        const videoId = enVivo ? VIDEO_ID : null;
+        let enVivo = false;
+        let videoId = null;
+
+        if (videoIdGuardado) {
+            // Tenemos un ID guardado: verificamos si sigue en vivo (1 unidad)
+            enVivo = await verificarStreamActivo(videoIdGuardado);
+            if (enVivo) {
+                videoId = videoIdGuardado;
+            } else {
+                // Ya no está en vivo, buscamos si hay uno nuevo (100 unidades)
+                videoId = await buscarStreamActivo();
+                enVivo = !!videoId;
+            }
+        } else {
+            // No tenemos ID guardado, buscamos desde cero (100 unidades)
+            videoId = await buscarStreamActivo();
+            enVivo = !!videoId;
+        }
 
         await guardarCacheDB(enVivo ? 1 : 0, videoId);
         res.json({ en_vivo: enVivo ? 1 : 0, video_id: videoId });
