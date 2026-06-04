@@ -15,7 +15,7 @@ app.use(cors({
 
 // Rutas
 const authRoutes = require('./routes/auth');
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 const guiaRoutes = require('./routes/guia');
 app.use('/guia', guiaRoutes);
