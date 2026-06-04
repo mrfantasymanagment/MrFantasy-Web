@@ -203,3 +203,15 @@ const usuario = JSON.parse(localStorage.getItem('usuario'));
 if (usuario) {
     document.getElementById('Login_Nombre').textContent = usuario.nickname;
 }
+
+//Login Correcto
+window.addEventListener('load', function() {
+  if (new URLSearchParams(window.location.search).get('exito') === '1') {
+      document.getElementById('Reportes_Agradecimiento').style.display = 'flex';
+      history.replaceState(null, '', window.location.pathname);
+  }
+});
+
+document.getElementById('Reportes_Cerrar').addEventListener('click', function() {
+  document.getElementById('Reportes_Agradecimiento').style.display = 'none';
+});
