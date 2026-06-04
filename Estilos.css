@@ -326,7 +326,7 @@ body{
     height: clamp(50px, 6vw, 90px);
     border-radius: 50%;
     background: rgb(45, 40, 75);
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: clamp(10px, 2vw, 40px);
     cursor: pointer;
     display: flex;
