@@ -1,10 +1,16 @@
+const usuario = JSON.parse(localStorage.getItem('usuario'));
+const esStaff = usuario && usuario.rango === 'Staff';
+
+if (usuario) {
+    document.getElementById('Login_Nombre').textContent = usuario.nickname;
+}
+
 let todosLosPlugins = [];
 
 function crearPlugin(datos) {
     const comandos = [datos.Comando1, datos.Comando2, datos.Comando3, datos.Comando4,
                       datos.Comando5, datos.Comando6, datos.Comando7, datos.Comando8]
                       .filter(c => c);
-
 
     return `
     <a href="${datos.Enlace}" style="text-decoration: none;">
@@ -24,8 +30,8 @@ function crearPlugin(datos) {
             <div class="Imagen_Campo">
                 <img src="${datos.Imagen}" class="Plugin_Imagen">
             </div>
-            <button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">Edit</button>
-            <button class="Checkout_Plugin_Boton ${datos.Checkout === 1 ? 'activo' : 'inactivo'}" onclick="event.preventDefault(); toggleCheckout('${datos.Nombre}', ${datos.Checkout}, this)"></button>
+            ${esStaff ? `<button class="Editar_Plugin_Boton" onclick="event.preventDefault(); editarPlugin('${datos.Nombre}')">Edit</button>` : ''}
+            ${esStaff ? `<button class="Checkout_Plugin_Boton ${datos.Checkout === 1 ? 'activo' : 'inactivo'}" onclick="event.preventDefault(); toggleCheckout('${datos.Nombre}', ${datos.Checkout}, this)"></button>` : ''}
         </div>
     </a>`;
 }
@@ -123,8 +129,8 @@ async function toggleCheckout(nombre, actual, boton) {
             body: JSON.stringify({ nombre, checkout: nuevo })
         });
         if (response.ok) {
-            boton.classList.remove('activo', 'inactivo');         // saca la clase actual
-            boton.classList.add(nuevo === 1 ? 'activo' : 'inactivo'); // pone la nueva
+            boton.classList.remove('activo', 'inactivo');
+            boton.classList.add(nuevo === 1 ? 'activo' : 'inactivo');
             const plugin = todosLosPlugins.find(p => p.Nombre === nombre);
             if (plugin) plugin.Checkout = nuevo;
             boton.setAttribute('onclick', `event.preventDefault(); toggleCheckout('${nombre}', ${nuevo}, this)`);
@@ -132,11 +138,4 @@ async function toggleCheckout(nombre, actual, boton) {
     } catch (error) {
         console.log(error);
     }
-}
-
-
-//Mostrar Nombre Usuario Login
-const usuario = JSON.parse(localStorage.getItem('usuario'));
-if (usuario) {
-    document.getElementById('Login_Nombre').textContent = usuario.nickname;
 }
