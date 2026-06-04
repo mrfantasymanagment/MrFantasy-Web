@@ -16,59 +16,6 @@ body{
     justify-items: center;
 }
 
-.Nickname_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 2/4;
-    grid-row: 2;
-    height: 80%;
-    width: 95%;
-    min-height: 25px;
-    margin: 2vw;
-    border-radius: 15px;
-    display: flex;
-}
-
-.Texto_Nickname{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5vw 1vw;
-    border-radius: 10px;
-    border: none;
-    background: rgb(26, 25, 25);
-    color: white;
-    font-size: 3vw;
-    font-family: sans-serif;
-    outline: none;
-    resize: none;
-    text-align: left;
-}
-
-.Contraseña_Campo {
-    background: rgb(26, 25, 25);
-    grid-column: 2/4;
-    grid-row: 3;
-    height: 80%;
-    width: 95%;
-    min-height: 25px;
-    margin: 2vw;
-    border-radius: 15px;
-    display: flex;
-}
-
-.Texto_Contraseña{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5vw 1vw;
-    border-radius: 10px;
-    border: none;
-    background: rgb(26, 25, 25);
-    color: white;
-    font-size: 3vw;
-    font-family: sans-serif;
-    outline: none;
-    resize: none;
-    text-align: left;
-}
 
 .Google_Campo{
     background: rgb(26, 25, 25);
