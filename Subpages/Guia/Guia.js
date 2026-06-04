@@ -138,7 +138,7 @@ async function toggleCheckout(nombre, actual, boton) {
 //Mostrar Nombre Usuario Login
 const usuario = JSON.parse(localStorage.getItem('usuario'));
 const Staff = usuario && usuario.rango === 'Staff';
-const Owner = usuario && usuario.rango === 'Staff';
+const Owner = usuario && usuario.rango === 'Owner';
 
 if (usuario) {
     document.getElementById('Login_Nombre').textContent = usuario.rango;
