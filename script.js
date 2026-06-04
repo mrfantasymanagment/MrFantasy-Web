@@ -109,6 +109,10 @@ document.getElementById('Reportes_Error_Cerrar').addEventListener('click', funct
   document.getElementById('Reportes_Incompleto').style.display = 'none';
 });
 
+document.getElementById('Login_Exitoso_Cerrar').addEventListener('click', function() {
+  document.getElementById('Login_Exitoso').style.display = 'none';
+});
+
 function formatearDHM(seg) {
   const d = Math.floor(seg / 86400);
   const h = Math.floor((seg % 86400) / 3600).toString().padStart(2, '0');
