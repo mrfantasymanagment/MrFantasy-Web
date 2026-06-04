@@ -323,15 +323,15 @@ body{
     right: 1vw;
     z-index: 10;
     width: clamp(15px, 4vw, 60px);
-    height: auto;            /* ← era fijo, ahora crece con el contenido */
-    min-height: clamp(15px, 4vw, 60px);
-    border-radius: 20px;     /* ← era 50%, lo cambiamos para que no quede raro con texto */
+    height: auto;    
+    min-height: clamp(15px, 4vw, 120px);
+    border-radius: 20px;  
     background: rgb(45, 40, 75);
     color: white;
     font-size: clamp(10px, 2vw, 40px);
     cursor: pointer;
     display: flex;
-    flex-direction: column;  /* ← ícono arriba, nombre abajo */
+    flex-direction: column;
     justify-content: center;   
     align-items: center;
     margin-right: 1.2vw;
