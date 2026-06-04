@@ -52,6 +52,6 @@ if (code) {
     .then(r => r.json())
     .then(session => {
         localStorage.setItem('usuario', JSON.stringify(session));
-        window.location.href = '/';
+        window.location.href = 'https://mrfantasymanagment.github.io/MrFantasy-Web/index.html';
     });
 }
