@@ -96,6 +96,8 @@ body{
     margin-top: 0.5vw;
     color:rgb(103, 3, 233);
     font-family: sans-serif;
+    justify-items: center;   
+    align-items: center;
 }
 
 @keyframes ZoomPulsante{
