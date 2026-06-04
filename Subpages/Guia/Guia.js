@@ -134,15 +134,11 @@ async function toggleCheckout(nombre, actual, boton) {
     }
 }
 
+
+//Mostrar Nombre Usuario Login
 const usuario = JSON.parse(localStorage.getItem('usuario'));
 if (usuario) {
     const res = await fetch(`https://tu-backend.com/api/usuario/${usuario.id}`);
     const datosActualizados = await res.json();
     localStorage.setItem('usuario', JSON.stringify(datosActualizados));
-}
-
-//Mostrar Nombre Usuario Login
-const usuario = JSON.parse(localStorage.getItem('usuario'));
-if (usuario) {
-    document.getElementById('Login_Nombre').textContent = usuario.nickname;
 }
