@@ -28,6 +28,8 @@ body{
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
+    justify-items: center;   
+    align-items: center;
 }
 
 .Google_Campo:hover{
@@ -55,6 +57,8 @@ body{
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
+    justify-items: center;   
+    align-items: center;
 }
 
 .Discord_Campo:hover{
@@ -82,6 +86,8 @@ body{
     transition-duration: 0.5s;
     cursor: pointer;
     display: flex;
+    justify-items: center;   
+    align-items: center;
 }
 
 
