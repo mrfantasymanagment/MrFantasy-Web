@@ -11,7 +11,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 20vh 90vw;
+    grid-template-rows: 20vh 79vw;
     row-gap: 0.1vw;
     align-items: center;
     justify-items: center;
