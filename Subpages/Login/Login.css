@@ -34,12 +34,12 @@ body{
 .Fuente_Sesion{
     font-size: 3vw;
     text-align: center;
-    color:rgb(103, 3, 233);
+    color:rgb(0, 0, 0);
     font-family: sans-serif;
 }
 
 .Google_Campo{
-    background-image: url(https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/Login_Discord_Imagen.png);
+    background-image: url(https://raw.githubusercontent.com/mrfantasymanagment/MrFantasy-Web/refs/heads/main/Resources/Final/Login_Google_Imagen.png);
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;    
