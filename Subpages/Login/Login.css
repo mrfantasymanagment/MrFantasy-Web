@@ -70,7 +70,7 @@ body{
     font-family: sans-serif;
 }
 
-.Login_Campo{
+.Sesion_Campo{
     background: rgb(26, 25, 25);
     height: 80%;
     width: 95%;
@@ -84,21 +84,8 @@ body{
     display: flex;
 }
 
-.Register_Campo{
-    background: rgb(26, 25, 25);
-    height: 80%;
-    width: 95%;
-    min-height: 25px;
-    border-radius: 15px;
-    grid-column: 2/4;
-    grid-row: 6;
-    margin: 2vw;
-    transition-duration: 0.5s;
-    cursor: pointer;
-    display: flex;
-}
 
-.Login_Campo:hover{
+.Sesion_Campo:hover{
     scale: 1.03;
     transform-origin: center;
 }
