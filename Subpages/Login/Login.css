@@ -19,7 +19,7 @@ body{
 
 .Sesion_Campo{
     background: rgb(26, 25, 25);
-    height: 80%;
+    height: 100%;
     width: 95%;
     min-height: 25px;
     border-radius: 15px;
@@ -47,7 +47,7 @@ body{
 
 .Google_Campo{
     background: rgb(26, 25, 25);
-    height: 80%;
+    height: 100%;
     width: 90%;
     min-height: 25px;
     border-radius: 15px;
@@ -74,7 +74,7 @@ body{
 
 .Discord_Campo{
     background: rgb(26, 25, 25);
-    height: 80%;
+    height: 100%;
     width: 90%;
     min-height: 25px;
     border-radius: 15px;
