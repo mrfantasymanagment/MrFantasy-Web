@@ -43,7 +43,7 @@ html, body {
 
 .Panel_Busqueda {
     grid-column: 4;
-    grid-row: 3;        
+    grid-row: 2;        
     position: sticky;    
     top: 12px;                    
     max-height: calc(100vh - 24px);
@@ -191,7 +191,6 @@ html, body {
 }
 
 #contenedor-plugins {
-    grid-row: 3;
     container-type: inline-size;
     color: black;
     border-radius: 2cqw;
