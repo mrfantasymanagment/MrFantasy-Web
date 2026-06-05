@@ -76,6 +76,11 @@ function renderPlugins(plugins) {
     const contenedor = document.getElementById('contenedor-plugins');
     const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     contenedor.innerHTML = '';
+    contenedor.insertAdjacentHTML('afterbegin', `
+        <div class="Crear_Plugin_Boton">
+            <a href="Subpages/Login/Login.html">👤</a>
+        </div>
+    `);
     letras.forEach(letra => {
         const pluginsDeLetra = plugins.filter(p => p.Nombre[0].toUpperCase() === letra);
         if (pluginsDeLetra.length === 0) return;
