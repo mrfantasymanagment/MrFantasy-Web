@@ -78,7 +78,7 @@ function renderPlugins(plugins) {
     contenedor.innerHTML = '';
     contenedor.insertAdjacentHTML('afterbegin', `
         <div class="Crear_Plugin_Boton">
-            <a href="https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Staff/Guia_Create.html">👤</a>
+            <a href="https://mrfantasymanagment.github.io/MrFantasy-Web/Subpages/Staff/Guia_Staff.html">👤</a>
         </div>
     `);
     letras.forEach(letra => {
