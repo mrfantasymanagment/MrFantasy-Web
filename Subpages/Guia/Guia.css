@@ -323,10 +323,10 @@ html, body {
 }
 
 .Barra_Acciones {
-    grid-column: 1 / 5;   /* ocupa todo el ancho */
-    grid-row: 2;          /* fila 2, debajo del banner */
+    grid-column: 1 / 5;   
+    grid-row: 2;          
     display: flex;
-    justify-content: flex-end;  /* botón a la derecha */
+    justify-content: flex-end; 
     align-items: center;
     padding: 0.5cqw 1cqw;
     background: rgb(20, 20, 20);
