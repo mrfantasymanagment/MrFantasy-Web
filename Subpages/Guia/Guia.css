@@ -43,7 +43,7 @@ html, body {
 
 .Panel_Busqueda {
     grid-column: 4;
-    grid-row: 3;        
+    grid-row: 2;        
     position: sticky;    
     top: 12px;                    
     max-height: calc(100vh - 24px);
@@ -62,7 +62,7 @@ html, body {
 
 .PanelBusqueda_Secciones_Ref {
     grid-column: 1 / 3;
-    grid-row: 3;
+    grid-row: 2;
     background: rgb(30, 30, 30);
     width: 95%;
     height: 100%;
