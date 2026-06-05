@@ -323,7 +323,7 @@ html, body {
 }
 
 .Crear_Plugin_Boton {
-    background: rgb(67, 1, 78);
+    background: rgb(0, 0, 0);
     grid-column: 3;
     grid-row: 1;
     width: 4cqw;
