@@ -326,8 +326,8 @@ html, body {
     background: rgb(0, 0, 0);
     grid-column: 3;
     grid-row: 1;
-    width: 2cqw;
-    height: 2cqw;
+    width: 3cqw;
+    height: 3cqw;
     border-radius: 50%;
     display: flex;
     align-items: center;
