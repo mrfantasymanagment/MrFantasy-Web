@@ -1,0 +1,52 @@
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    background: rgb(12, 11, 11);
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;        
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 25% 50% 25%;
+    align-items: center;
+    justify-items: center;
+}
+
+.EnProceso_Texto {
+    width: 85%;
+    height:85%;          /* la mitad del width */
+    background: rgba(40, 10, 10, 0.821);
+    color: rgb(225, 205, 205);
+    border-radius: 20px;  /* solo redondea la parte de abajo */
+    grid-column: 2/4;
+    grid-row: 2;
+
+}
+
+.hproyectos_Menus{
+    font-size: 3.1vw;
+    display: flex;        
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes ZoomPulsante{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.021);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+        
