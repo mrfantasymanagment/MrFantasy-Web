@@ -347,6 +347,11 @@ html, body {
 
 .Crear_Plugin_Boton:hover { scale: 1.1; }
 
+.Crear_Plugin_Boton a {
+    color: white;
+    text-decoration: none;
+}
+
 .Editar_Plugin_Boton {
     background: rgb(67, 1, 78);
     grid-column: 3;
