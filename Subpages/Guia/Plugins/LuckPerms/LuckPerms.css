@@ -14,21 +14,79 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     display: grid;
-    grid-template-columns: 15% 35% 35% 15%;
-    grid-template-rows: 25% 50% 25%;
+    grid-template-rows: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
     align-items: center;
     justify-items: center;
 }
 
-.EnProceso_Texto {
-    width: 85%;
-    height:85%;          /* la mitad del width */
-    background: rgba(40, 10, 10, 0.821);
-    color: rgb(225, 205, 205);
-    border-radius: 20px;  /* solo redondea la parte de abajo */
-    grid-column: 2/4;
-    grid-row: 2;
+.Banner{
+grid-row: 1;
+height: 100%;
+width: 100%;
+background: red;
+}
 
+.Nombre{
+grid-row: 2;
+height: 100%;
+width: 100%;
+background: rgb(217, 255, 0);
+}
+
+.Descripcion{
+grid-row: 3;
+height: 100%;
+width: 100%;
+background: rgb(0, 217, 255);
+}
+
+.Comandos_Texto{
+grid-row: 4;
+height: 100%;
+width: 100%;
+background: rgb(247, 0, 255);
+}
+
+.Comandos{
+grid-row: 5;
+height: 100%;
+width: 100%;
+background: rgb(9, 255, 0);
+}
+
+.Enlace_Interno{
+grid-row: 6;
+height: 100%;
+width: 100%;
+background: rgb(0, 140, 255);
+}
+
+.Estructura_Texto{
+grid-row: 7;
+height: 100%;
+width: 100%;
+background: rgb(255, 0, 179);
+}
+
+.Estructura_Interno{
+grid-row: 8;
+height: 100%;
+width: 100%;
+background: rgb(123, 255, 0);
+}
+
+.CodigoFuente_Texto{
+grid-row: 9;
+height: 100%;
+width: 100%;
+background: rgb(0, 255, 170);
+}
+
+.CodigoFuente{
+grid-row: 10;
+height: 100%;
+width: 100%;
+background: rgb(129, 209, 0);
 }
 
 .hproyectos_Menus{
