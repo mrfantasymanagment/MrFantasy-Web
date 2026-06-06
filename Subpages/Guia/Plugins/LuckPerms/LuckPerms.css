@@ -15,6 +15,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-rows: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    row-gap: 1vw;
     align-items: center;
     justify-items: center;
 }
