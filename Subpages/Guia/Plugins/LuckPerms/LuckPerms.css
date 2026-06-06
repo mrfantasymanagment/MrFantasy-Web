@@ -26,6 +26,11 @@ width: 100%;
 background: red;
 }
 
+.Banner_Imagen{
+    height: 100%;
+    width: 100%;
+    }
+
 .Nombre{
 grid-row: 2;
 height: 100%;
