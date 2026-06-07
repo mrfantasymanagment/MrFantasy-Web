@@ -64,7 +64,7 @@ height: 12vw;
 width: 100%;
 background: rgba(66, 64, 64, 0.486);
 display: grid;
-grid-template-rows: 3vw 3vw 3vw 15vw;
+grid-template-rows: 3vw 3vw 3vw 3vw;
 grid-template-columns: 10% 90%;
 outline: 2px solid rgb(88, 88, 88);
 margin-bottom: 2vw;
