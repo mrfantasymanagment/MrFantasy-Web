@@ -55,7 +55,7 @@ background: rgb(247, 0, 255);
 
 .Comandos{
 grid-row: 5;
-height: 100%;
+height: auto;
 width: 95%;
 }
 
