@@ -60,7 +60,7 @@ width: 95%;
 }
 
 .Comando_Estructura{
-height: 12vw;
+height: auto;
 width: 100%;
 background: rgba(66, 64, 64, 0.486);
 display: grid;
