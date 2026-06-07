@@ -127,7 +127,6 @@ padding-left: 1vw;
 .Parametro_Texto{
 height: 100%;
 width: 100%;
-grid-row: 4;
 grid-column: 1;
 outline: 2px solid rgb(88, 88, 88);
 border-radius: 0px 0px 0px 30px;
@@ -136,7 +135,6 @@ border-radius: 0px 0px 0px 30px;
 .Comando_Parametros{
 height: auto;
 width: 100%;
-grid-row: 4;
 grid-column: 2;
 display: grid;
 grid-template-columns: 20% 80%;
