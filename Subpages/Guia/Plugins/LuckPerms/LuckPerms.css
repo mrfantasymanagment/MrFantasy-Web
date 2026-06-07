@@ -11,10 +11,10 @@ body{
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat;        
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     height: 100%;
     display: grid;
-    grid-template-rows: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 10vw 10vw 10vw 10vw 28vw 10vw 10vw 10vw 10vw 10vw 10vw;
     row-gap: 1vw;
     align-items: center;
     justify-items: center;
@@ -57,7 +57,111 @@ background: rgb(247, 0, 255);
 grid-row: 5;
 height: 100%;
 width: 95%;
-background: rgba(46, 46, 46, 0.822);
+}
+
+.Comando_Estructura{
+height: 12vw;
+width: 100%;
+background: rgba(66, 64, 64, 0.486);
+display: grid;
+grid-template-rows: 3vw 3vw 3vw 3vw;
+grid-template-columns: 10% 90%;
+outline: 2px solid rgb(88, 88, 88);
+margin-bottom: 2vw;
+border-radius: 30px 30px 30px 30px;
+transition-duration: 1s;
+}
+
+.Comando_Estructura:hover{
+    scale: 1.015;
+    transform-origin: bottom center;
+}
+
+.Comando_Nombre_Texto{
+height: 100%;
+width: 100%;
+grid-row: 1;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+border-radius: 30px 0px 0px 0px;
+}
+
+.Comando_Nombre{
+height: 100%;
+width: 100%;
+grid-row: 1;
+grid-column: 2;
+outline: 2px solid rgb(88, 88, 88);
+padding-left: 1vw;
+border-radius: 0px 30px 0px 0px;
+}
+
+.Comando_Funcion_Texto{
+height: 100%;
+width: 100%;
+grid-row: 2;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+}
+
+.Comando_Funcion{
+height: 100%;
+width: 100%;
+grid-row: 2;
+grid-column: 2;
+outline: 2px solid rgb(88, 88, 88);
+padding-left: 1vw;
+}
+
+.Comando_Sintaxis_Texto{
+height: 100%;
+width: 100%;
+grid-row: 3;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+}
+
+.Comando_Sintaxis{
+height: 100%;
+width: 100%;
+grid-row: 3;
+grid-column: 2;
+outline: 2px solid rgb(88, 88, 88);
+padding-left: 1vw;
+}
+
+.Parametro_Texto{
+height: 100%;
+width: 100%;
+grid-row: 4;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+border-radius: 0px 0px 0px 30px;
+}
+
+.Comando_Parametros{
+height: 100%;
+width: 100%;
+grid-row: 4;
+grid-column: 2;
+display: grid;
+grid-template-columns: 20% 80%;
+}
+
+.Parametro_Nombre{
+height: 100%;
+width: 100%;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+}
+
+.Parametro_Descripcion{
+height: 100%;
+width: 100%;
+grid-column: 2;
+outline: 2px solid rgb(88, 88, 88);
+padding-left: 1vw;
+border-radius: 0px 0px 30px 0px;
 }
 
 .Permisos{
@@ -107,7 +211,25 @@ background: rgb(129, 209, 0);
     display: flex;        
     align-items: center;
     justify-content: center;
+    font-family: 'Fredoka';
 }
+
+.hParametros_Tipo{
+    font-size: 1.5vw;
+    display: flex;        
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka';
+}
+
+.hParametros_Definicion{
+    font-size: 1.5vw;
+    display: flex;        
+    align-items: center;
+    justify-content: left;
+    font-family: 'Fredoka';
+}
+
 
 @keyframes ZoomPulsante{
     0%{
