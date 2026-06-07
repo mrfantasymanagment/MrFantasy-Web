@@ -140,7 +140,7 @@ border-radius: 0px 0px 0px 30px;
 }
 
 .Comando_Parametros{
-height: 100%;
+height: auto;
 width: 100%;
 grid-row: 4;
 grid-column: 2;
