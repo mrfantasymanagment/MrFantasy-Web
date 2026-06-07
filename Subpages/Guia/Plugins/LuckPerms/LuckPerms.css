@@ -64,7 +64,7 @@ height: auto;
 width: 100%;
 background: rgba(66, 64, 64, 0.486);
 display: grid;
-grid-template-rows: repeat(auto-fit, 5vw);
+grid-auto-rows: 3vw;
 grid-template-columns: 10% 90%;
 outline: 2px solid rgb(88, 88, 88);
 margin-bottom: 2vw;
