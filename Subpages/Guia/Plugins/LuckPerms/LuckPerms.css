@@ -128,8 +128,6 @@ padding-left: 1vw;
 height: 100%;
 width: 100%;
 grid-column: 1;
-outline: 2px solid rgb(88, 88, 88);
-border-radius: 0px 0px 0px 30px;
 grid-row: span var(--params, 1);
 }
 
