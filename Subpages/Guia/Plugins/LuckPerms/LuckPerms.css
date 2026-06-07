@@ -146,7 +146,6 @@ grid-row: 4;
 grid-column: 2;
 display: grid;
 grid-template-columns: 20% 80%;
-grid-template-rows: ;
 }
 
 .Parametro_Nombre{
