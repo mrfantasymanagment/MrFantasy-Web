@@ -130,6 +130,7 @@ width: 100%;
 grid-column: 1;
 outline: 2px solid rgb(88, 88, 88);
 border-radius: 0px 0px 0px 30px;
+grid-row: span var(--params, 1);
 }
 
 .Comando_Parametros{
@@ -138,7 +139,7 @@ width: 100%;
 grid-column: 2;
 display: grid;
 grid-template-columns: 20% 80%;
-grid-auto-rows: 3vw;
+grid-row: span var(--params, 1);
 }
 
 .Parametro_Nombre{
