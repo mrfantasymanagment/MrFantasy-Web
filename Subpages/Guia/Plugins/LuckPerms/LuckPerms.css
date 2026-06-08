@@ -191,7 +191,20 @@ width: 100%;
 background: rgb(0, 38, 255);
 }
 
+.Permiso_Nombre{
+height: 100%;
+width: 100%;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+}
 
+.Comando_Nombre{
+height: 100%;
+width: 100%;
+grid-column: 2;
+outline: 2px solid rgb(88, 88, 88);
+padding-left: 1vw;
+}
 
 .Enlace_Interno{
 grid-row: 8;
