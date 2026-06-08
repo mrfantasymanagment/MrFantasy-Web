@@ -100,6 +100,21 @@ grid-column: 1;
 outline: 2px solid rgb(88, 88, 88);
 }
 
+.Comando_Notas_Texto{
+height: 100%;
+width: 100%;
+grid-column: 1;
+outline: 2px solid rgb(88, 88, 88);
+}
+
+.Comando_Notas{
+height: 100%;
+width: 100%;
+grid-column: 2;
+outline: 2px solid rgb(88, 88, 88);
+padding-left: 1vw;
+}
+
 .Comando_Funcion{
 height: 100%;
 width: 100%;
@@ -124,7 +139,7 @@ padding-left: 1vw;
 }
 
 .Parametro_Texto{
-height: 100%;
+height: calc(var(--Alto, 1)*3vw);
 width: 100%;
 grid-column: 1;
 outline: 2px solid rgb(88, 88, 88);

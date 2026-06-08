@@ -55,9 +55,11 @@
             <div class="Comando_Nombre hParametros_Definicion">bulkupdate</div>
             <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
             <div class="Comando_Funcion hParametros_Definicion">Permite Manipular grandes cantidades de permisos con una unica consulta sql</div>
+            <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+            <div class="Comando_Notas hParametros_Definicion">Solo Aplicable mediante consola</div>
             <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
             <div class="Comando_Sintaxis hParametros_Definicion">/lp bulkupdate [data type] [action] [action field] [action value] [constraint]</div>
-            <div class="Parametro_Texto hParametros_Tipo">Parametros</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 5">Parametros</div>
             <div class="Comando_Parametros" style="--params: 5">
                 <div class="Parametro_Nombre hParametros_Tipo">Data Type</div>
                 <div class="Parametro_Descripcion hParametros_Definicion">El tipo de datos que se están modificando. (Puede ser "todos", "usuarios" o "grupos")</div>
@@ -75,8 +77,342 @@
                 <div class="Parametro_Descripcion hParametros_Definicion">Las restricciones necesarias para la actualización</div>
             </div>
          </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Creategroup</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Crea un nuevo grupo de permisos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp creategroup [Grupo]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 1">Parametros</div>
+            <div class="Comando_Parametros" style="--params: 1">
+                <div class="Parametro_Nombre hParametros_Tipo">Grupo</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Nombre del grupo a crear</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Createtrack</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Crea una Línea de progresión de rangos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp createtrack [Track]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 1">Parametros</div>
+            <div class="Comando_Parametros" style="--params: 1">
+                <div class="Parametro_Nombre hParametros_Tipo">Track</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Nombre de la progresión a crear</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Deletegroup</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Elimina un grupo</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp deletegroup [Grupo]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 1">Parametros</div>
+            <div class="Comando_Parametros" style="--params: 1">
+                <div class="Parametro_Nombre hParametros_Tipo">Grupo</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Nombre del grupo a eliminar</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Deletetrack</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Elimina una Línea de Progresión de Rangos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp deletetrack [Track]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 1">Parametros</div>
+            <div class="Comando_Parametros" style="--params: 1">
+                <div class="Parametro_Nombre hParametros_Tipo">Track</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Nombre de la línea de Progresión a Eliminar</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Editor</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Permite Utilizar el editor de permisos web</div>
+            <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+            <div class="Comando_Notas hParametros_Definicion">Devuelve un enlace que te permitirá abrir el editor web con tu configuración actual</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp editor</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Export</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Permite Crear una copia de seguridad de la configuración de permisos actual</div>
+            <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+            <div class="Comando_Notas hParametros_Definicion">guarda el archivo de texto de respaldo con los comandos en la carpeta raíz del plugin</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp export [Archivo]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 1">Parametros</div>
+            <div class="Comando_Parametros" style="--params: 1">
+                <div class="Parametro_Nombre hParametros_Tipo">Archivo</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Nombre de la copia de seguridad</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Group</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Comando base para configurar los grupos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp group [grupo] [SubComando]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 12">Parametros</div>
+            <div class="Comando_Parametros" style="--params: 12">
+                <div class="Parametro_Nombre hParametros_Tipo">Clear</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Limpia todos los permisos, grupos padres y meta del grupo </div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Clone</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Crea una copia del grupo con su configuración pero con otro nombre</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Editor</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Abre el editor web para este grupo específico</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Info</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Muestra información del grupo</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">ListMembers</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Muestra los usuarios y grupos que heredan de éste de forma directa</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Meta</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Gestiona prefijos, sufijos y metadatos del grupo </div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Parent</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Gestiona herencia de grupos</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Permission</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Gestiona los permisos asociados al grupo</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Rename</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Cambia el nombre del grupo</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">SetDisplayName</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Define el nombre visible del grupo</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">SetWeight</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Gestiona el orden de prioridad de los grupos</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">ShowTracks</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Muestra si el grupo esta incluido en algun track</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Import</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Importa archivos de configuración exportados por “/export”</div>
+            <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+            <div class="Comando_Notas hParametros_Definicion">El archivo debe estar en la carpeta raíz del plugin</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp import [Archivo]</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Info</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Muestra información tecnica respecto a la version de LuckPerms</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp info</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">ListGroups</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Muestra la lista de grupos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp listgroups</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">ListTracks </div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Muestra la lista de tracks</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp listtracks</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Log</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Permite consultar el historial de cambios de los permisos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp log [SubComando]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 5">Sub Comandos</div>
+            <div class="Comando_Parametros" style="--params: 5">
+                <div class="Parametro_Nombre hParametros_Tipo">Recent [User] [Pagina]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Cambios Recientes</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Search [Término] [Pagina]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Buscar [Termino] en el log</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Notify [On\Off]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Notificaciones en tiempo Real</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">UserHistory [user] [página]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Historial de usuario</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">GroupHistory [Grupo] [Página]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Historial de grupo</div>
+                
+                <div class="Parametro_Nombre hParametros_Tipo">TrackHistory [Treack] [Página]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Historial del track</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">NetworkSync </div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Sincroniza los datos cacheados y puede sincronizarse en una network</div>
+            <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+            <div class="Comando_Notas hParametros_Definicion">Para sincronizar una network requiere servicio de mensajería</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp networksync</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">ReloadConfig</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Recarga el archivo de configuración (config.yml)</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp reloadconfig</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Search</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Busca que usuarios y grupos tienen un permiso específico</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp search [permiso]</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Sync</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Sincroniza los datos cacheados con los del almacenamiento</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp sync</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Track</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Comando base para la gestion de tracks</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp track [Track] [SubComando]</div>
+            <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 7">Sub Comandos</div>
+            <div class="Comando_Parametros" style="--params: 7">
+                <div class="Parametro_Nombre hParametros_Tipo">Info</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Muestra en orden los grupos del track</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Append [Grupo]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Agrega un grupo al final de la lista</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Insert [Grupo] [Posición]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Agrega un grupo en una posición</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Remove [Grupo]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Elimina un grupo del track</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Clear</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Vacía el track</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Rename [Nuevo Nombre]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Cambia el nombre del track</div>
+
+                <div class="Parametro_Nombre hParametros_Tipo">Clone [Nombre Copia]</div>
+                <div class="Parametro_Descripcion hParametros_Definicion">Crea una copia del track</div>
+            </div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Translations</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Gestiona las traducciones del plugin</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp translations</div>
+         </div>
+
+         <div class="Comando_Estructura">
+            <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+            <div class="Comando_Nombre hParametros_Definicion">Tree</div>
+            <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+            <div class="Comando_Funcion hParametros_Definicion">Genera un árbol visual de los permisos</div>
+            <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+            <div class="Comando_Notas hParametros_Definicion">“.” permite visualizar todos los permisos</div>
+            <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+            <div class="Comando_Sintaxis hParametros_Definicion">/lp tree [Plugin] [User] </div>
+         </div>
     </div>
 
+    <div class="Comando_Estructura">
+        <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+        <div class="Comando_Nombre hParametros_Definicion">TrustEditor</div>
+        <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+        <div class="Comando_Funcion hParametros_Definicion">Genera una sesión web con mayores permisos que “editor”</div>
+        <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+        <div class="Comando_Notas hParametros_Definicion"></div>
+        <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+        <div class="Comando_Sintaxis hParametros_Definicion"></div>
+        <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 5">Parametros</div>
+        <div class="Comando_Parametros" style="--params: 5">
+            <div class="Parametro_Nombre hParametros_Tipo"></div>
+            <div class="Parametro_Descripcion hParametros_Definicion"></div>
+        </div>
+     </div>
+
+     <div class="Comando_Estructura">
+        <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+        <div class="Comando_Nombre hParametros_Definicion"></div>
+        <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+        <div class="Comando_Funcion hParametros_Definicion"></div>
+        <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+        <div class="Comando_Notas hParametros_Definicion"></div>
+        <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+        <div class="Comando_Sintaxis hParametros_Definicion"></div>
+        <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 5">Parametros</div>
+        <div class="Comando_Parametros" style="--params: 5">
+            <div class="Parametro_Nombre hParametros_Tipo"></div>
+            <div class="Parametro_Descripcion hParametros_Definicion"></div>
+        </div>
+     </div>
+
+     <div class="Comando_Estructura">
+        <div class="Comando_Nombre_Texto hParametros_Tipo">Nombre</div>
+        <div class="Comando_Nombre hParametros_Definicion"></div>
+        <div class="Comando_Funcion_Texto hParametros_Tipo">Funcion</div>
+        <div class="Comando_Funcion hParametros_Definicion"></div>
+        <div class="Comando_Notas_Texto hParametros_Tipo">Notas</div>
+        <div class="Comando_Notas hParametros_Definicion"></div>
+        <div class="Comando_Sintaxis_Texto hParametros_Tipo">Sintaxis</div>
+        <div class="Comando_Sintaxis hParametros_Definicion"></div>
+        <div class="Parametro_Texto hParametros_Tipo" style="--Alto: 5">Parametros</div>
+        <div class="Comando_Parametros" style="--params: 5">
+            <div class="Parametro_Nombre hParametros_Tipo"></div>
+            <div class="Parametro_Descripcion hParametros_Definicion"></div>
+        </div>
+     </div>
     <div class="Permisos">
 
     </div>
