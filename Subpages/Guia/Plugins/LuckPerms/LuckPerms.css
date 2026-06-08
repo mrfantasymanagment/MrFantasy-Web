@@ -146,7 +146,6 @@ outline: 2px solid rgb(88, 88, 88);
 grid-row: span var(--params, 1);
 display: flex;
 text-align: center;
-flex-wrap: wrap;
 }
 
 .Comando_Parametros{
