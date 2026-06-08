@@ -194,6 +194,11 @@ transition-duration: 1s;
 overflow: hidden
 }
 
+.Enlace_Interno:hover{
+    scale: 1.015;
+    transform-origin: bottom center;
+}
+
 .Estructura_Texto{
 grid-row: 8;
 height: 100%;
