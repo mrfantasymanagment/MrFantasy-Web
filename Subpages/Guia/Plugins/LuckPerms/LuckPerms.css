@@ -206,14 +206,14 @@ cursor: pointer;
 }
 
 .Enlace_Interno:hover{
-    scale: 1.015;
-    transform-origin: bottom center;
+scale: 1.015;
+transform-origin: bottom center;
 }
 
 .Enlace_Interno a{
-    color: black;
-    text-decoration: none;
-    }
+color: black;
+text-decoration: none;
+}
 
 .Estructura_Texto{
 grid-row: 9;
