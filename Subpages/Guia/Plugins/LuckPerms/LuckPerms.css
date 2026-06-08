@@ -181,6 +181,14 @@ width: 100%;
 background: rgb(0, 38, 255);
 }
 
+.Permisos_Texto{
+grid-row: 8;
+height: 100%;
+width: 100%;
+background: rgb(255, 0, 179);
+}
+
+
 .Enlace_Interno{
 grid-row: 7;
 height: auto;
