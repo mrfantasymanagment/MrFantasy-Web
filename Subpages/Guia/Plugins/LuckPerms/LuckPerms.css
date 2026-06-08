@@ -192,6 +192,8 @@ margin-bottom: 2vw;
 border-radius: 30px 30px 30px 30px;
 transition-duration: 1s;
 overflow: hidden
+display: flex;
+text-align: center;
 }
 
 .Enlace_Interno:hover{
