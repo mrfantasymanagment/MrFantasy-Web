@@ -18,7 +18,6 @@ body{
     row-gap: 1vw;
     align-items: center;
     justify-items: center;
-    cursor: default;
 }
 
 .Banner{
@@ -190,7 +189,6 @@ margin-bottom: 2vw;
 border-radius: 30px 30px 30px 30px;
 transition-duration: 1s;
 overflow: hidden;
-cursor: default;
 }
 
 .Enlace_Interno:hover{
