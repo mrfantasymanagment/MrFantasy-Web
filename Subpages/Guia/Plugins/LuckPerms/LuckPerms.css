@@ -18,6 +18,7 @@ body{
     row-gap: 1vw;
     align-items: center;
     justify-items: center;
+    cursor: default;
 }
 
 .Banner{
