@@ -201,6 +201,7 @@ cursor: pointer;
 
 .Enlace_Interno a{
     color: black;
+    text-decoration: none;
     }
 
 .Estructura_Texto{
