@@ -183,7 +183,7 @@ background: rgb(0, 38, 255);
 grid-row: 7;
 height: auto;
 width: 100%;
-background: rgba(196, 53, 53, 0.486);
+background: rgba(199, 38, 38, 0.486);
 display: grid;
 grid-auto-rows: 3vw;
 grid-template-columns: 10% 90%;
