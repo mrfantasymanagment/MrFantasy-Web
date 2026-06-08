@@ -185,6 +185,7 @@ height: auto;
 width: 100%;
 background: rgba(197, 24, 24, 0.712);
 outline: 2px solid rgb(88, 88, 88);
+margin-bottom: 2vw;
 border-radius: 30px 30px 30px 30px;
 transition-duration: 1s;
 overflow: hidden
