@@ -181,9 +181,17 @@ background: rgb(0, 38, 255);
 
 .Enlace_Interno{
 grid-row: 7;
-height: 100%;
+height: auto;
 width: 100%;
-background: rgb(0, 140, 255);
+background: rgba(66, 64, 64, 0.486);
+display: grid;
+grid-auto-rows: 3vw;
+grid-template-columns: 10% 90%;
+outline: 2px solid rgb(88, 88, 88);
+margin-bottom: 2vw;
+border-radius: 30px 30px 30px 30px;
+transition-duration: 1s;
+overflow: hidden
 }
 
 .Estructura_Texto{
